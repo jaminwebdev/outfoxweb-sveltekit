@@ -1,7 +1,6 @@
 <script lang="ts">
 	import MobileNav from './MobileNav.svelte';
 	import DesktopNav from './DesktopNav.svelte';
-	export let open = false;
 </script>
 
 <nav>
@@ -9,6 +8,6 @@
 		<DesktopNav />
 	</div>
 	<div class="grid lg:hidden">
-		<MobileNav bind:open />
+		<MobileNav />
 	</div>
 </nav>

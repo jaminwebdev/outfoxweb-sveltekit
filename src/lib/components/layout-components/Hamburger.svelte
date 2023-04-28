@@ -1,23 +1,15 @@
 <script lang="ts">
+	import { createEventDispatcher } from 'svelte';
 	export let open: boolean;
 
-	const setOpen = () => {
-		open = !open;
-		const body = document.querySelector('body');
-
-		if (open) {
-			body!.style.overflowY = 'hidden';
-			return;
-		}
-
-		body!.style.overflowY = 'auto';
-	};
+	const dispatch = createEventDispatcher();
+	const handleHamburgerClick = () => dispatch('mobileMenuOpenToggle');
 </script>
 
 <button
 	class="text-body-text-dark dark:text-body-text-light hover:text-primary cursor-pointer mr-4 border-none focus:outline-none float-right"
 	class:open
-	on:click={setOpen}
+	on:click={handleHamburgerClick}
 >
 	<svg width="32" height="24">
 		<line id="top" x1="0" y1="2" x2="32" y2="2" />

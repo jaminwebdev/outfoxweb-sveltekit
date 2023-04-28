@@ -30,6 +30,10 @@
 	svg {
 		min-height: 24px;
 		transition: transform 0.3s ease-in-out;
+		z-index: 100000;
+		position: absolute;
+		top: 20px;
+		right: 20px;
 	}
 
 	svg line {

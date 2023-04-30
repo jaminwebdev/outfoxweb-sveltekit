@@ -14,6 +14,9 @@
 		<GlowButton classes="mt-6 text-body-text-light" on:glowBtnClicked={console.log} color="secondary">Glow Button Action</GlowButton>
 	</div>
 </div>
+<div class="max-w-4xl m-auto">
+	<MultiStepProjectForm />
+</div>
 <div class="grid gap-6 place-items-center p-7">
 	<h2>Regular Buttons - regular</h2>
 	<div class="grid gap-3 grid-cols-3">
@@ -37,7 +40,4 @@
 		<Button color="secondary" type="ghost" on:btnClicked={console.log}>Ghost button</Button>
 		<Button color="tertiary" type="ghost" on:btnClicked={console.log}>Ghost button</Button>
 	</div>
-</div>
-<div class="max-w-4xl m-auto">
-	<MultiStepProjectForm />
 </div>

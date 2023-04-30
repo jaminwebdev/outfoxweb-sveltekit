@@ -32,15 +32,15 @@
 
 <div>
 	{#if steps[currentStep] === 'project'}
-		<div in:fade={{ duration: 250, delay: 250 }} out:fade={{ duration: 250 }}>
+		<div in:fade={{ duration: 250, delay: 300 }} out:fade={{ duration: 250 }}>
 			<ProjectStep on:changeStep={changeStep} />
 		</div>
 	{:else if steps[currentStep] === 'description'}
-		<div in:fade={{ duration: 250, delay: 250 }} out:fade={{ duration: 250 }}>
+		<div in:fade={{ duration: 250, delay: 300 }} out:fade={{ duration: 250 }}>
 			<DescriptionStep on:changeStep={changeStep} />
 		</div>
 	{:else if steps[currentStep] === 'info'}
-		<div in:fade={{ duration: 250, delay: 250 }} out:fade={{ duration: 250 }}>
+		<div in:fade={{ duration: 250, delay: 300 }} out:fade={{ duration: 250 }}>
 			<InfoStep on:changeStep={changeStep} on:submitForm={submitForm} />
 		</div>
 	{/if}

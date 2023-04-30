@@ -36,7 +36,7 @@
 	}
 
 	button {
-		z-index: 20;
+		z-index: 100;
 	}
 
 	.open svg {

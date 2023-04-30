@@ -1,6 +1,12 @@
 <script lang="ts">
+	import { createEventDispatcher } from 'svelte';
+
+	const dispatch = createEventDispatcher();
+
+	export let type: 'button' | 'link' = 'button';
 	export let color: 'primary' | 'secondary' | 'tertiary' = 'primary';
-	export let link: string;
+	export let link: string = '/';
+	export let classes = '';
 
 	const colorVariants = {
 		primary: 'bg-primary shadow-[0_0_0.5em_0] shadow-primary after:shadow-[0_0_2.25rem] after:shadow-primary',
@@ -9,9 +15,11 @@
 	};
 </script>
 
-<a
-	href={link}
-	class={`glowBtn 
+{#if type === 'button'}
+	<button
+		type="button"
+		on:click={() => dispatch('glowBtnClicked')}
+		class={`glowBtn 
 	${colorVariants[color]} 
 	py-[16px] 
 	px-[28px] 
@@ -20,10 +28,29 @@
 	text-body-text-dark 
 	relative 
 	font-medium 
-	cursor-pointer`}
->
-	<slot />
-</a>
+	cursor-pointer
+    ${classes}`}
+	>
+		<slot />
+	</button>
+{:else if type === 'link'}
+	<a
+		href={link}
+		class={`glowBtn 
+	${colorVariants[color]} 
+	py-[16px] 
+	px-[28px] 
+	rounded-lg 
+	inline-block 
+	text-body-text-dark 
+	relative 
+	font-medium 
+	cursor-pointer
+	${classes}`}
+	>
+		<slot />
+	</a>
+{/if}
 
 <style>
 	.glowBtn::before {

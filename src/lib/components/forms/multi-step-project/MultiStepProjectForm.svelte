@@ -6,16 +6,16 @@
 
 	const steps = ['project', 'description', 'info'];
 	let currentStep = 0;
-
-	const form = {
-		projectType: '',
-		description: '',
-		name: '',
-		email: ''
-	};
+	let projectType: string[], description: string, name: string, email: string;
 
 	const submitForm = () => {
-		console.log(form);
+		const formItems = {
+			projectType,
+			description,
+			name,
+			email
+		};
+		console.log(formItems);
 	};
 
 	const changeStep = (event: CustomEvent<{ dir: 'prev' | 'next' }>) => {
@@ -32,15 +32,15 @@
 
 <div>
 	{#if steps[currentStep] === 'project'}
-		<div in:fade={{ duration: 250, delay: 300 }} out:fade={{ duration: 250 }}>
-			<ProjectStep on:changeStep={changeStep} />
+		<div in:fade={{ duration: 250, delay: 400 }} out:fade={{ duration: 150 }}>
+			<ProjectStep on:changeStep={changeStep} bind:projectType />
 		</div>
 	{:else if steps[currentStep] === 'description'}
-		<div in:fade={{ duration: 250, delay: 300 }} out:fade={{ duration: 250 }}>
-			<DescriptionStep on:changeStep={changeStep} />
+		<div in:fade={{ duration: 250, delay: 400 }} out:fade={{ duration: 150 }}>
+			<DescriptionStep on:changeStep={changeStep} bind:description />
 		</div>
 	{:else if steps[currentStep] === 'info'}
-		<div in:fade={{ duration: 250, delay: 300 }} out:fade={{ duration: 250 }}>
+		<div in:fade={{ duration: 250, delay: 400 }} out:fade={{ duration: 150 }}>
 			<InfoStep on:changeStep={changeStep} on:submitForm={submitForm} />
 		</div>
 	{/if}

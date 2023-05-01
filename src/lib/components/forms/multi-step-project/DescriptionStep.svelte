@@ -24,11 +24,11 @@
 <p>Characters left: {750 - description.length}</p>
 
 {#if description.length < 1 && touched && blurred}
-	<span transition:fade class="text-secondary">We need a description of your project in order to serve your needs better 😀.</span>
+	<p transition:fade class="text-secondary">We need a description of your project in order to serve your needs better 😀.</p>
 {/if}
 
 {#if description.length > 750}
-	<span transition:fade class="text-secondary">Please keep the description to less than 750 characters.</span>
+	<p transition:fade class="text-secondary">Please keep the description to less than 750 characters.</p>
 {/if}
 
 <div class="grid grid-cols-[repeat(2,_max-content)] justify-between gap-3">

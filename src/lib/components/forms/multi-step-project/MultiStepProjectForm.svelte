@@ -3,6 +3,7 @@
 	import ProjectStep from './ProjectStep.svelte';
 	import DescriptionStep from './DescriptionStep.svelte';
 	import InfoStep from './InfoStep.svelte';
+	import { Lottie } from 'lottie-svelte';
 	import { createEventDispatcher } from 'svelte';
 	const dispatch = createEventDispatcher();
 
@@ -38,7 +39,7 @@
 		}
 	};
 
-	$: if (selfClose <= 0) {
+	$: if (selfClose <= -2) {
 		dispatch('autoCloseForm');
 		clearInterval(closeInterval);
 	}
@@ -51,9 +52,16 @@
 {/if}
 
 {#if formStatus === 'success'}
-	<div transition:fade>
-		<p>Hooray we'll be in touch</p>
-		<span>This message will self destruct in {selfClose} seconds 💣</span>
+	<div class="grid justify-center">
+		{#if selfClose > 0}
+			<Lottie path="/src/lib/lottie/Successful.json" loop={false} />
+			<p>Hooray we'll be in touch</p>
+			<span>This message will self destruct in {selfClose} seconds 💣</span>
+		{:else}
+			<div class="max-w-[250px]">
+				<Lottie path="/src/lib/lottie/Bubbles.json" loop={false} height={200} />
+			</div>
+		{/if}
 	</div>
 {/if}
 

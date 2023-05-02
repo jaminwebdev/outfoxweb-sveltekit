@@ -16,6 +16,10 @@ export default {
 				'body-text': {
 					light: '#F4F4F5',
 					dark: '#1D1D20'
+				},
+				'bg-color': {
+					dark: '#1F2326',
+					light: '#E6EDF4'
 				}
 			}
 		}

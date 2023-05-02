@@ -15,7 +15,7 @@
 		on:mouseenter={() => (hovering = true)}
 		on:mouseleave={() => (hovering = false)}
 	>
-		<InteractiveLottie path="/lottie/Successful.json" bind:hover={play} />
+		<InteractiveLottie path="/lottie/Successful.json" bind:forceAnimate={play} />
 	</div>
 	<!-- Example of repeating lottie animation -->
 	<div class="bg-bg-color-dark rounded-xl">

@@ -5,19 +5,19 @@
 	export let timeLoop = 6000;
 	export let repeat = false;
 	export let path = '/lottie/Successful.json';
-	export let hover = false;
+	export let forceAnimate = false;
 
 	let animation: AnimationItem;
 
 	const handler = (event: AnimationEvent) => {
 		animation = event.detail;
-		animation.pause();
+		animation.goToAndStop(0);
 		if (repeat) {
 			setInterval(() => animation.goToAndPlay(0), timeLoop);
 		}
 	};
 
-	$: if (hover) {
+	$: if (forceAnimate) {
 		animation.goToAndPlay(0);
 	}
 </script>

@@ -55,13 +55,15 @@
 	<div class="grid justify-center">
 		{#if selfClose > 0}
 			<div>
-				<Lottie path="/Successful.json" loop={false} />
+				<div class="max-w-[350px]">
+					<Lottie path="/lottie/Successful.json" loop={false} />
+				</div>
 				<p>Hooray we'll be in touch</p>
 				<span>This message will self destruct in {selfClose} seconds 💣</span>
 			</div>
 		{:else}
-			<div class="max-w-[250px]">
-				<Lottie path="/Bubbles.json" loop={false} height={200} />
+			<div class="max-w-[350px]">
+				<Lottie path="/lottie/Bubbles.json" loop={false} height={200} />
 			</div>
 		{/if}
 	</div>
@@ -72,9 +74,6 @@
 		<p>Whoopsies</p>
 	</div>
 {/if}
-
-<Lottie path="/Successful.json" loop={false} />
-<Lottie path="/Bubbles.json" loop={false} />
 
 {#if formStatus === 'initial'}
 	<div>

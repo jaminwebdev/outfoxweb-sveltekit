@@ -21,7 +21,7 @@
 	svg {
 		min-height: 24px;
 		transition: transform 0.3s ease-in-out;
-		z-index: 100000;
+		z-index: 20;
 	}
 
 	svg line {

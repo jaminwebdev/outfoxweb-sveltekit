@@ -4,7 +4,7 @@
 </script>
 
 <aside
-	class="fixed z-50 w-full h-full bg-body-color-light dark:bg-body-color-dark text-body-text-dark dark:text-body-text-light"
+	class="fixed top-0 z-10 w-full h-full bg-body-color-light dark:bg-body-color-dark text-body-text-dark dark:text-body-text-light"
 	class:open>
 	<nav class="p-12 text-xl">
 		<a class="block" href="/about" on:click={handleNav}>About</a>

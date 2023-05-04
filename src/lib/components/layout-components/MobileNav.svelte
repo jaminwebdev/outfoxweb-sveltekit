@@ -16,7 +16,7 @@
 
 <div class="py-4 relative">
 	<div class="w-[65%] max-w-[170px]">
-		<SiteLogo />
+		<SiteLogo classes="relative z-20" />
 	</div>
 	<Hamburger bind:open on:mobileMenuOpenToggle={toggleOpen} />
 	<Sidebar bind:open />

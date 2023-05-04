@@ -1,4 +1,8 @@
-<a href="/" class="max-h-[70px]">
+<script lang="ts">
+	export let classes = '';
+</script>
+
+<a href="/" class="max-h-[70px] {classes}">
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
 		width="100%"

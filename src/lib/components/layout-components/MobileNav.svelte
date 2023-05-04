@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Hamburger from './Hamburger.svelte';
+	import SiteLogo from '$lib/components/SiteLogo.svelte';
 	import Sidebar from './Sidebar.svelte';
 	import { browser } from '$app/environment';
 
@@ -13,7 +14,8 @@
 	}
 </script>
 
-<div class="py-6 relative">
+<div class="py-4 relative">
+	<SiteLogo />
 	<Hamburger bind:open on:mobileMenuOpenToggle={toggleOpen} />
 	<Sidebar bind:open />
 </div>

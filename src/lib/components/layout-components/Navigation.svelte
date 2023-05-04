@@ -4,10 +4,10 @@
 </script>
 
 <nav>
-	<div class="hidden lg:grid">
+	<div class="hidden lg:block">
 		<DesktopNav />
 	</div>
-	<div class="grid lg:hidden">
+	<div class="block lg:hidden">
 		<MobileNav />
 	</div>
 </nav>

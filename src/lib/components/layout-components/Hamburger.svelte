@@ -7,10 +7,9 @@
 </script>
 
 <button
-	class="text-body-text-dark dark:text-body-text-light hover:text-primary cursor-pointer mr-4 border-none focus:outline-none float-right"
+	class="text-body-text-dark dark:text-body-text-light hover:text-primary cursor-pointer mr-4 border-none focus:outline-none absolute top-9 right-0"
 	class:open
-	on:click={handleHamburgerClick}
->
+	on:click={handleHamburgerClick}>
 	<svg width="32" height="24">
 		<line id="top" x1="0" y1="2" x2="32" y2="2" />
 		<line id="middle" x1="6" y1="12" x2="32" y2="12" />
@@ -23,9 +22,6 @@
 		min-height: 24px;
 		transition: transform 0.3s ease-in-out;
 		z-index: 100000;
-		position: absolute;
-		top: 20px;
-		right: 20px;
 	}
 
 	svg line {

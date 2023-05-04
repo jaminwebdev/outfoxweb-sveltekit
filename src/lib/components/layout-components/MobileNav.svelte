@@ -15,7 +15,9 @@
 </script>
 
 <div class="py-4 relative">
-	<SiteLogo />
+	<div class="w-[65%] max-w-[170px]">
+		<SiteLogo />
+	</div>
 	<Hamburger bind:open on:mobileMenuOpenToggle={toggleOpen} />
 	<Sidebar bind:open />
 </div>

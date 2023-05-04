@@ -7,7 +7,7 @@
 </script>
 
 <button
-	class="text-body-text-dark dark:text-body-text-light hover:text-primary cursor-pointer mr-4 border-none focus:outline-none absolute top-9 right-0"
+	class="text-body-text-dark dark:text-body-text-light hover:text-primary cursor-pointer p-4 border-none focus:outline-none absolute top-4 -right-3"
 	class:open
 	on:click={handleHamburgerClick}>
 	<svg width="32" height="24">

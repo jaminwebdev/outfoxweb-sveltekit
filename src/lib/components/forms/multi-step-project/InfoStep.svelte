@@ -28,8 +28,7 @@
 			bind:value={name}
 			on:focus={() => (nameTouched = true)}
 			on:blur={() => (nameBlurred = true)}
-			class="text-body-text-dark"
-		/>
+			class="text-body-text-dark" />
 		{#if name.length < 1 && nameTouched && nameBlurred}
 			<p transition:fade class="text-secondary">We need to know what to call you 😀.</p>
 		{/if}
@@ -42,8 +41,7 @@
 			bind:value={email}
 			on:focus={() => (emailTouched = true)}
 			on:blur={() => (emailBlurred = true)}
-			class="text-body-text-dark"
-		/>
+			class="text-body-text-dark" />
 		{#if !emailValid.success && emailTouched && emailBlurred}
 			<p transition:fade class="text-secondary">It's hard to email you without an email 😎.</p>
 		{/if}

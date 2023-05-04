@@ -11,7 +11,8 @@
 
 <p>What kind of project do you need help with?</p>
 <div class="grid">
-	<label><input type="checkbox" bind:group={projectType} value={'New website'} /> New website</label>
+	<label
+		><input type="checkbox" bind:group={projectType} value={'New website'} /> New website</label>
 	<label><input type="checkbox" bind:group={projectType} value={'SEO'} /> SEO</label>
 	<label><input type="checkbox" bind:group={projectType} value={'Design'} /> Design</label>
 </div>

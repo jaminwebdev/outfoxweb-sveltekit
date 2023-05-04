@@ -8,8 +8,7 @@
 		<a href="/">Services</a>
 		<a href="/">About</a>
 		<a href="/">Resources</a>
-		<button
-			class="rounded-lg bg-secondary text-body-text-light py-[13px] px-[23px]"
+		<button class="rounded-lg bg-secondary text-body-text-light py-[13px] px-[23px]"
 			>Let's Chat</button>
 	</div>
 </div>

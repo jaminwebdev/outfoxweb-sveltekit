@@ -14,8 +14,10 @@
 		},
 		outline: {
 			primary: 'border-2 border-primary text-primary hover:bg-primary hover:text-body-text-dark',
-			secondary: 'border-2 border-secondary text-secondary hover:bg-secondary hover:text-body-text-light',
-			tertiary: 'border-2 border-tertiary text-tertiary hover:bg-tertiary hover:text-body-text-light'
+			secondary:
+				'border-2 border-secondary text-secondary hover:bg-secondary hover:text-body-text-light',
+			tertiary:
+				'border-2 border-tertiary text-tertiary hover:bg-tertiary hover:text-body-text-light'
 		},
 		ghost: {
 			primary: 'bg-primary/10 text-primary hover:bg-primary/20 hover:scale-[1.05]',
@@ -40,7 +42,6 @@
 	cursor-pointer
     transition-all
     duration-150
-    ${classes}`}
->
+    ${classes}`}>
 	<slot />
 </button>

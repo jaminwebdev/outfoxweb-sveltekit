@@ -9,9 +9,12 @@
 	export let classes = '';
 
 	const colorVariants = {
-		primary: 'bg-primary shadow-[0_0_0.5em_0] shadow-primary after:shadow-[0_0_2.25rem] after:shadow-primary',
-		secondary: 'bg-secondary shadow-[0_0_.5em_0] shadow-secondary after:shadow-[0_0_2.25rem] after:shadow-secondary',
-		tertiary: 'bg-tertiary shadow-[0_0_.5em_0] shadow-tertiary after:shadow-[0_0_2.25rem] after:shadow-tertiary'
+		primary:
+			'bg-primary shadow-[0_0_0.5em_0] shadow-primary after:shadow-[0_0_2.25rem] after:shadow-primary',
+		secondary:
+			'bg-secondary shadow-[0_0_.5em_0] shadow-secondary after:shadow-[0_0_2.25rem] after:shadow-secondary',
+		tertiary:
+			'bg-tertiary shadow-[0_0_.5em_0] shadow-tertiary after:shadow-[0_0_2.25rem] after:shadow-tertiary'
 	};
 </script>
 
@@ -29,8 +32,7 @@
 	relative 
 	font-medium 
 	cursor-pointer
-    ${classes}`}
-	>
+    ${classes}`}>
 		<slot />
 	</button>
 {:else if type === 'link'}
@@ -46,8 +48,7 @@
 	relative 
 	font-medium 
 	cursor-pointer
-	${classes}`}
-	>
+	${classes}`}>
 		<slot />
 	</a>
 {/if}

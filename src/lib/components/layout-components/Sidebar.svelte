@@ -3,7 +3,9 @@
 	const handleNav = () => (open = !open);
 </script>
 
-<aside class="fixed z-50 w-full h-full bg-body-color-light dark:bg-body-color-dark text-body-text-dark dark:text-body-text-light" class:open>
+<aside
+	class="fixed z-50 w-full h-full bg-body-color-light dark:bg-body-color-dark text-body-text-dark dark:text-body-text-light"
+	class:open>
 	<nav class="p-12 text-xl">
 		<a class="block" href="/about" on:click={handleNav}>About</a>
 		<a class="block" href="#contact" on:click={handleNav}>Contact</a>

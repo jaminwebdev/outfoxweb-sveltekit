@@ -19,16 +19,19 @@
 	bind:value={description}
 	placeholder="Tell me more"
 	on:focus={() => (touched = true)}
-	on:blur={() => (blurred = true)}
-/>
+	on:blur={() => (blurred = true)} />
 <p>Characters left: {750 - description.length}</p>
 
 {#if description.length < 1 && touched && blurred}
-	<p transition:fade class="text-secondary">We need a description of your project in order to serve your needs better 😀.</p>
+	<p transition:fade class="text-secondary">
+		We need a description of your project in order to serve your needs better 😀.
+	</p>
 {/if}
 
 {#if description.length > 750}
-	<p transition:fade class="text-secondary">Please keep the description to less than 750 characters.</p>
+	<p transition:fade class="text-secondary">
+		Please keep the description to less than 750 characters.
+	</p>
 {/if}
 
 <div class="grid grid-cols-[repeat(2,_max-content)] justify-between gap-3">

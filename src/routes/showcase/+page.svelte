@@ -13,8 +13,7 @@
 	<div
 		class="bg-bg-color-dark rounded-xl"
 		on:mouseenter={() => (hovering = true)}
-		on:mouseleave={() => (hovering = false)}
-	>
+		on:mouseleave={() => (hovering = false)}>
 		<InteractiveLottie path="/lottie/Successful.json" bind:forceAnimate={play} />
 	</div>
 	<!-- Example of repeating lottie animation -->
@@ -33,13 +32,11 @@
 	<div class="grid gap-3 grid-cols-3">
 		<GlowButton classes="mt-6" link="/" type="link">Glow Button Link</GlowButton>
 		<GlowButton classes="mt-6 text-body-text-light" on:glowBtnClicked={console.log} color="tertiary"
-			>Glow Button Action</GlowButton
-		>
+			>Glow Button Action</GlowButton>
 		<GlowButton
 			classes="mt-6 text-body-text-light"
 			on:glowBtnClicked={console.log}
-			color="secondary">Glow Button Action</GlowButton
-		>
+			color="secondary">Glow Button Action</GlowButton>
 	</div>
 </div>
 <div class="grid gap-6 place-items-center p-7">

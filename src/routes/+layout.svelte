@@ -9,7 +9,7 @@
 	<BgSpotlight
 		classes="absolute -top-[30vw] -right-[34%] md:-top-[420px] md:-right-[40%] w-[80%]" />
 
-	<div id="layoutContainer" class="max-w-[1200px] mx-auto px-5">
+	<div id="layoutContainer" class="max-w-[1200px] mx-auto px-6">
 		<Navigation />
 		<slot />
 		<Footer />

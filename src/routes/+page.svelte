@@ -20,7 +20,8 @@
 		<img
 			src={Image}
 			alt="laptop and mobile phone mockup of modern website"
-			class="relative z-[1]" />
+			class="relative z-[1]"
+			loading="lazy" />
 		<ImgBackground classes="absolute -z-0 -top-[90px] -right-[170px] w-[150%] h-[150%]" />
 	</div>
 </div>

@@ -1,0 +1,35 @@
+<script lang="ts">
+	import InteractiveLottie from './InteractiveLottie.svelte';
+
+	export let lottiePath = '';
+	export let delay = 0;
+	export let timeLoop = 4000;
+	export let speed = 1;
+	export let initialPlay = false;
+
+	let isHovering = false;
+
+	const mouseEntered = () => (isHovering = true);
+	const mouseLeft = () => (isHovering = false);
+</script>
+
+<div
+	class="bg-bg-color-light dark:bg-bg-color-dark p-[25px] rounded-lg grid gap-2"
+	on:mouseenter={mouseEntered}
+	on:mouseleave={mouseLeft}>
+	<div class="max-w-[60px]">
+		<InteractiveLottie
+			path={lottiePath}
+			repeat
+			bind:delay
+			bind:timeLoop
+			bind:speed
+			bind:initialPlay />
+	</div>
+	<h3 class="text-xl">
+		<slot name="heading" />
+	</h3>
+	<p>
+		<slot name="body" />
+	</p>
+</div>

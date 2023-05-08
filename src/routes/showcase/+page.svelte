@@ -11,13 +11,13 @@
 <div class="grid grid-cols-3 my-8 gap-5 max-w-4xl mx-auto">
 	<!-- Example of outer card hover controlling lottie animation -->
 	<div
-		class="bg-bg-color-dark rounded-xl"
+		class="bg-secondary-bg-dark rounded-xl"
 		on:mouseenter={() => (hovering = true)}
 		on:mouseleave={() => (hovering = false)}>
 		<InteractiveLottie path="/lottie/Successful.json" bind:forceAnimate={play} />
 	</div>
 	<!-- Example of repeating lottie animation -->
-	<div class="bg-bg-color-dark rounded-xl">
+	<div class="bg-secondary-bg-dark rounded-xl">
 		<InteractiveLottie path="/lottie/Bubbles.json" timeLoop={5000} repeat />
 	</div>
 </div>
@@ -31,12 +31,10 @@
 	<h2>Glow Buttons</h2>
 	<div class="grid gap-3 grid-cols-3">
 		<GlowButton classes="mt-6" link="/" type="link">Glow Button Link</GlowButton>
-		<GlowButton classes="mt-6 text-body-text-light" on:glowBtnClicked={console.log} color="tertiary"
+		<GlowButton classes="mt-6" on:glowBtnClicked={console.log} color="tertiary"
 			>Glow Button Action</GlowButton>
-		<GlowButton
-			classes="mt-6 text-body-text-light"
-			on:glowBtnClicked={console.log}
-			color="secondary">Glow Button Action</GlowButton>
+		<GlowButton classes="mt-6" on:glowBtnClicked={console.log} color="secondary"
+			>Glow Button Action</GlowButton>
 	</div>
 </div>
 <div class="grid gap-6 place-items-center p-7">

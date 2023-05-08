@@ -14,7 +14,7 @@
 </script>
 
 <div
-	class="bg-bg-color-light dark:bg-bg-color-dark p-[25px] rounded-lg grid gap-2"
+	class="bg-secondary-bg-light dark:bg-secondary-bg-dark p-[25px] rounded-lg grid gap-2"
 	on:mouseenter={mouseEntered}
 	on:mouseleave={mouseLeft}>
 	<div class="max-w-[60px]">

@@ -17,9 +17,13 @@ export default {
 					light: '#F4F4F5',
 					dark: '#1D1D20'
 				},
-				'bg-color': {
+				'secondary-bg': {
 					dark: '#1F2326',
 					light: '#E6EDF4'
+				},
+				'tertiary-bg': {
+					dark: '#4C4F51',
+					light: '#cad9e8'
 				}
 			}
 		}

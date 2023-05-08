@@ -15,7 +15,7 @@
 	}
 
 	h2 {
-		@apply text-4xl md:text-4xl font-black;
+		@apply text-4xl md:text-[44px] font-black;
 	}
 
 	h3 {

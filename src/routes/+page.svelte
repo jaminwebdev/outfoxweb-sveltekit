@@ -4,6 +4,7 @@
 	import GlowButton from '$lib/components/GlowButton.svelte';
 	import ImgBackground from '$lib/components/ImgBackground.svelte';
 	import BenefitCard from '$lib/components/BenefitCard.svelte';
+	import PortfolioRow from '$lib/components/PortfolioRow.svelte';
 </script>
 
 <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-32 md:gap-14 py-20 md:py-24">
@@ -25,7 +26,7 @@
 		<ImgBackground classes="absolute -z-0 -top-[90px] -right-[170px] w-[150%] h-[150%]" />
 	</div>
 </div>
-<div id="benefitsRow" class="grid grid-cols-1 md:grid-cols-3 gap-8 md:my-[70px]">
+<div id="benefitsRow" class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-[125px]">
 	<BenefitCard lottiePath="/lottie/BarChart.json" initialPlay>
 		<span slot="heading">Multiply your conversions</span>
 		<span slot="body">
@@ -46,4 +47,5 @@
 		</span>
 	</BenefitCard>
 </div>
+<PortfolioRow />
 <div class="h-[500px]" />

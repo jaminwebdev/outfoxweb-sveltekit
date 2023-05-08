@@ -1,0 +1,81 @@
+<script lang="ts">
+	import GlowButton from './GlowButton.svelte';
+	import { fade } from 'svelte/transition';
+	import SaasImg from '$lib/images/Saas_header.png?format=webp&quality=100&w=550';
+	import CoworkImg from '$lib/images/Cowork_Header.png?format=webp&quality=100&w=550';
+	import NonprofitImg from '$lib/images/Nonprofit_Header.png?format=webp&quality=100&w=550';
+	import FinanceImg from '$lib/images/Finance_Header.png?format=webp&quality=100&w=550';
+	import PillButton from './PillButton.svelte';
+
+	let activeCategory = 'Saas';
+
+	const setActiveCategory = (category: string) => (activeCategory = category);
+</script>
+
+<div
+	class="rounded-xl bg-secondary-bg-light dark:bg-secondary-bg-dark px-6 py-10 md:p-[60px] grid grid-cols-1 lg:grid-cols-2 gap-4 overflow-hidden relative">
+	<!-- Left column -->
+	<div>
+		<p
+			class="bg-secondary/20 text-secondary dark:bg-primary/20 dark:text-primary py-[5px] px-[14px] rounded-md inline-block text-base mb-2">
+			CHECK IT OUT
+		</p>
+		<h2 class="mb-4">Our latest work</h2>
+		<p class="mb-8 lg:mb-4">
+			We don’t like to toot our own horn, but we’re fond of our designs and UX capabilities. Click
+			the categories below to peruse our latest endeavors.
+		</p>
+		<div class="mt-3 flex flex-wrap gap-5">
+			<PillButton
+				active={activeCategory === 'Saas'}
+				on:pillClicked={() => setActiveCategory('Saas')}>Saas</PillButton>
+			<PillButton
+				active={activeCategory === 'Finance'}
+				on:pillClicked={() => setActiveCategory('Finance')}>Finance</PillButton>
+			<PillButton
+				active={activeCategory === 'Workspace'}
+				on:pillClicked={() => setActiveCategory('Workspace')}>Workspace</PillButton>
+			<PillButton
+				active={activeCategory === 'Nonprofit'}
+				on:pillClicked={() => setActiveCategory('Nonprofit')}>Nonprofit</PillButton>
+		</div>
+		<GlowButton
+			type="link"
+			link="/"
+			classes="px-[24px] py-[12px] mt-10 mb-[60vw] sm:mb-[350px] lg:mb-0"
+			color="tertiary">See More</GlowButton>
+	</div>
+	<!-- Right column -->
+	{#if activeCategory === 'Saas'}
+		<img
+			src={SaasImg}
+			alt="Saas website design"
+			class="max-h-[380px] lg:max-h-[470px] object-contain absolute w-[85%] lg:w-[50%] left-[50%] lg:left-[initial] translate-x-[-50%] lg:translate-x-[initial] lg:-right-14 -bottom-12 lg:-bottom-24"
+			in:fade={{ duration: 150, delay: 200 }}
+			out:fade={{ duration: 150 }} />
+	{/if}
+	{#if activeCategory === 'Finance'}
+		<img
+			src={FinanceImg}
+			alt="Financial advisor & fiduciary website design"
+			class="max-h-[380px] lg:max-h-[470px] object-contain absolute w-[85%] lg:w-[50%] left-[50%] lg:left-[initial] translate-x-[-50%] lg:translate-x-[initial] lg:-right-14 -bottom-12 lg:-bottom-24"
+			in:fade={{ duration: 150, delay: 200 }}
+			out:fade={{ duration: 150 }} />
+	{/if}
+	{#if activeCategory === 'Workspace'}
+		<img
+			src={CoworkImg}
+			alt="Cowork space website design"
+			class="max-h-[380px] lg:max-h-[470px] object-contain absolute w-[85%] lg:w-[50%] left-[50%] lg:left-[initial] translate-x-[-50%] lg:translate-x-[initial] lg:-right-14 -bottom-12 lg:-bottom-24"
+			in:fade={{ duration: 150, delay: 200 }}
+			out:fade={{ duration: 150 }} />
+	{/if}
+	{#if activeCategory === 'Nonprofit'}
+		<img
+			src={NonprofitImg}
+			alt="Nonprofit website design"
+			class="max-h-[380px] lg:max-h-[470px] object-contain absolute w-[85%] lg:w-[50%] left-[50%] lg:left-[initial] translate-x-[-50%] lg:translate-x-[initial] lg:-right-14 -bottom-12 lg:-bottom-24"
+			in:fade={{ duration: 150, delay: 200 }}
+			out:fade={{ duration: 150 }} />
+	{/if}
+</div>

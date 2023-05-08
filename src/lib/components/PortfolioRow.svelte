@@ -1,12 +1,13 @@
 <script lang="ts">
 	import GlowButton from './GlowButton.svelte';
 	import { fade } from 'svelte/transition';
+	import PillButton from './PillButton.svelte';
 	import SaasImg from '$lib/images/Saas_header.png?format=webp&quality=100&w=550';
 	import CoworkImg from '$lib/images/Cowork_Header.png?format=webp&quality=100&w=550';
 	import NonprofitImg from '$lib/images/Nonprofit_Header.png?format=webp&quality=100&w=550';
 	import FinanceImg from '$lib/images/Finance_Header.png?format=webp&quality=100&w=550';
-	import PillButton from './PillButton.svelte';
 
+	const categories = ['Saas', 'Finance', 'Workspace', 'Nonprofit'];
 	let activeCategory = 'Saas';
 
 	const setActiveCategory = (category: string) => (activeCategory = category);
@@ -26,18 +27,11 @@
 			the categories below to peruse our latest endeavors.
 		</p>
 		<div class="mt-3 flex flex-wrap gap-5">
-			<PillButton
-				active={activeCategory === 'Saas'}
-				on:pillClicked={() => setActiveCategory('Saas')}>Saas</PillButton>
-			<PillButton
-				active={activeCategory === 'Finance'}
-				on:pillClicked={() => setActiveCategory('Finance')}>Finance</PillButton>
-			<PillButton
-				active={activeCategory === 'Workspace'}
-				on:pillClicked={() => setActiveCategory('Workspace')}>Workspace</PillButton>
-			<PillButton
-				active={activeCategory === 'Nonprofit'}
-				on:pillClicked={() => setActiveCategory('Nonprofit')}>Nonprofit</PillButton>
+			{#each categories as category}
+				<PillButton
+					active={activeCategory === category}
+					on:pillClicked={() => setActiveCategory(category)}>{category}</PillButton>
+			{/each}
 		</div>
 		<GlowButton
 			type="link"

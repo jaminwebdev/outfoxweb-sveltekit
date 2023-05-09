@@ -36,40 +36,42 @@
 		<GlowButton
 			type="link"
 			link="/"
-			classes="px-[24px] py-[12px] mt-10 mb-[60vw] sm:mb-[350px] lg:mb-0"
+			classes="px-[24px] py-[12px] mt-10 mb-14 lg:mb-0"
 			color="tertiary">See More</GlowButton>
 	</div>
 	<!-- Right column -->
-	{#if activeCategory === 'Saas'}
-		<img
-			src={SaasImg}
-			alt="Saas website design"
-			class="max-h-[380px] lg:max-h-[470px] object-contain absolute w-[85%] lg:w-[50%] left-[50%] lg:left-[initial] translate-x-[-50%] lg:translate-x-[initial] lg:-right-14 -bottom-12 lg:-bottom-24"
-			in:fade={{ duration: 150, delay: 200 }}
-			out:fade={{ duration: 150 }} />
-	{/if}
-	{#if activeCategory === 'Finance'}
-		<img
-			src={FinanceImg}
-			alt="Financial advisor & fiduciary website design"
-			class="max-h-[380px] lg:max-h-[470px] object-contain absolute w-[85%] lg:w-[50%] left-[50%] lg:left-[initial] translate-x-[-50%] lg:translate-x-[initial] lg:-right-14 -bottom-12 lg:-bottom-24"
-			in:fade={{ duration: 150, delay: 200 }}
-			out:fade={{ duration: 150 }} />
-	{/if}
-	{#if activeCategory === 'Workspace'}
-		<img
-			src={CoworkImg}
-			alt="Cowork space website design"
-			class="max-h-[380px] lg:max-h-[470px] object-contain absolute w-[85%] lg:w-[50%] left-[50%] lg:left-[initial] translate-x-[-50%] lg:translate-x-[initial] lg:-right-14 -bottom-12 lg:-bottom-24"
-			in:fade={{ duration: 150, delay: 200 }}
-			out:fade={{ duration: 150 }} />
-	{/if}
-	{#if activeCategory === 'Nonprofit'}
-		<img
-			src={NonprofitImg}
-			alt="Nonprofit website design"
-			class="max-h-[380px] lg:max-h-[470px] object-contain absolute w-[85%] lg:w-[50%] left-[50%] lg:left-[initial] translate-x-[-50%] lg:translate-x-[initial] lg:-right-14 -bottom-12 lg:-bottom-24"
-			in:fade={{ duration: 150, delay: 200 }}
-			out:fade={{ duration: 150 }} />
-	{/if}
+	<div class="grid grid-cols-1 grid-rows-1">
+		{#if activeCategory === 'Saas'}
+			<img
+				src={SaasImg}
+				alt="Saas website design"
+				class="max-h-[380px] lg:max-h-[470px] -mb-[80px] lg:ml-[80px] object-contain col-start-1 row-start-1 justify-self-center lg:justify-self-auto"
+				in:fade={{ duration: 150, delay: 200 }}
+				out:fade={{ duration: 150 }} />
+		{/if}
+		{#if activeCategory === 'Finance'}
+			<img
+				src={FinanceImg}
+				alt="Financial advisor & fiduciary website design"
+				class="max-h-[380px] lg:max-h-[470px] -mb-[80px] lg:ml-[80px] object-contain col-start-1 row-start-1 justify-self-center lg:justify-self-auto"
+				in:fade={{ duration: 150, delay: 200 }}
+				out:fade={{ duration: 150 }} />
+		{/if}
+		{#if activeCategory === 'Workspace'}
+			<img
+				src={CoworkImg}
+				alt="Cowork space website design"
+				class="max-h-[380px] lg:max-h-[470px] -mb-[80px] lg:ml-[80px] object-contain col-start-1 row-start-1 justify-self-center lg:justify-self-auto"
+				in:fade={{ duration: 150, delay: 200 }}
+				out:fade={{ duration: 150 }} />
+		{/if}
+		{#if activeCategory === 'Nonprofit'}
+			<img
+				src={NonprofitImg}
+				alt="Nonprofit website design"
+				class="max-h-[380px] lg:max-h-[470px] -mb-[80px] lg:ml-[80px] object-contain col-start-1 row-start-1 justify-self-center lg:justify-self-auto"
+				in:fade={{ duration: 150, delay: 200 }}
+				out:fade={{ duration: 150 }} />
+		{/if}
+	</div>
 </section>

@@ -5,6 +5,7 @@
 	import ImgBackground from '$lib/components/ImgBackground.svelte';
 	import BenefitCard from '$lib/components/BenefitCard.svelte';
 	import PortfolioRow from '$lib/components/PortfolioRow.svelte';
+	import ServicesTabs from '$lib/components/ServicesTabs.svelte';
 </script>
 
 <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-32 md:gap-14 py-20 md:py-24">
@@ -48,4 +49,5 @@
 	</BenefitCard>
 </div>
 <PortfolioRow />
+<ServicesTabs />
 <div class="h-[500px]" />

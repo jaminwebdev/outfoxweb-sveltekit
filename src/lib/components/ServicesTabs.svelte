@@ -1,0 +1,135 @@
+<script lang="ts">
+	import WebDevImg from '$lib/images/Mobile_Score.png?format=webp&quality=100&w=475';
+	import ImgBackground from '$lib/components/ImgBackground.svelte';
+	import GlowButton from './GlowButton.svelte';
+	import { fade } from 'svelte/transition';
+
+	const services = ['Development', 'Design', 'SEO', 'Web Audits'];
+	let activeService = 'Development';
+</script>
+
+<section class="my-[125px] grid">
+	<p class="bg-tertiary/20 text-tertiary py-[5px] px-[14px] rounded-md text-base mb-4 m-auto">
+		WHAT WE DO
+	</p>
+	<h2 class="text-center mb-8 leading-tight">
+		Powerful websites. <br />
+		Made just for you.
+	</h2>
+	<!-- tabs -->
+	<div class="grid grid-cols-2 gap-8 sm:gap-4 sm:grid-cols-4 max-w-4xl m-auto w-full mb-20 sm:mb-8">
+		{#each services as service}
+			<button
+				class="p-4 underline underline-offset-4 text-lg {activeService === service
+					? 'text-secondary decoration-secondary dark:text-primary dark:decoration-primary'
+					: ''}"
+				on:click={() => (activeService = service)}>{service}</button>
+		{/each}
+	</div>
+	<div class="grid grid-cols-1 grid-rows-1">
+		{#if activeService === 'Development'}
+			<div class="col-start-1 row-start-1">
+				<div
+					class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-32 items-center"
+					in:fade={{ duration: 150, delay: 200 }}
+					out:fade={{ duration: 150 }}>
+					<div class="py-14 grid gap-4 justify-items-start">
+						<h3>Incredibly fast. <br />Incredibly engaging.</h3>
+						<p>With our battle-tested technology stack, your audience never has to wait.</p>
+						<ul>
+							<li>Placeholder Reason</li>
+							<li>Placeholder Reason</li>
+							<li>Placeholder Reason</li>
+						</ul>
+						<GlowButton classes="mt-4" type="link" link="/">Learn More</GlowButton>
+					</div>
+					<div class="row-start-1 sm:row-start-auto relative justify-self-end">
+						<img
+							class="relative z-[1]"
+							src={WebDevImg}
+							alt="Mobile website design with Lighthouse performance score" />
+						<ImgBackground classes="absolute -z-0 top-[30px] -right-[80px] w-[140%]" />
+					</div>
+				</div>
+			</div>
+		{/if}
+		{#if activeService === 'Design'}
+			<div class="col-start-1 row-start-1">
+				<div
+					class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-32 items-center"
+					in:fade={{ duration: 150, delay: 200 }}
+					out:fade={{ duration: 150 }}>
+					<div class="py-14 grid gap-4 justify-items-start">
+						<h3>Design</h3>
+						<p>With our battle-tested technology stack, your audience never has to wait.</p>
+						<ul>
+							<li>Placeholder Reason</li>
+							<li>Placeholder Reason</li>
+							<li>Placeholder Reason</li>
+						</ul>
+						<GlowButton classes="mt-4" type="link" link="/">Learn More</GlowButton>
+					</div>
+					<div class="row-start-1 sm:row-start-auto relative justify-self-end">
+						<img
+							class="relative z-[1]"
+							src={WebDevImg}
+							alt="Mobile website design with Lighthouse performance score" />
+						<ImgBackground classes="absolute -z-0 top-[30px] -right-[80px] w-[140%]" />
+					</div>
+				</div>
+			</div>
+		{/if}
+		{#if activeService === 'SEO'}
+			<div class="col-start-1 row-start-1">
+				<div
+					class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-32 items-center"
+					in:fade={{ duration: 150, delay: 200 }}
+					out:fade={{ duration: 150 }}>
+					<div class="py-14 grid gap-4 justify-items-start">
+						<h3>SEO</h3>
+						<p>With our battle-tested technology stack, your audience never has to wait.</p>
+						<ul>
+							<li>Placeholder Reason</li>
+							<li>Placeholder Reason</li>
+							<li>Placeholder Reason</li>
+						</ul>
+						<GlowButton classes="mt-4" type="link" link="/">Learn More</GlowButton>
+					</div>
+					<div class="row-start-1 sm:row-start-auto relative justify-self-end">
+						<img
+							class="relative z-[1]"
+							src={WebDevImg}
+							alt="Mobile website design with Lighthouse performance score" />
+						<ImgBackground classes="absolute -z-0 top-[30px] -right-[80px] w-[140%]" />
+					</div>
+				</div>
+			</div>
+		{/if}
+		{#if activeService === 'Web Audits'}
+			<div class="col-start-1 row-start-1">
+				<div
+					class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-32 items-center"
+					in:fade={{ duration: 150, delay: 200 }}
+					out:fade={{ duration: 150 }}>
+					<div class="py-14 grid gap-4 justify-items-start">
+						<h3>Audits</h3>
+						<p>With our battle-tested technology stack, your audience never has to wait.</p>
+						<ul>
+							<li>Placeholder Reason</li>
+							<li>Placeholder Reason</li>
+							<li>Placeholder Reason</li>
+						</ul>
+						<GlowButton classes="mt-4" type="link" link="/">Learn More</GlowButton>
+					</div>
+					<div class="row-start-1 sm:row-start-auto relative justify-self-end">
+						<img
+							class="relative z-[1]"
+							src={WebDevImg}
+							alt="Mobile website design with Lighthouse performance score" />
+						<ImgBackground classes="absolute -z-0 top-[30px] -right-[80px] w-[140%]" />
+					</div>
+				</div>
+			</div>
+		{/if}
+	</div>
+</section>

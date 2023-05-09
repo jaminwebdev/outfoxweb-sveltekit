@@ -13,7 +13,7 @@
 	const setActiveCategory = (category: string) => (activeCategory = category);
 </script>
 
-<div
+<section
 	class="rounded-xl bg-secondary-bg-light dark:bg-secondary-bg-dark px-6 py-10 md:p-[60px] grid grid-cols-1 lg:grid-cols-2 gap-4 overflow-hidden relative">
 	<!-- Left column -->
 	<div>
@@ -72,4 +72,4 @@
 			in:fade={{ duration: 150, delay: 200 }}
 			out:fade={{ duration: 150 }} />
 	{/if}
-</div>
+</section>

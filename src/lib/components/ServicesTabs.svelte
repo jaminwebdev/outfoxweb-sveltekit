@@ -1,5 +1,9 @@
 <script lang="ts">
 	import WebDevImg from '$lib/images/Mobile_Score.png?format=webp&quality=100&w=475';
+	import DesignImg from '$lib/images/Figma_Tablet.png?format=webp&quality=100&w=475';
+	import SEOImg from '$lib/images/Laptop_Metrics_Right.png?format=webp&quality=100&w=475';
+	import AuditImg from '$lib/images/Laptop_Audit.png?format=webp&quality=100&w=475';
+
 	import ImgBackground from '$lib/components/ImgBackground.svelte';
 	import GlowButton from './GlowButton.svelte';
 	import { fade } from 'svelte/transition';
@@ -48,7 +52,7 @@
 							class="relative z-[1]"
 							src={WebDevImg}
 							alt="Mobile website design with Lighthouse performance score" />
-						<ImgBackground classes="absolute -z-0 top-[30px] -right-[80px] w-[140%]" />
+						<ImgBackground classes="absolute -z-0 top-[0%] -right-[20%] w-[150%] h-[110%]" />
 					</div>
 				</div>
 			</div>
@@ -70,11 +74,8 @@
 						<GlowButton classes="mt-4" type="link" link="/">Learn More</GlowButton>
 					</div>
 					<div class="row-start-1 sm:row-start-auto relative justify-self-end">
-						<img
-							class="relative z-[1]"
-							src={WebDevImg}
-							alt="Mobile website design with Lighthouse performance score" />
-						<ImgBackground classes="absolute -z-0 top-[30px] -right-[80px] w-[140%]" />
+						<img class="relative z-[1]" src={DesignImg} alt="Website design in Figma" />
+						<ImgBackground classes="absolute -z-0 -top-[30%] -right-[80%] w-[240%] h-[190%]" />
 					</div>
 				</div>
 			</div>
@@ -97,10 +98,10 @@
 					</div>
 					<div class="row-start-1 sm:row-start-auto relative justify-self-end">
 						<img
-							class="relative z-[1]"
-							src={WebDevImg}
-							alt="Mobile website design with Lighthouse performance score" />
-						<ImgBackground classes="absolute -z-0 top-[30px] -right-[80px] w-[140%]" />
+							class="relative z-[1] max-w-[425px] w-full"
+							src={SEOImg}
+							alt="Graphic showing improved SEO graphs overlaying website design" />
+						<ImgBackground classes="absolute -z-0 -top-[10%] -right-[60%] w-[220%] h-[140%]" />
 					</div>
 				</div>
 			</div>
@@ -123,10 +124,10 @@
 					</div>
 					<div class="row-start-1 sm:row-start-auto relative justify-self-end">
 						<img
-							class="relative z-[1]"
-							src={WebDevImg}
-							alt="Mobile website design with Lighthouse performance score" />
-						<ImgBackground classes="absolute -z-0 top-[30px] -right-[80px] w-[140%]" />
+							class="relative z-[1] max-w-[425px] w-full"
+							src={AuditImg}
+							alt="Laptop with audit metric graphics overlayed" />
+						<ImgBackground classes="absolute -z-0 -top-[40%] -right-[70%] w-[220%] h-[220%]" />
 					</div>
 				</div>
 			</div>

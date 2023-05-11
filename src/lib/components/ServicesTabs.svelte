@@ -50,6 +50,8 @@
 					<div class="row-start-1 sm:row-start-auto relative justify-self-end">
 						<img
 							class="relative z-[1]"
+							height="395"
+							width="475"
 							src={WebDevImg}
 							alt="Mobile website design with Lighthouse performance score" />
 						<ImgBackground classes="absolute -z-0 top-[0%] -right-[20%] w-[150%] h-[110%]" />
@@ -74,7 +76,12 @@
 						<GlowButton classes="mt-4" type="link" link="/">Learn More</GlowButton>
 					</div>
 					<div class="row-start-1 sm:row-start-auto relative justify-self-end">
-						<img class="relative z-[1]" src={DesignImg} alt="Website design in Figma" />
+						<img
+							class="relative z-[1]"
+							src={DesignImg}
+							alt="Website design in Figma"
+							height="320"
+							width="582" />
 						<ImgBackground classes="absolute -z-0 -top-[30%] -right-[80%] w-[240%] h-[190%]" />
 					</div>
 				</div>
@@ -100,7 +107,9 @@
 						<img
 							class="relative z-[1] max-w-[425px] w-full"
 							src={SEOImg}
-							alt="Graphic showing improved SEO graphs overlaying website design" />
+							alt="Graphic showing improved SEO graphs overlaying website design"
+							height="512"
+							width="500" />
 						<ImgBackground classes="absolute -z-0 -top-[10%] -right-[60%] w-[220%] h-[140%]" />
 					</div>
 				</div>
@@ -126,7 +135,9 @@
 						<img
 							class="relative z-[1] max-w-[425px] w-full"
 							src={AuditImg}
-							alt="Laptop with audit metric graphics overlayed" />
+							alt="Laptop with audit metric graphics overlayed"
+							height="372"
+							width="504" />
 						<ImgBackground classes="absolute -z-0 -top-[40%] -right-[70%] w-[220%] h-[220%]" />
 					</div>
 				</div>

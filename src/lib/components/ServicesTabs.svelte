@@ -7,6 +7,7 @@
 	import ImgBackground from '$lib/components/ImgBackground.svelte';
 	import GlowButton from './GlowButton.svelte';
 	import { fade } from 'svelte/transition';
+	import Checkmark from './Checkmark.svelte';
 
 	const services = ['Development', 'Design', 'SEO', 'Web Audits'];
 	let activeService = 'Development';
@@ -40,11 +41,9 @@
 					<div class="py-14 grid gap-4 justify-items-start">
 						<h3>Incredibly fast. <br />Incredibly engaging.</h3>
 						<p>With our battle-tested technology stack, your audience never has to wait.</p>
-						<ul>
-							<li>Placeholder Reason</li>
-							<li>Placeholder Reason</li>
-							<li>Placeholder Reason</li>
-						</ul>
+						<Checkmark body="< 1 second load times" />
+						<Checkmark body="99.9% uptime in over 3 years" />
+						<Checkmark body="Feature rich and always interactive" />
 						<GlowButton classes="mt-4" type="link" link="/">Learn More</GlowButton>
 					</div>
 					<div class="row-start-1 sm:row-start-auto relative justify-self-end">
@@ -68,11 +67,9 @@
 					<div class="py-14 grid gap-4 justify-items-start">
 						<h3>Design</h3>
 						<p>With our battle-tested technology stack, your audience never has to wait.</p>
-						<ul>
-							<li>Placeholder Reason</li>
-							<li>Placeholder Reason</li>
-							<li>Placeholder Reason</li>
-						</ul>
+						<Checkmark body="< 1 second load times" />
+						<Checkmark body="99.9% uptime in over 3 years" />
+						<Checkmark body="Feature rich and always interactive" />
 						<GlowButton classes="mt-4" type="link" link="/">Learn More</GlowButton>
 					</div>
 					<div class="row-start-1 sm:row-start-auto relative justify-self-end">
@@ -96,11 +93,9 @@
 					<div class="py-14 grid gap-4 justify-items-start">
 						<h3>SEO</h3>
 						<p>With our battle-tested technology stack, your audience never has to wait.</p>
-						<ul>
-							<li>Placeholder Reason</li>
-							<li>Placeholder Reason</li>
-							<li>Placeholder Reason</li>
-						</ul>
+						<Checkmark body="< 1 second load times" />
+						<Checkmark body="99.9% uptime in over 3 years" />
+						<Checkmark body="Feature rich and always interactive" />
 						<GlowButton classes="mt-4" type="link" link="/">Learn More</GlowButton>
 					</div>
 					<div class="row-start-1 sm:row-start-auto relative justify-self-end">
@@ -124,11 +119,9 @@
 					<div class="py-14 grid gap-4 justify-items-start">
 						<h3>Audits</h3>
 						<p>With our battle-tested technology stack, your audience never has to wait.</p>
-						<ul>
-							<li>Placeholder Reason</li>
-							<li>Placeholder Reason</li>
-							<li>Placeholder Reason</li>
-						</ul>
+						<Checkmark body="< 1 second load times" />
+						<Checkmark body="99.9% uptime in over 3 years" />
+						<Checkmark body="Feature rich and always interactive" />
 						<GlowButton classes="mt-4" type="link" link="/">Learn More</GlowButton>
 					</div>
 					<div class="row-start-1 sm:row-start-auto relative justify-self-end">

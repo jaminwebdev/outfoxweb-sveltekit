@@ -1,0 +1,14 @@
+import type { Testimonial } from './components/TestimonialRow.svelte';
+
+export const testimonials: Record<string, Testimonial> = {
+	kyle: {
+		name: 'Kyle',
+		imgPath: 'staticImages/Placeholder_Headshot.jpg',
+		body: 'Foxcraft Digial saved my life and the life of my children.'
+	},
+	stacy: {
+		name: 'Stacy',
+		imgPath: 'staticImages/Placeholder_Headshot.jpg',
+		body: `We can’t believe it - Our conversions doubled, and our revenue did too.`
+	}
+};

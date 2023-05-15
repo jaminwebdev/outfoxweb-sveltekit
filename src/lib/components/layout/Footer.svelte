@@ -1,2 +1,31 @@
-<footer>Footer stuff</footer>
-<a href="https://lordicon.com/">Animated icons by Lordicon.com</a>
+<script lang="ts">
+	import VerticalLogo from '$lib/components/VerticalLogo.svelte';
+</script>
+
+<footer class="grid grid-cols-1 md:grid-cols-3 gap-14 pt-[100px] pb-8">
+	<div class="grid justify-center md:justify-start text-center md:text-left gap-5">
+		<h4 class="text-2xl">Links</h4>
+		<a href="/" class="hover:underline decoration-inherit hover:underline-offset-8"
+			>Web Development</a>
+		<a href="/" class="hover:underline decoration-inherit hover:underline-offset-8">Web Design</a>
+		<a href="/" class="hover:underline decoration-inherit hover:underline-offset-8">SEO</a>
+		<a href="/" class="hover:underline decoration-inherit hover:underline-offset-8">Consulting</a>
+		<a href="/" class="hover:underline decoration-inherit hover:underline-offset-8"
+			>Performance Audit</a>
+	</div>
+	<div class="grid justify-center row-start-1 md:row-start-auto">
+		<VerticalLogo classes="max-w-[160px] w-full" />
+	</div>
+	<div class="grid justify-center md:justify-end text-center md:text-right gap-5">
+		<h4 class="text-2xl">Support</h4>
+		<a href="/" class="hover:underline decoration-inherit hover:underline-offset-8">Contact</a>
+		<a href="/" class="hover:underline decoration-inherit hover:underline-offset-8">About</a>
+		<a href="/" class="hover:underline decoration-inherit hover:underline-offset-8">SEO</a>
+		<a href="/" class="hover:underline decoration-inherit hover:underline-offset-8"
+			>Terms and Conditions</a>
+		<a href="/" class="hover:underline decoration-inherit hover:underline-offset-8"
+			>Privacy Policy</a>
+	</div>
+	<a href="https://lordicon.com/" class="lg:col-span-3 text-center"
+		>Animated icons by Lordicon.com</a>
+</footer>

@@ -85,4 +85,3 @@
 			>See More</GlowButton>
 	</div>
 </section>
-<div class="h-[500px]" />

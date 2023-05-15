@@ -12,7 +12,7 @@
 	export let testimonials: [Testimonial, Testimonial];
 </script>
 
-<div
+<section
 	class="rounded-xl px-6 py-12 md:pt-[60px] md:px-[50px] md:pb-[150px] grid grid-cols-1 lg:grid-cols-2 gap-16 content-center bg-cover bg-center"
 	style="background-image: url('staticImages/Testimonials_Bg.jpg')">
 	<div class="grid gap-4">
@@ -27,4 +27,4 @@
 			testimonial={testimonials[1]}
 			classes="lg:absolute lg:top-[30%] max-w-[480px]" />
 	</div>
-</div>
+</section>

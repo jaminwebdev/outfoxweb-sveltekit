@@ -8,7 +8,7 @@
 	class:open>
 	<nav class="p-12 text-xl">
 		<a class="block" href="/about" on:click={handleNav}>About</a>
-		<a class="block" href="/contact" on:click={handleNav}>Contact</a>
+		<a class="block" href="/" on:click={handleNav}>Contact</a>
 	</nav>
 </aside>
 

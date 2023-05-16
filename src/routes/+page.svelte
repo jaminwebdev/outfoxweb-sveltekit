@@ -25,8 +25,7 @@
 		<img
 			src={HeroImg}
 			alt="laptop and mobile phone mockup of modern website"
-			class="relative z-[1]"
-			loading="lazy" />
+			class="relative z-[1]" />
 		<ImgBackground classes="absolute -z-0 -top-[90px] -right-[170px] w-[150%] h-[150%]" />
 	</div>
 </header>

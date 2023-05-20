@@ -30,20 +30,20 @@
 	</div>
 </header>
 <section id="benefitsRow" class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-[125px]">
-	<BenefitCard lottiePath="/lottie/BarChart.json" initialPlay>
+	<BenefitCard lottiePath="/lottie/BarChart_primary.json" initialPlay>
 		<span slot="heading">Multiply your conversions</span>
 		<span slot="body">
 			Using the best UX research and insights, we can turn your web dud in to a web stud.
 		</span>
 	</BenefitCard>
-	<BenefitCard lottiePath="/lottie/Globe.json" delay={750} initialPlay>
+	<BenefitCard lottiePath="/lottie/Globe_tertiary.json" delay={750} initialPlay>
 		<span slot="heading">Reach users faster</span>
 		<span slot="body">
 			Our websites load faster than 99.9% of competitors. With our tech, your users don’t have to
 			wait long.
 		</span>
 	</BenefitCard>
-	<BenefitCard lottiePath="/lottie/Server.json" delay={1500} initialPlay>
+	<BenefitCard lottiePath="/lottie/Server_secondary.json" delay={1500} initialPlay>
 		<span slot="heading">0% Downtime</span>
 		<span slot="body">
 			In the last 3 years, our websites have a 0% downtime - never miss out on opportunities.

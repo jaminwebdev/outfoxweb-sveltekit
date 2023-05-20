@@ -32,20 +32,19 @@
 	<BenefitCard lottiePath="/lottie/Tablet_primary.json" initialPlay>
 		<span slot="heading">Decrease load times</span>
 		<span slot="body">
-			Using the best UX research and insights, we can turn your web dud in to a web stud.
+			A faster site leads to improved user experience and higher organic rankings.
 		</span>
 	</BenefitCard>
 	<BenefitCard lottiePath="/lottie/Consult_tertiary.json" delay={500} initialPlay>
 		<span slot="heading">Get more customers</span>
 		<span slot="body">
-			Our websites load faster than 99.9% of competitors. With our tech, your users don’t have to
-			wait long.
+			We’ll help you create a website that converts passive users into paying customers.
 		</span>
 	</BenefitCard>
 	<BenefitCard lottiePath="/lottie/Coins_secondary.json" delay={1500} initialPlay>
 		<span slot="heading">Supercharge your business</span>
 		<span slot="body">
-			Our reliable tech leaves you to do what you do best - run your business.
+			Gain a competitive advantage, increase brand awareness, and reach your goals.
 		</span>
 	</BenefitCard>
 </section>

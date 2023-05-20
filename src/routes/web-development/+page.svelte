@@ -8,6 +8,7 @@
 	import LaptopImg from '$lib/images/Laptop_Metrics_Left.png?format=webp&quality=75&w=513';
 	import TestimonialRow from '$lib/components/TestimonialRow.svelte';
 	import { testimonials } from '$lib/testimonials';
+	import FAQ from '$lib/components/FAQ.svelte';
 </script>
 
 <header class="grid grid-cols-1 md:grid-cols-2 items-center gap-32 md:gap-14 py-24">
@@ -145,3 +146,55 @@
 	</StatCard>
 </section>
 <TestimonialRow testimonials={[testimonials['kyle'], testimonials['stacy']]} />
+<section id="processRow" class="grid grid-cols-1 md:grid-cols-3 gap-8 my-[125px]">
+	<h2 class="col-start-1 md:col-span-3 text-center mb-5">How do we do it?</h2>
+	<BenefitCard lottiePath="/lottie/Consult_primary.json" initialPlay>
+		<span slot="heading">Discovery</span>
+		<span slot="body">
+			We collaborate with you on market research, competitor analysis, keywords, wireframes, and
+			design.
+		</span>
+	</BenefitCard>
+	<BenefitCard lottiePath="/lottie/Computer_tertiary.json" delay={500} initialPlay>
+		<span slot="heading">Development</span>
+		<span slot="body">
+			Sit back while we do all the work to create and thoroughly test your beautiful new website.
+		</span>
+	</BenefitCard>
+	<BenefitCard lottiePath="/lottie/Confettie_secondary.json" delay={1500} initialPlay>
+		<span slot="heading">Delivery</span>
+		<span slot="body">
+			After the launch of your amazing new site, we carry on providing training and ongoing
+			maintenance.
+		</span>
+	</BenefitCard>
+</section>
+<section id="FAQs" class="flex flex-col items-center">
+	<h2 class="text-center mb-5">FAQs</h2>
+	<FAQ isOpen>
+		<span slot="question">How long does it take to build a new site?</span>
+		<span slot="answer">It depends</span>
+	</FAQ>
+	<FAQ>
+		<span slot="question">Do you offer hosting and maintenance?</span>
+		<div slot="answer">
+			<p>
+				Absolutely! Not only can we manage your hosting needs, but we prefer it. This allows us to
+				seamlessly update your website monthly, with 0 effort on your part.
+			</p>
+			<p class="mt-5">
+				On top of that, we don’t just launch your website and leave it up to chance. We monitor your
+				website by crawling it every 10 minutes to ensure your pages are always up and available. In
+				the event a page goes down, we’re notified in 10 minutes or less.
+			</p>
+		</div>
+	</FAQ>
+	<FAQ>
+		<span slot="question">What are Google’s Core Web Vitals?</span>
+		<span slot="answer">It depends</span>
+	</FAQ>
+	<FAQ>
+		<span slot="question">Do you also offer design and SEO services for websites you build?</span>
+		<span slot="answer">It depends</span>
+	</FAQ>
+</section>

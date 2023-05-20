@@ -3,7 +3,7 @@
 	import ImgBackground from '$lib/components/ImgBackground.svelte';
 	import BenefitCard from '$lib/components/BenefitCard.svelte';
 	import Checkmark from '$lib/components/Checkmark.svelte';
-	import CoworkImg from '$lib/images/Cowork_Header.png?format=webp&quality=100&w=550';
+	import FinanceImg from '$lib/images/Finance_Header.png?format=webp&quality=100&w=550';
 	import StatCard from '$lib/components/StatCard.svelte';
 	import LaptopImg from '$lib/images/Laptop_Metrics_Left.png?format=webp&quality=75&w=513';
 	import TestimonialRow from '$lib/components/TestimonialRow.svelte';
@@ -55,7 +55,7 @@
 		<p class="bg-orange/20 text-orange py-[5px] px-[14px] rounded-md inline-block text-base mb-2">
 			POOR PERFORMANCE?
 		</p>
-		<h2 class="mb-4">Is your website performing?</h2>
+		<h2 class="mb-6">Is your website performing?</h2>
 		<p class="mb-8 lg:mb-4">
 			What’s worse than a slow website? A slow website that doesn’t bring in customers, looks
 			outdated, and ultimately doesn’t fit your business needs.
@@ -68,7 +68,7 @@
 	</div>
 	<!-- Right column -->
 	<img
-		src={CoworkImg}
+		src={FinanceImg}
 		width="602"
 		height="513"
 		alt="Coworking business website design"
@@ -94,7 +94,9 @@
 			>64% of consumers unhappy with their experience will buy elsewhere next time.</span>
 	</StatCard>
 </section>
-<section id="solution" class="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center my-[125px]">
+<section
+	id="solution"
+	class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-32 items-center my-[125px]">
 	<div class="relative flex justify-center lg:justify-start">
 		<img
 			class="relative z-[1] max-w-[425px] w-full"
@@ -110,7 +112,7 @@
 		<p class="bg-primary/20 text-primary py-[5px] px-[14px] rounded-md inline-block text-base mb-2">
 			LEVEL UP
 		</p>
-		<h2 class="mb-4">Boost your business with a new website.</h2>
+		<h2 class="mb-6">Boost your business with a new website.</h2>
 		<p>
 			Think about it: every time you navigate around a website, another 3-10 seconds goes by. A lot
 			of life happens between pages. Every business needs an engaging website that’s free of bugs,

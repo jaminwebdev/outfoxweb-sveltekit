@@ -52,7 +52,8 @@
 							height="395"
 							width="475"
 							src={WebDevImg}
-							alt="Mobile website design with Lighthouse performance score" />
+							alt="Mobile website design with Lighthouse performance score"
+							loading="lazy" />
 						<ImgBackground classes="absolute -z-0 top-[0%] -right-[20%] w-[150%] h-[110%]" />
 					</div>
 				</div>

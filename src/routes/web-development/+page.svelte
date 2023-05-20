@@ -1,10 +1,13 @@
 <script lang="ts">
-	import HeroImg from '$lib/images/homepage_hero_img.png?format=webp&quality=75&w=550';
 	import GlowButton from '$lib/components/GlowButton.svelte';
 	import ImgBackground from '$lib/components/ImgBackground.svelte';
 	import BenefitCard from '$lib/components/BenefitCard.svelte';
 	import Checkmark from '$lib/components/Checkmark.svelte';
 	import CoworkImg from '$lib/images/Cowork_Header.png?format=webp&quality=100&w=550';
+	import StatCard from '$lib/components/StatCard.svelte';
+	import LaptopImg from '$lib/images/Laptop_Metrics_Left.png?format=webp&quality=75&w=513';
+	import TestimonialRow from '$lib/components/TestimonialRow.svelte';
+	import { testimonials } from '$lib/testimonials';
 </script>
 
 <header class="grid grid-cols-1 md:grid-cols-2 items-center gap-32 md:gap-14 py-24">
@@ -21,13 +24,7 @@
 		<GlowButton type="link" link="/showcase" classes="justify-self-center md:justify-self-start"
 			>Showcase</GlowButton>
 	</div>
-	<div class="relative grid justify-center md:justify-normal">
-		<img
-			src={HeroImg}
-			alt="laptop and mobile phone mockup of modern website"
-			class="relative z-[1]" />
-		<ImgBackground classes="absolute -z-0 -top-[90px] -right-[170px] w-[150%] h-[150%]" />
-	</div>
+	<div class="relative grid justify-center md:justify-normal">Chart go here</div>
 </header>
 <section id="benefitsRow" class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-[125px]">
 	<BenefitCard lottiePath="/lottie/Tablet_primary.json" initialPlay>
@@ -50,6 +47,7 @@
 	</BenefitCard>
 </section>
 <section
+	id="intro"
 	class="rounded-xl bg-secondary-bg-light dark:bg-secondary-bg-dark px-6 py-10 md:p-[60px] grid grid-cols-1 lg:grid-cols-2 gap-4 items-center overflow-hidden">
 	<!-- Left column -->
 	<div>
@@ -75,3 +73,75 @@
 		alt="Coworking business website design"
 		class="max-h-[380px] lg:max-h-[470px] -mb-[80px] lg:ml-[80px] object-contain justify-self-center lg:justify-self-auto" />
 </section>
+<section id="initialStats" class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-[125px] mt-[40px]">
+	<StatCard color="orange">
+		<span slot="stat">40%</span>
+		<span slot="subtitle">Won't wait</span>
+		<span slot="body"
+			>40% of customers won’t wait more than 2-3 seconds before abandoning a site.</span>
+	</StatCard>
+	<StatCard color="secondary">
+		<span slot="stat">85%</span>
+		<span slot="subtitle">Expect speed</span>
+		<span slot="body"
+			>85% of mobile users expect pages to load as fast or faster than they do on a desktop.</span>
+	</StatCard>
+	<StatCard color="tertiary">
+		<span slot="stat">64%</span>
+		<span slot="subtitle">Look elsewhere</span>
+		<span slot="body"
+			>64% of consumers unhappy with their experience will buy elsewhere next time.</span>
+	</StatCard>
+</section>
+<section id="solution" class="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center my-[125px]">
+	<div class="relative flex justify-center lg:justify-start">
+		<img
+			class="relative z-[1] max-w-[425px] w-full"
+			src={LaptopImg}
+			alt="Graphic showing improved SEO graphs overlaying website design"
+			height="513"
+			width="518"
+			loading="lazy" />
+		<ImgBackground
+			classes="absolute -z-0 -top-[25%] -left-[25%] lg:-left-[40%] w-[160%] h-[160%]" />
+	</div>
+	<div class="mt-7 lg:mt-0">
+		<p class="bg-primary/20 text-primary py-[5px] px-[14px] rounded-md inline-block text-base mb-2">
+			LEVEL UP
+		</p>
+		<h2 class="mb-4">Boost your business with a new website.</h2>
+		<p>
+			Think about it: every time you navigate around a website, another 3-10 seconds goes by. A lot
+			of life happens between pages. Every business needs an engaging website that’s free of bugs,
+			and meets their audience’s needs at the speed of life.
+		</p>
+		<p class="mt-4 mb-8">
+			This is why we’ve spent the last decade meticulously choosing our technologies, honing our
+			process, and connecting with our clients.
+		</p>
+		<GlowButton type="link" link="/" classes="px-[24px] py-[12px]" color="tertiary"
+			>Boost Your Website Today</GlowButton>
+	</div>
+</section>
+<section id="secondaryStats" class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-[125px] mt-[40px]">
+	<StatCard color="primary">
+		<span slot="stat">0.3s</span>
+		<span slot="subtitle">Average load time</span>
+		<span slot="body"
+			>Using the fastest frameworks and hosting solutions, our sites are incredibly fast.</span>
+	</StatCard>
+	<StatCard color="secondary">
+		<span slot="stat">2x</span>
+		<span slot="subtitle">Conversion rates</span>
+		<span slot="body"
+			>Our clients see double the conversions on average in 6-8 months after launch.</span>
+	</StatCard>
+	<StatCard color="tertiary">
+		<span slot="stat">0%</span>
+		<span slot="subtitle">Down time</span>
+		<span slot="body"
+			>Thanks to our ultra-reliable hosting solutions and monitoring software, our sites are
+			extremely reliable.</span>
+	</StatCard>
+</section>
+<TestimonialRow testimonials={[testimonials['kyle'], testimonials['stacy']]} />

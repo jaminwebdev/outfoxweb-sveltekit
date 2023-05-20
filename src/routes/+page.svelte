@@ -1,5 +1,4 @@
 <script lang="ts">
-	// @ts-nocheck
 	import HeroImg from '$lib/images/homepage_hero_img.png?format=webp&quality=75&w=550';
 	import HeadlessWPImg from '$lib/images/Headless_WP_iMac.png?format=webp&quality=75&w=550';
 	import GlowButton from '$lib/components/GlowButton.svelte';
@@ -13,13 +12,12 @@
 
 <header class="grid grid-cols-1 md:grid-cols-2 items-center gap-32 md:gap-14 py-20 md:py-24">
 	<div class="grid gap-7">
-		<h1>Grow Better <br />& Engage More</h1>
-		<p>
+		<h1 class="lg:text-[65px] text-center md:text-left">Grow Better <br />& Engage More</h1>
+		<p class="text-center md:text-left">
 			Reach your audience, convert more customers, and rank better with the best website for you.
 		</p>
-		<div>
-			<GlowButton type="link" link="/showcase" classes="justify-self-start">Showcase</GlowButton>
-		</div>
+		<GlowButton type="link" link="/showcase" classes="justify-self-center md:justify-self-start"
+			>Showcase</GlowButton>
 	</div>
 	<div class="relative grid justify-center md:justify-normal">
 		<img

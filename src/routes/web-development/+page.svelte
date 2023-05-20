@@ -29,23 +29,23 @@
 	</div>
 </header>
 <section id="benefitsRow" class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-[125px]">
-	<BenefitCard lottiePath="/lottie/BarChart_primary.json" initialPlay>
-		<span slot="heading">Multiply your conversions</span>
+	<BenefitCard lottiePath="/lottie/Tablet_primary.json" initialPlay>
+		<span slot="heading">Decrease load times</span>
 		<span slot="body">
 			Using the best UX research and insights, we can turn your web dud in to a web stud.
 		</span>
 	</BenefitCard>
-	<BenefitCard lottiePath="/lottie/Globe_tertiary.json" delay={750} initialPlay>
-		<span slot="heading">Reach users faster</span>
+	<BenefitCard lottiePath="/lottie/Consult_tertiary.json" delay={500} initialPlay>
+		<span slot="heading">Get more customers</span>
 		<span slot="body">
 			Our websites load faster than 99.9% of competitors. With our tech, your users don’t have to
 			wait long.
 		</span>
 	</BenefitCard>
-	<BenefitCard lottiePath="/lottie/Server_secondary.json" delay={1500} initialPlay>
-		<span slot="heading">0% Downtime</span>
+	<BenefitCard lottiePath="/lottie/Coins_secondary.json" delay={1500} initialPlay>
+		<span slot="heading">Supercharge your business</span>
 		<span slot="body">
-			In the last 3 years, our websites have a 0% downtime - never miss out on opportunities.
+			Our reliable tech leaves you to do what you do best - run your business.
 		</span>
 	</BenefitCard>
 </section>

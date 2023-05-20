@@ -9,6 +9,7 @@ export default {
 				primary: '#62E9C3',
 				secondary: '#198CE8',
 				tertiary: '#8E59ED',
+				orange: '#F7754C',
 				'body-color': {
 					light: '#F4F4F5',
 					dark: '#1D1D20'

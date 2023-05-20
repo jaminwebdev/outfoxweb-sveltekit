@@ -22,6 +22,8 @@
 	<div class="relative grid justify-center md:justify-normal">
 		<img
 			src={HeroImg}
+			width="541"
+			height="486"
 			alt="laptop and mobile phone mockup of modern website"
 			class="relative z-[1]" />
 		<ImgBackground classes="absolute -z-0 -top-[90px] -right-[170px] w-[150%] h-[150%]" />

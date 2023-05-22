@@ -43,14 +43,13 @@
 	<BenefitCard lottiePath="/lottie/Fingerprint_tertiary.json" delay={750} initialPlay>
 		<span slot="heading">Completely custom</span>
 		<span slot="body">
-			Cookie-cutter designs are for cookie-cutter businesses. We believe in completely custom
-			designs.
+			Cookie-cutter designs are for cookie-cutter businesses. We believe in custom designs.
 		</span>
 	</BenefitCard>
 	<BenefitCard lottiePath="/lottie/Magnet_secondary.json" delay={1500} initialPlay>
 		<span slot="heading">Stay ahead of the curve</span>
 		<span slot="body">
-			We never stop taking inventory of the trends going on around the web - ensuring you get modern
+			We never stop taking inventory of the trends going on around the web, ensuring you get modern
 			work.
 		</span>
 	</BenefitCard>

@@ -1,12 +1,15 @@
 <script lang="ts">
-	import GlowButton from '$lib/components/GlowButton.svelte';
+	// @ts-ignore
 	import DesignHero from '$lib/images/Figma_Tablet.png?format=webp&quality=75&w=550';
+	// @ts-ignore
+	import MuseumImg from '$lib/images/Museum_Header.png?format=webp&quality=100&w=550';
+	// @ts-ignore
+	import VRLaptop from '$lib/images/VR_Laptop_Left.png?format=webp&quality=75&w=513';
+	import GlowButton from '$lib/components/GlowButton.svelte';
 	import ImgBackground from '$lib/components/ImgBackground.svelte';
 	import BenefitCard from '$lib/components/BenefitCard.svelte';
 	import Checkmark from '$lib/components/Checkmark.svelte';
-	import MuseumImg from '$lib/images/Museum_Header.png?format=webp&quality=100&w=550';
 	import StatCard from '$lib/components/StatCard.svelte';
-	import VRLaptop from '$lib/images/VR_Laptop_Left.png?format=webp&quality=75&w=513';
 	import TestimonialRow from '$lib/components/TestimonialRow.svelte';
 	import { testimonials } from '$lib/testimonials';
 	import FAQ from '$lib/components/FAQ.svelte';

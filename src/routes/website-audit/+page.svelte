@@ -1,12 +1,15 @@
 <script lang="ts">
-	import GlowButton from '$lib/components/GlowButton.svelte';
+	// @ts-ignore
 	import AuditImg from '$lib/images/Laptop_Audit.png?format=webp&quality=75&w=500';
+	// @ts-ignore
+	import TabletAuditImg from '$lib/images/Tablet_Audit.png?format=webp&quality=75&w=513';
+	// @ts-ignore
+	import SaasImg from '$lib/images/Saas_header.png?format=webp&quality=100&w=550';
+	import GlowButton from '$lib/components/GlowButton.svelte';
 	import ImgBackground from '$lib/components/ImgBackground.svelte';
 	import BenefitCard from '$lib/components/BenefitCard.svelte';
 	import Checkmark from '$lib/components/Checkmark.svelte';
-	import SaasImg from '$lib/images/Saas_header.png?format=webp&quality=100&w=550';
 	import StatCard from '$lib/components/StatCard.svelte';
-	import TabletAuditImg from '$lib/images/Tablet_Audit.png?format=webp&quality=75&w=513';
 	import TestimonialRow from '$lib/components/TestimonialRow.svelte';
 	import { testimonials } from '$lib/testimonials';
 	import FAQ from '$lib/components/FAQ.svelte';

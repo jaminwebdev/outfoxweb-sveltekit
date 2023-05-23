@@ -1,5 +1,7 @@
 <script lang="ts">
+	// @ts-ignore
 	import HeroImg from '$lib/images/homepage_hero_img.png?format=webp&quality=75&w=550';
+	// @ts-ignore
 	import HeadlessWPImg from '$lib/images/Headless_WP_iMac.png?format=webp&quality=75&w=550';
 	import GlowButton from '$lib/components/GlowButton.svelte';
 	import ImgBackground from '$lib/components/ImgBackground.svelte';

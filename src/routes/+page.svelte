@@ -9,7 +9,7 @@
 	import PortfolioRow from '$lib/components/PortfolioRow.svelte';
 	import ServicesTabs from '$lib/components/ServicesTabs.svelte';
 	import TestimonialRow from '$lib/components/TestimonialRow.svelte';
-	import { testimonials } from '$lib/testimonials';
+	import { testimonials } from '$lib/utils/testimonials';
 </script>
 
 <header class="grid grid-cols-1 md:grid-cols-2 items-center gap-32 md:gap-14 py-20 md:py-24">

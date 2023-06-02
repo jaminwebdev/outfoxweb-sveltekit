@@ -11,7 +11,7 @@
 	import Checkmark from '$lib/components/Checkmark.svelte';
 	import StatCard from '$lib/components/StatCard.svelte';
 	import TestimonialRow from '$lib/components/TestimonialRow.svelte';
-	import { testimonials } from '$lib/testimonials';
+	import { testimonials } from '$lib/utils/testimonials';
 	import FAQ from '$lib/components/FAQ.svelte';
 </script>
 

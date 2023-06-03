@@ -3,7 +3,7 @@
 	import Navigation from '$lib/components/layout/navigation/Navigation.svelte';
 	import Footer from '$lib/components/layout/Footer.svelte';
 	import BgSpotlight from '$lib/components/BgSpotlight.svelte';
-	import OverflowContainer from '$lib/components/OverflowContainer.svelte';
+	import OverflowContainer from '$lib/components/layout/OverflowContainer.svelte';
 </script>
 
 <div class="relative overflow-hidden">

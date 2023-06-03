@@ -2,9 +2,13 @@
 	import GlowButton from './GlowButton.svelte';
 	import { fade } from 'svelte/transition';
 	import PillButton from './PillButton.svelte';
+	// @ts-ignore
 	import SaasImg from '$lib/images/Saas_header.png?format=webp&quality=100&w=550';
+	// @ts-ignore
 	import CoworkImg from '$lib/images/Cowork_Header.png?format=webp&quality=100&w=550';
+	// @ts-ignore
 	import NonprofitImg from '$lib/images/Nonprofit_Header.png?format=webp&quality=100&w=550';
+	// @ts-ignore
 	import FinanceImg from '$lib/images/Finance_Header.png?format=webp&quality=100&w=550';
 
 	const categories = ['Saas', 'Finance', 'Workspace', 'Nonprofit'];

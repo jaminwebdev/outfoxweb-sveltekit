@@ -8,7 +8,7 @@ import rehypeSlug from 'rehype-slug';
 
 const mdsvexOptions = {
 	extensions: ['.md'],
-	remarkPlugins: [remarkUnwrapImages, [remarkToc, { tight: true }]],
+	remarkPlugins: [remarkUnwrapImages, [remarkToc, { tight: true, ordered: true }]],
 	rehypePlugins: [rehypeSlug],
 	highlight: {
 		highlighter: async (code, lang = 'text') => {

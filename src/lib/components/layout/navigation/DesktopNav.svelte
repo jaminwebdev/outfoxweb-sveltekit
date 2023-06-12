@@ -1,6 +1,10 @@
 <script lang="ts">
 	import SiteLogo from '$lib/components/SiteLogo.svelte';
+
+	export let urlData: string;
+	let prevUrl = '';
 	let selectedMenuItem = 'none';
+
 	const setSelectedMenuItem = (item: string) => {
 		if (selectedMenuItem === item) {
 			selectedMenuItem = 'none';
@@ -8,9 +12,13 @@
 		}
 		selectedMenuItem = item;
 	};
+
+	$: if (prevUrl !== urlData) {
+		selectedMenuItem = 'none';
+	}
 </script>
 
-<div class="py-[28px] grid grid-cols-[minmax(200px,_250px)_1fr] relative">
+<div class="py-[28px] grid grid-cols-[minmax(200px,_250px)_1fr]">
 	<SiteLogo />
 	<ul class="grid gap-12 grid-flow-col text-xl justify-self-end items-center">
 		<li>
@@ -20,7 +28,7 @@
 				on:click={() => setSelectedMenuItem('services')}
 				aria-expanded={selectedMenuItem === 'services'}>Services</button>
 			<div
-				class="opacity-0 invisible absolute bottom-0 bg-secondary-bg-dark transition-all duration-150"
+				class="opacity-0 invisible absolute top-[130px] left-0 bg-secondary-bg-dark transition-all duration-150 w-screen p-3"
 				class:shown={selectedMenuItem === 'services'}>
 				<a href="/blog" on:click={() => setSelectedMenuItem('services')}>More stuff</a>
 			</div>

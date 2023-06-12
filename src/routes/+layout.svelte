@@ -4,6 +4,8 @@
 	import Footer from '$lib/components/layout/Footer.svelte';
 	import BgSpotlight from '$lib/components/BgSpotlight.svelte';
 	import OverflowContainer from '$lib/components/layout/OverflowContainer.svelte';
+	import type { LayoutData } from './$types';
+	export let data: LayoutData;
 </script>
 
 <div class="relative overflow-hidden">
@@ -13,7 +15,7 @@
 	</div>
 
 	<OverflowContainer>
-		<Navigation />
+		<Navigation urlData={data.url} />
 		<slot />
 		<Footer />
 	</OverflowContainer>

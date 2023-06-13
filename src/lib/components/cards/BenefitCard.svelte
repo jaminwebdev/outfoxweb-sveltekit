@@ -1,5 +1,5 @@
 <script lang="ts">
-	import InteractiveLottie from './InteractiveLottie.svelte';
+	import InteractiveLottie from '$lib/components/InteractiveLottie.svelte';
 
 	export let lottiePath = '';
 	export let delay = 0;

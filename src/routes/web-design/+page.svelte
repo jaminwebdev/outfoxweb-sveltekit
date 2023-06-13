@@ -7,9 +7,9 @@
 	import VRLaptop from '$lib/images/VR_Laptop_Left.png?format=webp&quality=75&w=513';
 	import GlowButton from '$lib/components/GlowButton.svelte';
 	import ImgBackground from '$lib/components/ImgBackground.svelte';
-	import BenefitCard from '$lib/components/BenefitCard.svelte';
+	import BenefitCard from '$lib/components/cards/BenefitCard.svelte';
 	import Checkmark from '$lib/components/Checkmark.svelte';
-	import StatCard from '$lib/components/StatCard.svelte';
+	import StatCard from '$lib/components/cards/StatCard.svelte';
 	import TestimonialRow from '$lib/components/TestimonialRow.svelte';
 	import { testimonials } from '$lib/utils/testimonials';
 	import FAQ from '$lib/components/FAQ.svelte';

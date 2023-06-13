@@ -7,7 +7,7 @@
 </script>
 
 <script lang="ts">
-	import TestimonialCard from './TestimonialCard.svelte';
+	import TestimonialCard from '$lib/components/cards/TestimonialCard.svelte';
 
 	export let testimonials: [Testimonial, Testimonial];
 </script>

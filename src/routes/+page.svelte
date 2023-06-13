@@ -5,7 +5,7 @@
 	import HeadlessWPImg from '$lib/images/Headless_WP_iMac.png?format=webp&quality=75&w=550';
 	import GlowButton from '$lib/components/GlowButton.svelte';
 	import ImgBackground from '$lib/components/ImgBackground.svelte';
-	import BenefitCard from '$lib/components/BenefitCard.svelte';
+	import BenefitCard from '$lib/components/cards/BenefitCard.svelte';
 	import PortfolioRow from '$lib/components/PortfolioRow.svelte';
 	import ServicesTabs from '$lib/components/ServicesTabs.svelte';
 	import TestimonialRow from '$lib/components/TestimonialRow.svelte';

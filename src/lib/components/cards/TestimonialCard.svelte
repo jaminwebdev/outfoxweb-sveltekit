@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Testimonial } from './TestimonialRow.svelte';
+	import type { Testimonial } from '$lib/components/TestimonialRow.svelte';
 	export let testimonial: Testimonial;
 	export let classes: string = '';
 </script>

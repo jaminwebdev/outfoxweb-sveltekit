@@ -2,6 +2,8 @@
 	import SiteLogo from '$lib/components/SiteLogo.svelte';
 	import Dropdown from '$lib/components/layout/navigation/Dropdown.svelte';
 	import ServicesMenu from '$lib/components/layout/navigation/menus/ServicesMenu.svelte';
+	import ResourcesMenu from '$lib/components/layout/navigation/menus/ResourcesMenu.svelte';
+	import AboutMenu from '$lib/components/layout/navigation/menus/AboutMenu.svelte';
 
 	export let urlData: string;
 	let prevUrl = '';
@@ -41,11 +43,18 @@
 				on:click={() => setSelectedMenuItem('resources')}
 				aria-expanded={selectedMenuItem === 'resources'}>Resources</button>
 			<Dropdown shown={selectedMenuItem === 'resources'}>
-				<ServicesMenu />
+				<ResourcesMenu />
 			</Dropdown>
 		</li>
 		<li>
-			<button type="button" class="p-5">About</button>
+			<button
+				type="button"
+				class="p-5"
+				on:click={() => setSelectedMenuItem('about')}
+				aria-expanded={selectedMenuItem === 'about'}>About</button>
+			<Dropdown shown={selectedMenuItem === 'about'}>
+				<AboutMenu />
+			</Dropdown>
 		</li>
 		<li>
 			<button class="rounded-lg bg-secondary text-body-text-light py-[12px] px-[28px]"

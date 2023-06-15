@@ -1,6 +1,7 @@
 <script lang="ts">
 	import SiteLogo from '$lib/components/SiteLogo.svelte';
 	import Dropdown from '$lib/components/layout/navigation/Dropdown.svelte';
+	import ServicesMenu from '$lib/components/layout/navigation/menus/ServicesMenu.svelte';
 
 	export let urlData: string;
 	let prevUrl = '';
@@ -30,11 +31,18 @@
 				on:click={() => setSelectedMenuItem('services')}
 				aria-expanded={selectedMenuItem === 'services'}>Services</button>
 			<Dropdown shown={selectedMenuItem === 'services'}>
-				<a href="/blog" on:click={() => setSelectedMenuItem('services')}>More stuff</a>
+				<ServicesMenu />
 			</Dropdown>
 		</li>
 		<li>
-			<button type="button" class="p-5">Resources</button>
+			<button
+				type="button"
+				class="p-5"
+				on:click={() => setSelectedMenuItem('resources')}
+				aria-expanded={selectedMenuItem === 'resources'}>Resources</button>
+			<Dropdown shown={selectedMenuItem === 'resources'}>
+				<ServicesMenu />
+			</Dropdown>
 		</li>
 		<li>
 			<button type="button" class="p-5">About</button>

@@ -4,7 +4,7 @@
 
 <div
 	class:shown
-	class="opacity-0 invisible absolute top-[130px] left-0 bg-secondary-bg-dark transition-all duration-150 w-screen p-3">
+	class="opacity-0 invisible absolute top-0 left-[50%] -translate-x-2/4 bg-secondary-bg-dark w-[calc(100vw-30px)] z-50 rounded-[25px] overflow-hidden">
 	<slot />
 </div>
 
@@ -12,5 +12,7 @@
 	.shown {
 		opacity: 1;
 		visibility: visible;
+		top: 110px;
+		transition: opacity 0.35s ease-out;
 	}
 </style>

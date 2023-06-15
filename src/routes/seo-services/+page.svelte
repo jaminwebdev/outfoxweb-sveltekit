@@ -15,7 +15,8 @@
 	import FAQ from '$lib/components/FAQ.svelte';
 </script>
 
-<header class="grid grid-cols-1 md:grid-cols-2 items-center gap-32 md:gap-14 py-24">
+<header
+	class="grid grid-cols-1 md:grid-cols-[3fr_2fr] items-center gap-32 md:gap-14 py-24 md:py-20">
 	<div class="grid gap-10 md:gap-7">
 		<h1 class="text-center md:text-left">
 			Grow your traffic.<br />
@@ -35,7 +36,7 @@
 			width="500"
 			height="512"
 			alt="laptop and mobile phone mockup of modern website"
-			class="relative z-[1]" />
+			class="relative z-[1] max-h-[425px] object-cover" />
 		<ImgBackground classes="absolute -z-0 -top-[90px] -right-[170px] w-[150%] h-[150%]" />
 	</div>
 </header>

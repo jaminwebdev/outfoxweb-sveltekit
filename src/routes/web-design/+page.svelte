@@ -15,7 +15,7 @@
 	import FAQ from '$lib/components/FAQ.svelte';
 </script>
 
-<header class="grid grid-cols-1 md:grid-cols-2 items-center gap-32 md:gap-14 py-24">
+<header class="grid grid-cols-1 md:grid-cols-2 items-center gap-32 md:gap-14 py-24 md:py-28">
 	<div class="grid gap-10 md:gap-7">
 		<h1 class="text-center md:text-left">Modern Designs for a Modern Web.</h1>
 		<div class="grid gap-4 justify-items-start px-6 md:px-0">

@@ -12,11 +12,11 @@
 	import { testimonials } from '$lib/utils/testimonials';
 </script>
 
-<header class="grid grid-cols-1 md:grid-cols-2 items-center gap-32 md:gap-14 py-20 md:py-24">
+<header class="grid grid-cols-1 md:grid-cols-2 items-center gap-32 md:gap-14 py-20 md:py-16">
 	<div class="grid gap-7">
 		<h1 class="lg:text-[65px] text-center md:text-left">Grow Better <br />& Engage More</h1>
 		<p class="text-center md:text-left">
-			Reach your audience, convert more customers, and rank better with the best website for you.
+			Reach your audience, convert more customers, and rank higher with the best website for you.
 		</p>
 		<GlowButton type="link" link="/showcase" classes="justify-self-center md:justify-self-start"
 			>Showcase</GlowButton>

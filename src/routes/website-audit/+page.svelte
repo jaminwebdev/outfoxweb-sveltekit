@@ -140,7 +140,7 @@
 </section>
 <section id="FAQs" class="flex flex-col items-center mb-[125px]">
 	<h2 class="text-center mb-5">How do we do it?</h2>
-	<Accordion isOpen>
+	<Accordion>
 		<span slot="question">Website crawl</span>
 		<span slot="answer">It depends</span>
 	</Accordion>
@@ -171,7 +171,7 @@
 
 <section id="FAQs" class="flex flex-col items-center mt-[125px]">
 	<h2 class="text-center mb-5">FAQs</h2>
-	<Accordion isOpen>
+	<Accordion>
 		<span slot="question">What does the website audit cover?</span>
 		<span slot="answer">It depends</span>
 	</Accordion>

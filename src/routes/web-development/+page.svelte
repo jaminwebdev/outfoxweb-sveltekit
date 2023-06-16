@@ -175,7 +175,7 @@
 </section>
 <section id="FAQs" class="flex flex-col items-center">
 	<h2 class="text-center mb-5">FAQs</h2>
-	<Accordion isOpen>
+	<Accordion>
 		<span slot="question">How long does it take to build a new site?</span>
 		<span slot="answer">It depends</span>
 	</Accordion>

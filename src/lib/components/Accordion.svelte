@@ -1,15 +1,23 @@
 <script lang="ts">
-	import { slide } from 'svelte/transition';
-	export let classes = '';
+	export let bodyClasses = '';
 	export let isOpen = false;
-	const toggle = () => (isOpen = !isOpen);
+	let panel: HTMLDivElement;
+
+	const toggle = () => {
+		isOpen = !isOpen;
+		if (isOpen) {
+			panel.style.maxHeight = panel.scrollHeight + 'px';
+			return;
+		}
+		panel.style.maxHeight = '0px';
+	};
 </script>
 
 <div class="w-full max-w-[900px] mt-4">
 	<button
 		on:click={toggle}
 		aria-expanded={isOpen}
-		class="grid grid-cols-[1fr,_min-content] gap-2 items-center text-left w-full justify-between bg-secondary-bg-light dark:bg-secondary-bg-dark rounded-lg p-5 {classes}">
+		class="grid grid-cols-[1fr,_min-content] gap-2 items-center text-left w-full justify-between bg-secondary-bg-light dark:bg-secondary-bg-dark rounded-lg p-5">
 		<slot name="question" />
 		<svg
 			style="tran"
@@ -23,9 +31,11 @@
 			class="{isOpen ? '-rotate-90' : 'rotate-90'} transition-transform duration-200"
 			stroke="currentColor"><path d="M9 5l7 7-7 7" /></svg>
 	</button>
-	{#if isOpen}
-		<div transition:slide={{ duration: 300 }} class="text-left w-full max-w-[900px]">
-			<slot name="answer" />
-		</div>
-	{/if}
+	<div
+		bind:this={panel}
+		class="text-left w-full max-w-[900px] max-h-0 overflow-hidden transition-all duration-200 ease-out px-5 {isOpen
+			? 'py-5'
+			: ''} {bodyClasses}">
+		<slot name="answer" />
+	</div>
 </div>

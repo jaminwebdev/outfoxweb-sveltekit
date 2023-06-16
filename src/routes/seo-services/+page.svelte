@@ -145,7 +145,7 @@
 </section>
 <section id="FAQs" class="flex flex-col items-center mb-[125px]">
 	<h2 class="text-center mb-5">How do we do it?</h2>
-	<Accordion isOpen>
+	<Accordion>
 		<span slot="question">Discovery</span>
 		<span slot="answer">It depends</span>
 	</Accordion>
@@ -184,7 +184,7 @@
 
 <section id="FAQs" class="flex flex-col items-center mt-[125px]">
 	<h2 class="text-center mb-5">FAQs</h2>
-	<Accordion isOpen>
+	<Accordion>
 		<span slot="question">How long does SEO take to see results?</span>
 		<span slot="answer">It depends</span>
 	</Accordion>

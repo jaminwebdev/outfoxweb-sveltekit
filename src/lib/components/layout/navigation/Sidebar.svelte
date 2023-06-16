@@ -12,19 +12,19 @@
 	class:open>
 	<nav class="pt-36 pb-8 px-8 text-xl">
 		<div class="bg-body-color-light dark:bg-body-color-dark">
-			<Accordion classes="z-50">
+			<Accordion bodyClasses="px-0">
 				<span slot="question">Services</span>
 				<div slot="answer">
 					<ServicesMenu on:click={handleMobileNav} />
 				</div>
 			</Accordion>
-			<Accordion>
+			<Accordion bodyClasses="px-0">
 				<span slot="question">Resources</span>
 				<div slot="answer">
 					<ResourcesMenu on:click={handleMobileNav} />
 				</div>
 			</Accordion>
-			<Accordion>
+			<Accordion bodyClasses="px-0">
 				<span slot="question">About</span>
 				<div slot="answer">
 					<AboutMenu on:click={handleMobileNav} />

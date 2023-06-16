@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { slide } from 'svelte/transition';
+	export let classes = '';
 	export let isOpen = false;
 	const toggle = () => (isOpen = !isOpen);
 </script>
@@ -8,7 +9,7 @@
 	<button
 		on:click={toggle}
 		aria-expanded={isOpen}
-		class="grid grid-cols-[1fr,_min-content] gap-2 items-center text-left w-full justify-between bg-secondary-bg-light dark:bg-secondary-bg-dark rounded-lg p-5">
+		class="grid grid-cols-[1fr,_min-content] gap-2 items-center text-left w-full justify-between bg-secondary-bg-light dark:bg-secondary-bg-dark rounded-lg p-5 {classes}">
 		<slot name="question" />
 		<svg
 			style="tran"
@@ -23,7 +24,7 @@
 			stroke="currentColor"><path d="M9 5l7 7-7 7" /></svg>
 	</button>
 	{#if isOpen}
-		<div transition:slide={{ duration: 300 }} class="text-left w-full max-w-[900px] p-5">
+		<div transition:slide={{ duration: 300 }} class="text-left w-full max-w-[900px]">
 			<slot name="answer" />
 		</div>
 	{/if}

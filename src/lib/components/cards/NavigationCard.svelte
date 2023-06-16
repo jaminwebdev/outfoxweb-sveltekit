@@ -20,16 +20,19 @@
 
 <a
 	href={link}
+	on:click
 	on:mouseenter={mouseEntered}
 	on:mouseleave={mouseLeft}
-	class="p-[70px_40px] hover:bg-body-color-dark {bgColors[bgColor]}">
+	class="px-5 py-7 lg:p-[70px_40px] hover:bg-body-color-dark {bgColors[bgColor]}">
 	<div class="grid gap-2">
-		<div class="max-w-[60px] max-h-[60px] -ml-2">
-			<InteractiveLottie path={lottiePath} bind:forceAnimate={play} />
+		<div class="flex lg:block items-center gap-2">
+			<div class="max-w-[60px] max-h-[60px] -ml-2 md:mb-2">
+				<InteractiveLottie path={lottiePath} bind:forceAnimate={play} />
+			</div>
+			<h3 class="text-xl">
+				<slot name="heading" />
+			</h3>
 		</div>
-		<h3 class="text-xl">
-			<slot name="heading" />
-		</h3>
 		<p>
 			<slot name="body" />
 		</p>

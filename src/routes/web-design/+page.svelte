@@ -12,7 +12,7 @@
 	import StatCard from '$lib/components/cards/StatCard.svelte';
 	import TestimonialRow from '$lib/components/TestimonialRow.svelte';
 	import { testimonials } from '$lib/utils/testimonials';
-	import FAQ from '$lib/components/FAQ.svelte';
+	import Accordion from '$lib/components/Accordion.svelte';
 </script>
 
 <header class="grid grid-cols-1 md:grid-cols-2 items-center gap-32 md:gap-14 py-24 md:py-28">
@@ -140,11 +140,11 @@
 </section>
 <section id="FAQs" class="flex flex-col items-center mb-[125px]">
 	<h2 class="text-center mb-5">How do we do it?</h2>
-	<FAQ isOpen>
+	<Accordion isOpen>
 		<span slot="question">Discovery</span>
 		<span slot="answer">It depends</span>
-	</FAQ>
-	<FAQ>
+	</Accordion>
+	<Accordion>
 		<span slot="question">Market and competitor analysis</span>
 		<div slot="answer">
 			<p>
@@ -157,33 +157,33 @@
 				the event a page goes down, we’re notified in 10 minutes or less.
 			</p>
 		</div>
-	</FAQ>
-	<FAQ>
+	</Accordion>
+	<Accordion>
 		<span slot="question">Keyword research</span>
 		<span slot="answer">It depends</span>
-	</FAQ>
-	<FAQ>
+	</Accordion>
+	<Accordion>
 		<span slot="question">Wireframing & revisions</span>
 		<span slot="answer">It depends</span>
-	</FAQ>
-	<FAQ>
+	</Accordion>
+	<Accordion>
 		<span slot="question">Design & revisions</span>
 		<span slot="answer">It depends</span>
-	</FAQ>
-	<FAQ>
+	</Accordion>
+	<Accordion>
 		<span slot="question">Delivery</span>
 		<span slot="answer">It depends</span>
-	</FAQ>
+	</Accordion>
 </section>
 <TestimonialRow testimonials={[testimonials['kyle'], testimonials['stacy']]} />
 
 <section id="FAQs" class="flex flex-col items-center mt-[125px]">
 	<h2 class="text-center mb-5">FAQs</h2>
-	<FAQ isOpen>
+	<Accordion isOpen>
 		<span slot="question">How long does a design take?</span>
 		<span slot="answer">It depends</span>
-	</FAQ>
-	<FAQ>
+	</Accordion>
+	<Accordion>
 		<span slot="question">How many revisions do you allow?</span>
 		<div slot="answer">
 			<p>
@@ -196,9 +196,9 @@
 				the event a page goes down, we’re notified in 10 minutes or less.
 			</p>
 		</div>
-	</FAQ>
-	<FAQ>
+	</Accordion>
+	<Accordion>
 		<span slot="question">Do you provide copywriting as well?</span>
 		<span slot="answer">It depends</span>
-	</FAQ>
+	</Accordion>
 </section>

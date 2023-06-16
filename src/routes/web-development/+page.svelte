@@ -10,7 +10,7 @@
 	import StatCard from '$lib/components/cards/StatCard.svelte';
 	import TestimonialRow from '$lib/components/TestimonialRow.svelte';
 	import { testimonials } from '$lib/utils/testimonials';
-	import FAQ from '$lib/components/FAQ.svelte';
+	import Accordion from '$lib/components/Accordion.svelte';
 </script>
 
 <header class="grid grid-cols-1 md:grid-cols-2 items-center gap-32 md:gap-14 py-24">
@@ -175,11 +175,11 @@
 </section>
 <section id="FAQs" class="flex flex-col items-center">
 	<h2 class="text-center mb-5">FAQs</h2>
-	<FAQ isOpen>
+	<Accordion isOpen>
 		<span slot="question">How long does it take to build a new site?</span>
 		<span slot="answer">It depends</span>
-	</FAQ>
-	<FAQ>
+	</Accordion>
+	<Accordion>
 		<span slot="question">Do you offer hosting and maintenance?</span>
 		<div slot="answer">
 			<p>
@@ -192,13 +192,13 @@
 				the event a page goes down, we’re notified in 10 minutes or less.
 			</p>
 		</div>
-	</FAQ>
-	<FAQ>
+	</Accordion>
+	<Accordion>
 		<span slot="question">What are Google’s Core Web Vitals?</span>
 		<span slot="answer">It depends</span>
-	</FAQ>
-	<FAQ>
+	</Accordion>
+	<Accordion>
 		<span slot="question">Do you also offer design and SEO services for websites you build?</span>
 		<span slot="answer">It depends</span>
-	</FAQ>
+	</Accordion>
 </section>

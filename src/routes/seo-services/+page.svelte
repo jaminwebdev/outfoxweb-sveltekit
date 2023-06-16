@@ -12,7 +12,7 @@
 	import StatCard from '$lib/components/cards/StatCard.svelte';
 	import TestimonialRow from '$lib/components/TestimonialRow.svelte';
 	import { testimonials } from '$lib/utils/testimonials';
-	import FAQ from '$lib/components/FAQ.svelte';
+	import Accordion from '$lib/components/Accordion.svelte';
 </script>
 
 <header
@@ -145,11 +145,11 @@
 </section>
 <section id="FAQs" class="flex flex-col items-center mb-[125px]">
 	<h2 class="text-center mb-5">How do we do it?</h2>
-	<FAQ isOpen>
+	<Accordion isOpen>
 		<span slot="question">Discovery</span>
 		<span slot="answer">It depends</span>
-	</FAQ>
-	<FAQ>
+	</Accordion>
+	<Accordion>
 		<span slot="question">Market and competitor analysis</span>
 		<div slot="answer">
 			<p>
@@ -162,33 +162,33 @@
 				the event a page goes down, we’re notified in 10 minutes or less.
 			</p>
 		</div>
-	</FAQ>
-	<FAQ>
+	</Accordion>
+	<Accordion>
 		<span slot="question">Keyword research</span>
 		<span slot="answer">It depends</span>
-	</FAQ>
-	<FAQ>
+	</Accordion>
+	<Accordion>
 		<span slot="question">Content strategy</span>
 		<span slot="answer">It depends</span>
-	</FAQ>
-	<FAQ>
+	</Accordion>
+	<Accordion>
 		<span slot="question">On-page optimizations</span>
 		<span slot="answer">It depends</span>
-	</FAQ>
-	<FAQ>
+	</Accordion>
+	<Accordion>
 		<span slot="question">Delivery</span>
 		<span slot="answer">It depends</span>
-	</FAQ>
+	</Accordion>
 </section>
 <TestimonialRow testimonials={[testimonials['kyle'], testimonials['stacy']]} />
 
 <section id="FAQs" class="flex flex-col items-center mt-[125px]">
 	<h2 class="text-center mb-5">FAQs</h2>
-	<FAQ isOpen>
+	<Accordion isOpen>
 		<span slot="question">How long does SEO take to see results?</span>
 		<span slot="answer">It depends</span>
-	</FAQ>
-	<FAQ>
+	</Accordion>
+	<Accordion>
 		<span slot="question">How many words should a page or blog be?</span>
 		<div slot="answer">
 			<p>
@@ -201,9 +201,9 @@
 				the event a page goes down, we’re notified in 10 minutes or less.
 			</p>
 		</div>
-	</FAQ>
-	<FAQ>
+	</Accordion>
+	<Accordion>
 		<span slot="question">Why isn't my website ranking on Google?</span>
 		<span slot="answer">It depends</span>
-	</FAQ>
+	</Accordion>
 </section>

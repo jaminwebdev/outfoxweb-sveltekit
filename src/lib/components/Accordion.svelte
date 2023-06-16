@@ -1,7 +1,15 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+
 	export let bodyClasses = '';
 	export let isOpen = false;
 	let panel: HTMLDivElement;
+
+	onMount(() => {
+		if (isOpen) {
+			panel.style.maxHeight = panel.scrollHeight + 'px';
+		}
+	});
 
 	const toggle = () => {
 		isOpen = !isOpen;

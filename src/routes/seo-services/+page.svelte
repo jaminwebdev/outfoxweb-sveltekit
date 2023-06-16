@@ -145,7 +145,7 @@
 </section>
 <section id="FAQs" class="flex flex-col items-center mb-[125px]">
 	<h2 class="text-center mb-5">How do we do it?</h2>
-	<Accordion>
+	<Accordion isOpen>
 		<span slot="question">Discovery</span>
 		<span slot="answer">It depends</span>
 	</Accordion>

@@ -33,7 +33,7 @@
 				on:click={() => setSelectedMenuItem('services')}
 				aria-expanded={selectedMenuItem === 'services'}>Services</button>
 			<Dropdown shown={selectedMenuItem === 'services'}>
-				<ServicesMenu />
+				<ServicesMenu on:click={() => setSelectedMenuItem('none')} />
 			</Dropdown>
 		</li>
 		<li>
@@ -43,7 +43,7 @@
 				on:click={() => setSelectedMenuItem('resources')}
 				aria-expanded={selectedMenuItem === 'resources'}>Resources</button>
 			<Dropdown shown={selectedMenuItem === 'resources'}>
-				<ResourcesMenu />
+				<ResourcesMenu on:click={() => setSelectedMenuItem('none')} />
 			</Dropdown>
 		</li>
 		<li>
@@ -53,7 +53,7 @@
 				on:click={() => setSelectedMenuItem('about')}
 				aria-expanded={selectedMenuItem === 'about'}>About</button>
 			<Dropdown shown={selectedMenuItem === 'about'}>
-				<AboutMenu />
+				<AboutMenu on:click={() => setSelectedMenuItem('none')} />
 			</Dropdown>
 		</li>
 		<li>

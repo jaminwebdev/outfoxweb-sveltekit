@@ -8,9 +8,9 @@
 </script>
 
 <aside
-	class="fixed top-0 z-10 w-full h-full bg-body-color-light dark:bg-body-color-dark text-body-text-dark dark:text-body-text-light overflow-y-scroll"
+	class="fixed top-[100px] pt-10 pb-[150px] z-10 w-full h-screen bg-body-color-light dark:bg-body-color-dark text-body-text-dark dark:text-body-text-light overflow-y-scroll"
 	class:open>
-	<nav class="pt-36 pb-8 px-8 text-xl">
+	<nav class="px-8 text-xl">
 		<div class="bg-body-color-light dark:bg-body-color-dark">
 			<Accordion bodyClasses="px-0">
 				<span slot="question">Services</span>

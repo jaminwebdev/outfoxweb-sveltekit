@@ -9,7 +9,8 @@
 </script>
 
 <div class="relative overflow-hidden">
-	<div class="w-screen h-[500px] md:h-[1000px] overflow-hidden absolute top-0 pointer-events-none">
+	<div
+		class="w-screen h-[500px] md:h-[1000px] overflow-hidden absolute top-0 pointer-events-none opacity-0 lg:opacity-100">
 		<BgSpotlight
 			classes="absolute -top-[30vw] -right-[34%] md:-top-[420px] md:-right-[40%] w-[80%]" />
 	</div>

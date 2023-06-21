@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { formatDate } from '$lib/utils/dates';
-	export let data;
+	import type { PageData } from './$types';
+	export let data: PageData;
 
 	const { title, date, content } = data;
 </script>

@@ -14,7 +14,7 @@
 	const toggle = () => {
 		isOpen = !isOpen;
 		if (isOpen) {
-			panel.style.maxHeight = panel.scrollHeight + 'px';
+			panel.style.maxHeight = panel.scrollHeight + 30 + 'px';
 			return;
 		}
 		panel.style.maxHeight = '0px';

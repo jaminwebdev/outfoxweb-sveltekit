@@ -2,6 +2,10 @@
 	import type { PageData } from './$types';
 	export let data: PageData;
 	const { posts, searchParams } = data;
+	$: ({ params } = data);
+	$: currentPage = params.page;
+	$: trimStart = (+currentPage - 1) * 9;
+	$: trimEnd = trimStart + 9;
 	$: search = searchParams.get('search') ?? '';
 	$: filteredPosts = posts.filter((post) =>
 		post.search.toLowerCase().includes(search.toLowerCase())
@@ -16,7 +20,7 @@
 
 	<div>
 		{#if filteredPosts.length}
-			{#each filteredPosts.slice(0, 9) as post}
+			{#each filteredPosts.slice(trimStart, trimEnd) as post}
 				<a href={post.path}>
 					<h3>{post.meta.title}</h3>
 					<p>{post.meta.date}</p>
@@ -29,13 +33,18 @@
 	</div>
 	<div class="flex gap-3 justify-center my-8 text-lg">
 		{#each Array(totalPages) as _, idx}
-			{#if idx === 0}
+			{#if idx === +currentPage - 1}
 				<span class="text-primary">{idx + 1}</span>
+			{:else if idx === 0}
+				<a href="/blog{search ? `?search=${search}` : ''}"> 1 </a>
 			{:else}
 				<a href="/blog/page/{idx + 1}{search ? `?search=${search}` : ''}">
 					{idx + 1}
 				</a>
 			{/if}
 		{/each}
+		{#if totalPages < 1}
+			<a href="/blog{search ? `?search=${search}` : ''}"> 1 </a>
+		{/if}
 	</div>
 </section>

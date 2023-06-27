@@ -3,7 +3,7 @@
 </script>
 
 <div class="grid grid-cols-1 lg:grid-cols-4">
-	<NavigationCard lottiePath="/lottie/Pencil_primary.json" link="/web-development" on:click>
+	<NavigationCard lottiePath="/lottie/Pencil_primary.json" link="/blog" on:click>
 		<span slot="heading">Blog</span>
 		<span slot="body"> Stay up to date with the latest trends in dev, design and SEO </span>
 	</NavigationCard>

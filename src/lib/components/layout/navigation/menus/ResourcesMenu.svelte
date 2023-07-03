@@ -10,7 +10,7 @@
 	<NavigationCard
 		lottiePath="/lottie/Drawing_tertiary.json"
 		bgColor="tertiary"
-		link="web-design"
+		link="/web-design"
 		on:click>
 		<span slot="heading">Web Design</span>
 		<span slot="body"> Turn your web dud in to a web stud with best UX research and insights </span>

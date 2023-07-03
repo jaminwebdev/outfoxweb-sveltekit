@@ -10,7 +10,7 @@
 	<NavigationCard
 		lottiePath="/lottie/Consult_tertiary.json"
 		bgColor="tertiary"
-		link="web-design"
+		link="/web-design"
 		on:click>
 		<span slot="heading">Contact Us</span>
 		<span slot="body"> We'd love to chat about anything you have in mind </span>

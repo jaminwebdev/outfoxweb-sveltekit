@@ -5,6 +5,7 @@ const config: PlaywrightTestConfig = {
 		command: 'npm run start:prod',
 		port: 4173
 	},
+	reporter: 'html',
 	testDir: 'tests'
 };
 

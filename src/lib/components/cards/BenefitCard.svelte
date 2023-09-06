@@ -6,17 +6,9 @@
 	export let timeLoop = 4000;
 	export let speed = 1;
 	export let initialPlay = false;
-
-	let isHovering = false;
-
-	const mouseEntered = () => (isHovering = true);
-	const mouseLeft = () => (isHovering = false);
 </script>
 
-<div
-	class="bg-secondary-bg-light dark:bg-secondary-bg-dark p-[25px] rounded-lg grid gap-2"
-	on:mouseenter={mouseEntered}
-	on:mouseleave={mouseLeft}>
+<div class="bg-secondary-bg-light dark:bg-secondary-bg-dark p-[25px] rounded-lg grid gap-2">
 	<div class="max-w-[60px]">
 		<InteractiveLottie
 			path={lottiePath}

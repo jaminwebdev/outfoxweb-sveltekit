@@ -22,6 +22,7 @@
 		min-height: 24px;
 		transition: transform 0.3s ease-in-out;
 		z-index: 20;
+		view-transition-name: hamburger;
 	}
 
 	svg line {

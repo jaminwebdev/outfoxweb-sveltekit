@@ -4,7 +4,7 @@
 	export let urlData: string;
 </script>
 
-<nav>
+<nav class="relative z-20">
 	<div class="hidden lg:block">
 		<DesktopNav {urlData} />
 	</div>
@@ -12,3 +12,9 @@
 		<MobileNav />
 	</div>
 </nav>
+
+<style>
+	nav {
+		view-transition-name: nav;
+	}
+</style>

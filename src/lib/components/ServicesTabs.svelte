@@ -36,8 +36,8 @@
 			<div class="col-start-1 row-start-1">
 				<div
 					class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-32 items-center"
-					in:fade={{ duration: 150, delay: 200 }}
-					out:fade={{ duration: 150 }}>
+					in:fade|global={{ duration: 150, delay: 200 }}
+					out:fade|global={{ duration: 150 }}>
 					<div class="py-14 grid gap-4 justify-items-start">
 						<h3>Incredibly fast. <br />Incredibly engaging.</h3>
 						<p>With our battle-tested technology stack, your audience never has to wait.</p>
@@ -63,8 +63,8 @@
 			<div class="col-start-1 row-start-1">
 				<div
 					class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-32 items-center"
-					in:fade={{ duration: 150, delay: 200 }}
-					out:fade={{ duration: 150 }}>
+					in:fade|global={{ duration: 150, delay: 200 }}
+					out:fade|global={{ duration: 150 }}>
 					<div class="py-14 grid gap-4 justify-items-start">
 						<h3>Design</h3>
 						<p>With our battle-tested technology stack, your audience never has to wait.</p>
@@ -89,8 +89,8 @@
 			<div class="col-start-1 row-start-1">
 				<div
 					class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-32 items-center"
-					in:fade={{ duration: 150, delay: 200 }}
-					out:fade={{ duration: 150 }}>
+					in:fade|global={{ duration: 150, delay: 200 }}
+					out:fade|global={{ duration: 150 }}>
 					<div class="py-14 grid gap-4 justify-items-start">
 						<h3>SEO</h3>
 						<p>With our battle-tested technology stack, your audience never has to wait.</p>
@@ -115,8 +115,8 @@
 			<div class="col-start-1 row-start-1">
 				<div
 					class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-32 items-center"
-					in:fade={{ duration: 150, delay: 200 }}
-					out:fade={{ duration: 150 }}>
+					in:fade|global={{ duration: 150, delay: 200 }}
+					out:fade|global={{ duration: 150 }}>
 					<div class="py-14 grid gap-4 justify-items-start">
 						<h3>Audits</h3>
 						<p>With our battle-tested technology stack, your audience never has to wait.</p>

@@ -46,7 +46,7 @@
 </script>
 
 {#if formStatus === 'loading'}
-	<div transition:fade>
+	<div transition:fade|global>
 		<p>Submitting...</p>
 	</div>
 {/if}
@@ -70,7 +70,7 @@
 {/if}
 
 {#if formStatus === 'error'}
-	<div transition:fade>
+	<div transition:fade|global>
 		<p>Whoopsies</p>
 	</div>
 {/if}
@@ -78,15 +78,15 @@
 {#if formStatus === 'initial'}
 	<div>
 		{#if steps[currentStep] === 'project'}
-			<div in:fade={{ duration: 250, delay: 400 }} out:fade={{ duration: 150 }}>
+			<div in:fade|global={{ duration: 250, delay: 400 }} out:fade|global={{ duration: 150 }}>
 				<ProjectStep on:changeStep={changeStep} bind:projectType />
 			</div>
 		{:else if steps[currentStep] === 'description'}
-			<div in:fade={{ duration: 250, delay: 400 }} out:fade={{ duration: 150 }}>
+			<div in:fade|global={{ duration: 250, delay: 400 }} out:fade|global={{ duration: 150 }}>
 				<DescriptionStep on:changeStep={changeStep} bind:description />
 			</div>
 		{:else if steps[currentStep] === 'info'}
-			<div in:fade={{ duration: 250, delay: 400 }} out:fade={{ duration: 150 }}>
+			<div in:fade|global={{ duration: 250, delay: 400 }} out:fade|global={{ duration: 150 }}>
 				<InfoStep on:changeStep={changeStep} on:submitForm={submitForm} bind:name bind:email />
 			</div>
 		{/if}

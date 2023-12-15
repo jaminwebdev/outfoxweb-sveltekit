@@ -18,7 +18,7 @@
 </div>
 
 {#if projectType.length > 0}
-	<div transition:fade class="grid grid-cols-[repeat(2,_max-content)] justify-between gap-3">
+	<div transition:fade|global class="grid grid-cols-[repeat(2,_max-content)] justify-between gap-3">
 		<Button classes="col-start-2" on:btnClicked={() => handleClick('next')}>Next</Button>
 	</div>
 {/if}

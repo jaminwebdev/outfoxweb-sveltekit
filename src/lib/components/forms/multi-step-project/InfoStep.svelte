@@ -30,7 +30,7 @@
 			on:blur={() => (nameBlurred = true)}
 			class="text-body-text-dark" />
 		{#if name.length < 1 && nameTouched && nameBlurred}
-			<p transition:fade class="text-secondary">We need to know what to call you 😀.</p>
+			<p transition:fade|global class="text-secondary">We need to know what to call you 😀.</p>
 		{/if}
 	</label>
 
@@ -43,7 +43,7 @@
 			on:blur={() => (emailBlurred = true)}
 			class="text-body-text-dark" />
 		{#if !emailValid.success && emailTouched && emailBlurred}
-			<p transition:fade class="text-secondary">It's hard to email you without an email 😎.</p>
+			<p transition:fade|global class="text-secondary">It's hard to email you without an email 😎.</p>
 		{/if}
 	</label>
 </div>
@@ -51,7 +51,7 @@
 <div class="grid grid-cols-[repeat(2,_max-content)] justify-between gap-3">
 	<Button type="ghost" color="tertiary" on:btnClicked={() => handleClick('prev')}>Prev</Button>
 	{#if name.length > 0 && emailValid.success}
-		<span transition:fade>
+		<span transition:fade|global>
 			<Button on:btnClicked={submitForm}>Submit</Button>
 		</span>
 	{/if}

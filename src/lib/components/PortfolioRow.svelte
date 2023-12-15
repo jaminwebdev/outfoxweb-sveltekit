@@ -50,32 +50,32 @@
 				src={SaasImg}
 				alt="Saas website design"
 				class="max-h-[380px] lg:max-h-[470px] -mb-[80px] lg:ml-[80px] object-contain col-start-1 row-start-1 justify-self-center lg:justify-self-auto"
-				in:fade={{ duration: 150, delay: 200 }}
-				out:fade={{ duration: 150 }} />
+				in:fade|global={{ duration: 150, delay: 200 }}
+				out:fade|global={{ duration: 150 }} />
 		{/if}
 		{#if activeCategory === 'Finance'}
 			<img
 				src={FinanceImg}
 				alt="Financial advisor & fiduciary website design"
 				class="max-h-[380px] lg:max-h-[470px] -mb-[80px] lg:ml-[80px] object-contain col-start-1 row-start-1 justify-self-center lg:justify-self-auto"
-				in:fade={{ duration: 150, delay: 200 }}
-				out:fade={{ duration: 150 }} />
+				in:fade|global={{ duration: 150, delay: 200 }}
+				out:fade|global={{ duration: 150 }} />
 		{/if}
 		{#if activeCategory === 'Workspace'}
 			<img
 				src={CoworkImg}
 				alt="Cowork space website design"
 				class="max-h-[380px] lg:max-h-[470px] -mb-[80px] lg:ml-[80px] object-contain col-start-1 row-start-1 justify-self-center lg:justify-self-auto"
-				in:fade={{ duration: 150, delay: 200 }}
-				out:fade={{ duration: 150 }} />
+				in:fade|global={{ duration: 150, delay: 200 }}
+				out:fade|global={{ duration: 150 }} />
 		{/if}
 		{#if activeCategory === 'Nonprofit'}
 			<img
 				src={NonprofitImg}
 				alt="Nonprofit website design"
 				class="max-h-[380px] lg:max-h-[470px] -mb-[80px] lg:ml-[80px] object-contain col-start-1 row-start-1 justify-self-center lg:justify-self-auto"
-				in:fade={{ duration: 150, delay: 200 }}
-				out:fade={{ duration: 150 }} />
+				in:fade|global={{ duration: 150, delay: 200 }}
+				out:fade|global={{ duration: 150 }} />
 		{/if}
 	</div>
 </section>

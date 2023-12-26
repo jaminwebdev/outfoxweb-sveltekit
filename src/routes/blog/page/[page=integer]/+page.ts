@@ -5,7 +5,7 @@ export const load: PageLoad = async ({ url, params }) => {
 	// await parent (root) layout where all blog posts are loaded
 	if (params.page === '1') {
 		const searchParams = url.searchParams ? `?${url.searchParams}` : '';
-		throw redirect(302, `/blog${searchParams}`);
+		redirect(302, `/blog${searchParams}`);
 	}
 	return {
 		searchParams: url.searchParams,

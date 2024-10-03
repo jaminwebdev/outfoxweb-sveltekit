@@ -10,27 +10,48 @@
 @layer base {
 	body {
 		font-family: Inter, system-ui, sans-serif;
-		@apply bg-body-color-light text-body-text-dark;
-		@apply dark:bg-body-color-dark dark:text-body-text-light;
 		overflow-x: hidden;
+		@apply text-body-text;
 	}
-	h1 {
+	body h1 {
 		@apply text-4xl md:text-[55px] leading-tight font-black;
 	}
 
-	h2 {
+	body h2 {
 		@apply text-3xl md:text-[40px] leading-[2.75rem] font-black;
 	}
 
-	h3 {
+	body h3 {
 		@apply text-2xl md:text-3xl font-bold;
 	}
 
-	h4 {
+	body h4 {
 		@apply text-lg md:text-xl font-semibold;
 	}
-	p {
+	body p {
 		@apply text-lg;
+	}
+
+	:root {
+		--color-primary: 142 89 237;
+		--color-secondary: 25 140 232;
+		--color-tertiary: 56 203 159;
+		--color-orange: 247 117 76;
+		--color-body-text: #1d1d20;
+		--body-color: #f4f4f5;
+		--body-color-secondary: #e6edf4;
+		--body-color-tertiary: #cad9e8;
+	}
+
+	:root[class~='dark'] {
+		--color-primary: 98 233 195;
+		--color-secondary: 25 140 232;
+		--color-tertiary: 142 89 237;
+		--color-orange: 247 117 76;
+		--color-body-text: #f4f4f5;
+		--body-color: #1d1d20;
+		--body-color-secondary: #1f2326;
+		--body-color-tertiary: #4c4f51;
 	}
 }
 

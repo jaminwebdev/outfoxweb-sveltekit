@@ -14,6 +14,6 @@
 <button
 	on:click={handleClick}
 	class={` ${active ? pillColors['active'] : pillColors['inactive']}
-rounded-md bg-secondary/20 py-[5px] px-[14px]`}>
+rounded-md py-[5px] px-[14px]`}>
 	<slot />
 </button>

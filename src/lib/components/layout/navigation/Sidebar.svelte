@@ -8,7 +8,7 @@
 </script>
 
 <aside
-	class="fixed top-[100px] pt-10 pb-[200px] z-10 w-full h-screen bg-body-color-light dark:bg-body-color-dark text-body-text-dark dark:text-body-text-light overflow-y-scroll"
+	class="fixed top-[100px] pt-10 pb-[200px] z-10 w-full h-screen bg-body-color-light dark:bg-body-color-dark text-body-text dark:text-body-text overflow-y-scroll"
 	class:open>
 	<nav class="px-8 text-xl">
 		<div class="bg-body-color-light dark:bg-body-color-dark">

@@ -19,7 +19,7 @@
 	<h4 class="text-[20px] mb-3">
 		<slot name="subtitle" />
 	</h4>
-	<p class="text-body-text-dark dark:text-body-text-light">
+	<p class="text-body-text dark:text-body-text">
 		<slot name="body" />
 	</p>
 </div>

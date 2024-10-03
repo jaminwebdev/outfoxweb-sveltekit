@@ -12,9 +12,9 @@
 		primary:
 			'bg-primary shadow-[0_0_0.5em_0] shadow-primary after:shadow-[0_0_2.25rem] after:shadow-primary',
 		secondary:
-			'bg-secondary shadow-[0_0_.5em_0] shadow-secondary after:shadow-[0_0_2.25rem] after:shadow-secondary text-body-text-light',
+			'bg-secondary shadow-[0_0_.5em_0] shadow-secondary after:shadow-[0_0_2.25rem] after:shadow-secondary text-body-text',
 		tertiary:
-			'bg-tertiary shadow-[0_0_.5em_0] shadow-tertiary after:shadow-[0_0_2.25rem] after:shadow-tertiary text-body-text-light'
+			'bg-tertiary shadow-[0_0_.5em_0] shadow-tertiary after:shadow-[0_0_2.25rem] after:shadow-tertiary text-body-text'
 	};
 </script>
 
@@ -28,7 +28,7 @@
 	px-[28px] 
 	rounded-lg 
 	inline-block 
-	text-body-text-dark 
+	text-body-text 
 	relative 
 	font-medium 
 	cursor-pointer
@@ -44,7 +44,7 @@
 	px-[28px] 
 	rounded-lg 
 	inline-block 
-	text-body-text-dark 
+	text-body-text 
 	relative 
 	font-medium 
 	cursor-pointer

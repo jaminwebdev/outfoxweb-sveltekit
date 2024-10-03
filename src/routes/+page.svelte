@@ -56,7 +56,7 @@
 <ServicesTabs />
 <TestimonialRow testimonials={[testimonials['kyle'], testimonials['stacy']]} />
 <section
-	class="rounded-2xl bg-secondary-bg-light dark:bg-secondary-bg-dark px-6 py-12 md:p-[60px_] grid grid-cols-1 lg:grid-cols-2 gap-4 items-center my-[125px]">
+	class="rounded-2xl bg-body-color-secondary px-6 py-12 md:p-[60px_] grid grid-cols-1 lg:grid-cols-2 gap-4 items-center my-[125px]">
 	<div class="relative flex justify-center lg:justify-start">
 		<img
 			src={HeadlessWPImg}

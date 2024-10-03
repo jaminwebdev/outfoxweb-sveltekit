@@ -1,5 +1,5 @@
 <script lang="ts">
-	import InteractiveLottie from '$lib/components/InteractiveLottie.svelte';
+	import InteractiveLottie from '../InteractiveLottie.svelte';
 
 	export let link = '/';
 	export let lottiePath = '';
@@ -11,10 +11,10 @@
 	const mouseLeft = () => (isHovering = false);
 
 	const bgColors = {
-		primary: 'hover:bg-primary/10',
-		secondary: 'hover:bg-secondary/10',
-		tertiary: 'hover:bg-tertiary/10',
-		orange: 'hover:bg-orange/10'
+		primary: 'dark:hover:bg-primary/10',
+		secondary: 'dark:hover:bg-secondary/10',
+		tertiary: 'dark:hover:bg-tertiary/10',
+		orange: 'dark:hover:bg-orange/10'
 	};
 </script>
 
@@ -23,7 +23,7 @@
 	on:click
 	on:mouseenter={mouseEntered}
 	on:mouseleave={mouseLeft}
-	class="px-5 py-7 lg:p-[70px_40px] hover:bg-body-color-dark {bgColors[bgColor]}">
+	class="px-5 py-7 lg:p-[70px_40px] {bgColors[bgColor]} ">
 	<div class="grid gap-2">
 		<div class="flex lg:block items-center gap-2">
 			<div class="max-w-[60px] max-h-[60px] -ml-2 md:mb-2">

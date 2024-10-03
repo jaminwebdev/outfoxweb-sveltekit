@@ -7,8 +7,7 @@
 
 	const pillColors = {
 		active: 'bg-secondary/20 text-secondary',
-		inactive:
-			'bg-tertiary-bg-light dark:bg-tertiary-bg-dark text-body-text-dark dark:text-body-text-light'
+		inactive: 'bg-body-color-tertiary'
 	};
 </script>
 

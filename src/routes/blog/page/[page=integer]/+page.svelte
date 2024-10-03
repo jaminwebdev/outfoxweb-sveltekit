@@ -15,7 +15,7 @@
 
 <section id="blogPosts" class="min-h-[500px]">
 	<div class="max-w-[700px] mx-auto grid">
-		<input class="text-body-text-dark p-3 rounded-lg" bind:value={search} placeholder="Search..." />
+		<input class="text-body-text p-3 rounded-lg" bind:value={search} placeholder="Search..." />
 	</div>
 
 	<div>

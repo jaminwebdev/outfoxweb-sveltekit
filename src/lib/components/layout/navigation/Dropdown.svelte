@@ -4,7 +4,7 @@
 
 <div
 	class:shown
-	class="opacity-0 invisible absolute top-0 left-[50%] -translate-x-2/4 bg-secondary-bg-dark w-[calc(100vw-30px)] z-50 rounded-[25px] overflow-hidden">
+	class="opacity-0 invisible absolute top-0 left-[50%] -translate-x-2/4 bg-body-color-secondary w-[calc(100vw-30px)] z-50 rounded-[25px] overflow-hidden">
 	<slot />
 </div>
 

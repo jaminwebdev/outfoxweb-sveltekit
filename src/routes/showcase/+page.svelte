@@ -11,13 +11,13 @@
 <div class="grid grid-cols-3 my-8 gap-5 max-w-4xl mx-auto">
 	<!-- Example of outer card hover controlling lottie animation -->
 	<div
-		class="bg-secondary-bg-dark rounded-xl"
+		class="bg-body-color-secondary rounded-xl"
 		on:mouseenter={() => (hovering = true)}
 		on:mouseleave={() => (hovering = false)}>
 		<InteractiveLottie path="/lottie/Successful.json" bind:forceAnimate={play} />
 	</div>
 	<!-- Example of repeating lottie animation -->
-	<div class="bg-secondary-bg-dark rounded-xl">
+	<div class="bg-body-color-secondary rounded-xl">
 		<InteractiveLottie path="/lottie/Bubbles.json" timeLoop={5000} repeat />
 	</div>
 </div>

@@ -8,7 +8,7 @@
 	export let initialPlay = false;
 </script>
 
-<div class="bg-secondary-bg-light dark:bg-secondary-bg-dark p-[25px] rounded-lg grid gap-2">
+<div class="bg-body-color-secondary p-[25px] rounded-lg grid gap-2">
 	<div class="max-w-[60px]">
 		<InteractiveLottie
 			path={lottiePath}

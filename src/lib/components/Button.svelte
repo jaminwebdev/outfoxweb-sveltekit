@@ -9,15 +9,13 @@
 	const variants = {
 		normal: {
 			primary: 'bg-primary hover:scale-[1.05]',
-			secondary: 'bg-secondary text-body-text-light hover:scale-[1.05]',
-			tertiary: 'bg-tertiary text-body-text-light hover:scale-[1.05]'
+			secondary: 'bg-secondary text-body-text hover:scale-[1.05]',
+			tertiary: 'bg-tertiary text-body-text hover:scale-[1.05]'
 		},
 		outline: {
-			primary: 'border-2 border-primary text-primary hover:bg-primary hover:text-body-text-dark',
-			secondary:
-				'border-2 border-secondary text-secondary hover:bg-secondary hover:text-body-text-light',
-			tertiary:
-				'border-2 border-tertiary text-tertiary hover:bg-tertiary hover:text-body-text-light'
+			primary: 'border-2 border-primary text-primary hover:bg-primary hover:text-body-text',
+			secondary: 'border-2 border-secondary text-secondary hover:bg-secondary hover:text-body-text',
+			tertiary: 'border-2 border-tertiary text-tertiary hover:bg-tertiary hover:text-body-text'
 		},
 		ghost: {
 			primary: 'bg-primary/10 text-primary hover:bg-primary/20 hover:scale-[1.05]',
@@ -36,7 +34,7 @@
 	px-[28px] 
 	rounded-lg 
 	inline-block 
-	text-body-text-dark 
+	text-body-text 
 	relative 
 	font-medium 
 	cursor-pointer

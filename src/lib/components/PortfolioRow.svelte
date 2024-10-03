@@ -18,11 +18,11 @@
 </script>
 
 <section
-	class="rounded-xl bg-secondary-bg-light dark:bg-secondary-bg-dark px-6 py-10 md:p-[60px] grid grid-cols-1 lg:grid-cols-2 gap-4 items-center overflow-hidden min-h-[790px] lg:min-h-0">
+	class="rounded-xl bg-body-color-secondary px-6 py-10 md:p-[60px] grid grid-cols-1 lg:grid-cols-2 gap-4 items-center overflow-hidden min-h-[790px] lg:min-h-0">
 	<!-- Left column -->
 	<div>
 		<p
-			class="bg-secondary/20 text-secondary dark:bg-primary/20 dark:text-primary py-[5px] px-[14px] rounded-md inline-block text-base mb-2">
+			class="bg-secondary/20 text-secondary py-[5px] px-[14px] rounded-md inline-block text-base mb-2">
 			CHECK IT OUT
 		</p>
 		<h2 class="mb-4">Our latest work</h2>

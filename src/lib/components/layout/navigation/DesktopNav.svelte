@@ -57,8 +57,7 @@
 			</Dropdown>
 		</li>
 		<li>
-			<button class="rounded-lg bg-secondary text-body-text-light py-[12px] px-[28px]"
-				>Let's Chat</button>
+			<button class="rounded-lg bg-secondary text-body-text py-[12px] px-[28px]">Let's Chat</button>
 		</li>
 	</ul>
 </div>

@@ -15,7 +15,7 @@
 
 <textarea
 	rows="6"
-	class="w-full rounded-lg text-body-text-dark p-3"
+	class="w-full rounded-lg text-body-text p-3"
 	bind:value={description}
 	placeholder="Tell me more"
 	on:focus={() => (touched = true)}

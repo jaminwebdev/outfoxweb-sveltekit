@@ -26,7 +26,7 @@
 		{#each services as service}
 			<button
 				class="p-4 underline underline-offset-4 text-lg {activeService === service
-					? 'text-secondary decoration-secondary dark:text-primary dark:decoration-primary'
+					? 'text-primary'
 					: ''}"
 				on:click={() => (activeService = service)}>{service}</button>
 		{/each}

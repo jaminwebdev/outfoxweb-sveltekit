@@ -5,7 +5,7 @@
 	import TabletAuditImg from '$lib/images/Tablet_Audit.png?format=webp&quality=75&w=513';
 	// @ts-ignore
 	import SaasImg from '$lib/images/Saas_header.png?format=webp&quality=100&w=550';
-	import GlowButton from '$lib/components/GlowButton.svelte';
+	import Button from '$lib/components/Button.svelte';
 	import ImgBackground from '$lib/components/ImgBackground.svelte';
 	import BenefitCard from '$lib/components/cards/BenefitCard.svelte';
 	import Checkmark from '$lib/components/Checkmark.svelte';
@@ -26,8 +26,8 @@
 			<Checkmark body="Enhance user experience" />
 			<Checkmark body="Increase engagement" />
 		</div>
-		<GlowButton type="link" link="/showcase" classes="justify-self-center md:justify-self-start"
-			>Let's Chat</GlowButton>
+		<Button type="link" link="/showcase" classes="justify-self-center md:justify-self-start"
+			>Let's Chat</Button>
 	</div>
 	<div class="relative grid justify-center md:justify-end">
 		<img
@@ -134,8 +134,8 @@
 			website is successful. The longer you wait, the more customers and rankings you’re losing out
 			on.
 		</p>
-		<GlowButton type="link" link="/" classes="px-[24px] py-[12px]" color="tertiary"
-			>Boost Your Website Today</GlowButton>
+		<Button type="link" link="/" classes="px-[24px] py-[12px]" color="tertiary"
+			>Boost Your Website Today</Button>
 	</div>
 </section>
 <section id="FAQs" class="flex flex-col items-center mb-[125px]">

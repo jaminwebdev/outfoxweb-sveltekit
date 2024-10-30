@@ -5,7 +5,7 @@
 	import AuditImg from '$lib/images/Laptop_Audit.png?format=webp&quality=100&w=475';
 
 	import ImgBackground from '$lib/components/ImgBackground.svelte';
-	import GlowButton from './GlowButton.svelte';
+	import Button from './Button.svelte';
 	import { fade } from 'svelte/transition';
 	import Checkmark from './Checkmark.svelte';
 
@@ -44,7 +44,7 @@
 						<Checkmark body="< 1 second load times" />
 						<Checkmark body="99.9% uptime in over 3 years" />
 						<Checkmark body="Feature rich and always interactive" />
-						<GlowButton classes="mt-4" type="link" link="/">Learn More</GlowButton>
+						<Button classes="mt-4" type="link" link="/">Learn More</Button>
 					</div>
 					<div class="row-start-1 sm:row-start-auto relative justify-self-end">
 						<img
@@ -71,7 +71,7 @@
 						<Checkmark body="< 1 second load times" />
 						<Checkmark body="99.9% uptime in over 3 years" />
 						<Checkmark body="Feature rich and always interactive" />
-						<GlowButton classes="mt-4" type="link" link="/">Learn More</GlowButton>
+						<Button classes="mt-4" type="link" link="/">Learn More</Button>
 					</div>
 					<div class="row-start-1 sm:row-start-auto relative justify-self-end">
 						<img
@@ -97,7 +97,7 @@
 						<Checkmark body="< 1 second load times" />
 						<Checkmark body="99.9% uptime in over 3 years" />
 						<Checkmark body="Feature rich and always interactive" />
-						<GlowButton classes="mt-4" type="link" link="/">Learn More</GlowButton>
+						<Button classes="mt-4" type="link" link="/">Learn More</Button>
 					</div>
 					<div class="row-start-1 sm:row-start-auto relative justify-self-end">
 						<img
@@ -123,7 +123,7 @@
 						<Checkmark body="< 1 second load times" />
 						<Checkmark body="99.9% uptime in over 3 years" />
 						<Checkmark body="Feature rich and always interactive" />
-						<GlowButton classes="mt-4" type="link" link="/">Learn More</GlowButton>
+						<Button classes="mt-4" type="link" link="/">Learn More</Button>
 					</div>
 					<div class="row-start-1 sm:row-start-auto relative justify-self-end">
 						<img

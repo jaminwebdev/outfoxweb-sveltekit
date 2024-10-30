@@ -5,7 +5,7 @@
 	import SEOHeroImg from '$lib/images/Laptop_Metrics_Right.png?format=webp&quality=75&w=500';
 	// @ts-ignore
 	import CoworkImg from '$lib/images/Cowork_Header.png?format=webp&quality=100&w=550';
-	import GlowButton from '$lib/components/GlowButton.svelte';
+	import Button from '$lib/components/Button.svelte';
 	import ImgBackground from '$lib/components/ImgBackground.svelte';
 	import BenefitCard from '$lib/components/cards/BenefitCard.svelte';
 	import Checkmark from '$lib/components/Checkmark.svelte';
@@ -27,8 +27,8 @@
 			<Checkmark body="Build trust and credibility" />
 			<Checkmark body="Increase engagement" />
 		</div>
-		<GlowButton type="link" link="/showcase" classes="justify-self-center md:justify-self-start"
-			>Let's Chat</GlowButton>
+		<Button type="link" link="/showcase" classes="justify-self-center md:justify-self-start"
+			>Let's Chat</Button>
 	</div>
 	<div class="relative grid justify-center md:justify-normal">
 		<img
@@ -139,8 +139,8 @@
 			approach. With the right keywords, content strategy, and page optimizations, you can rest
 			assured your monthly visits will skyrocket.
 		</p>
-		<GlowButton type="link" link="/" classes="px-[24px] py-[12px]" color="tertiary"
-			>Boost Your Website Today</GlowButton>
+		<Button type="link" link="/" classes="px-[24px] py-[12px]" color="tertiary"
+			>Boost Your Website Today</Button>
 	</div>
 </section>
 <section id="FAQs" class="flex flex-col items-center mb-[125px]">

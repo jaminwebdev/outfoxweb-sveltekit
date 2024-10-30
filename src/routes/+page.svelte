@@ -3,7 +3,7 @@
 	import HeroImg from '$lib/images/homepage_hero_img.png?format=webp&quality=75&w=550';
 	// @ts-ignore
 	import HeadlessWPImg from '$lib/images/Headless_WP_iMac.png?format=webp&quality=75&w=550';
-	import GlowButton from '$lib/components/GlowButton.svelte';
+	import Button from '$lib/components/Button.svelte';
 	import ImgBackground from '$lib/components/ImgBackground.svelte';
 	import BenefitCard from '$lib/components/cards/BenefitCard.svelte';
 	import PortfolioRow from '$lib/components/PortfolioRow.svelte';
@@ -18,8 +18,8 @@
 		<p class="text-center md:text-left">
 			Reach your audience, convert more customers, and rank higher with the best website for you.
 		</p>
-		<GlowButton type="link" link="/showcase" classes="justify-self-center md:justify-self-start"
-			>Showcase</GlowButton>
+		<Button type="link" link="/showcase" classes="justify-self-center md:justify-self-start"
+			>Showcase</Button>
 	</div>
 	<div class="relative grid justify-center md:justify-normal">
 		<img
@@ -82,7 +82,6 @@
 			Have no fear! We can easily combine WordPress and our faster frontend technologies for
 			ultimate convenience and optimal performance!
 		</p>
-		<GlowButton type="link" link="/" classes="px-[24px] py-[12px]" color="secondary"
-			>See More</GlowButton>
+		<Button type="link" link="/" classes="px-[24px] py-[12px]" color="secondary">See More</Button>
 	</div>
 </section>

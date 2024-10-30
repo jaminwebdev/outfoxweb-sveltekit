@@ -5,7 +5,7 @@
 	import MuseumImg from '$lib/images/Museum_Header.png?format=webp&quality=100&w=550';
 	// @ts-ignore
 	import VRLaptop from '$lib/images/VR_Laptop_Left.png?format=webp&quality=75&w=513';
-	import GlowButton from '$lib/components/GlowButton.svelte';
+	import Button from '$lib/components/Button.svelte';
 	import ImgBackground from '$lib/components/ImgBackground.svelte';
 	import BenefitCard from '$lib/components/cards/BenefitCard.svelte';
 	import Checkmark from '$lib/components/Checkmark.svelte';
@@ -23,8 +23,8 @@
 			<Checkmark body="Completely custom designs" />
 			<Checkmark body="Latest design trends" />
 		</div>
-		<GlowButton type="link" link="/showcase" classes="justify-self-center md:justify-self-start"
-			>Let's Chat</GlowButton>
+		<Button type="link" link="/showcase" classes="justify-self-center md:justify-self-start"
+			>Let's Chat</Button>
 	</div>
 	<div class="relative grid justify-center md:justify-normal">
 		<img
@@ -131,8 +131,8 @@
 			with the latest in UX research, and even then, we believe in a truly collaborative process
 			with our clients.
 		</p>
-		<GlowButton type="link" link="/" classes="px-[24px] py-[12px]" color="tertiary"
-			>Boost Your Website Today</GlowButton>
+		<Button type="link" link="/" classes="px-[24px] py-[12px]" color="tertiary"
+			>Boost Your Website Today</Button>
 	</div>
 </section>
 <section id="portfolioGrid" class="grid grid-cols-1 md:grid-cols-3 gap-8 my-[125px]">

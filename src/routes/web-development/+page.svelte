@@ -3,7 +3,7 @@
 	import LaptopImg from '$lib/images/Laptop_Metrics_Left.png?format=webp&quality=75&w=513';
 	// @ts-ignore
 	import FinanceImg from '$lib/images/Finance_Header.png?format=webp&quality=100&w=550';
-	import GlowButton from '$lib/components/GlowButton.svelte';
+	import Button from '$lib/components/Button.svelte';
 	import ImgBackground from '$lib/components/ImgBackground.svelte';
 	import BenefitCard from '$lib/components/cards/BenefitCard.svelte';
 	import Checkmark from '$lib/components/Checkmark.svelte';
@@ -24,8 +24,8 @@
 			<Checkmark body="Lifetime 99.9% uptime " />
 			<Checkmark body="Feature rich & interactive" />
 		</div>
-		<GlowButton type="link" link="/showcase" classes="justify-self-center md:justify-self-start"
-			>Showcase</GlowButton>
+		<Button type="link" link="/showcase" classes="justify-self-center md:justify-self-start"
+			>Showcase</Button>
 	</div>
 	<div class="relative grid justify-center md:justify-normal">Chart go here</div>
 </header>
@@ -124,8 +124,8 @@
 			This is why we’ve spent the last decade meticulously choosing our technologies, honing our
 			process, and connecting with our clients.
 		</p>
-		<GlowButton type="link" link="/" classes="px-[24px] py-[12px]" color="tertiary"
-			>Boost Your Website Today</GlowButton>
+		<Button type="link" link="/" classes="px-[24px] py-[12px]" color="tertiary"
+			>Boost Your Website Today</Button>
 	</div>
 </section>
 <section id="secondaryStats" class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-[125px] mt-[40px]">

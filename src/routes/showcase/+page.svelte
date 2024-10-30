@@ -1,6 +1,5 @@
 <script lang="ts">
 	import MultiStepProjectForm from '$lib/components/forms/multi-step-project/MultiStepProjectForm.svelte';
-	import GlowButton from '$lib/components/GlowButton.svelte';
 	import Button from '$lib/components/Button.svelte';
 	import InteractiveLottie from '$lib/components/InteractiveLottie.svelte';
 

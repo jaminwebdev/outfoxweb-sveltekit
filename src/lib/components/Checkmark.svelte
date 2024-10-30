@@ -1,5 +1,9 @@
 <script lang="ts">
-	export let body = '';
+	import type { Snippet } from 'svelte';
+	interface Props {
+		body: string;
+	}
+	let { body }: Props = $props();
 </script>
 
 <div class="flex items-center gap-3">

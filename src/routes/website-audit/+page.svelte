@@ -41,22 +41,34 @@
 </header>
 <section id="benefitsRow" class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-[125px]">
 	<BenefitCard lottiePath="/lottie/WorldMedia_primary.json" initialPlay>
-		<span slot="heading">Future proof your website</span>
-		<span slot="body">
-			By optimizing your website today, you ensure that you reap the benefits tomorrow.
-		</span>
+    {#snippet heading()}
+      <span>Future proof your website</span>
+    {/snippet}
+    {#snippet body()}
+      <span>
+        By optimizing your website today, you ensure that you reap the benefits tomorrow.
+      </span>
+    {/snippet}
 	</BenefitCard>
 	<BenefitCard lottiePath="/lottie/Media_tertiary.json" delay={750} initialPlay>
-		<span slot="heading">Enhance user experience</span>
-		<span slot="body">
-			No one likes broken links, broken images, or errors. Happy users turn into happy customers.
-		</span>
+    {#snippet heading()}
+      <span>Enhance user experience</span>
+    {/snippet}
+    {#snippet body()}
+      <span>
+        No one likes broken links, broken images, or errors. Happy users turn into happy customers.
+      </span>
+    {/snippet}
 	</BenefitCard>
 	<BenefitCard lottiePath="/lottie/Magnet_secondary.json" delay={1700} initialPlay>
-		<span slot="heading">Increase engagement</span>
-		<span slot="body">
-			A site that’s easy to navigate, find, and reliable is one that improves user engagement.
-		</span>
+    {#snippet heading()}
+      <span>Increase engagement</span>
+    {/snippet}
+    {#snippet body()}
+      <span>
+        A site that’s easy to navigate, find, and reliable is one that improves user engagement.
+      </span>
+    {/snippet}
 	</BenefitCard>
 </section>
 <section

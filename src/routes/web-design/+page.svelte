@@ -38,23 +38,34 @@
 </header>
 <section id="benefitsRow" class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-[125px]">
 	<BenefitCard lottiePath="/lottie/Lab_Bottle_primary.json" initialPlay>
-		<span slot="heading">Research driven</span>
-		<span slot="body">
-			Using the best UX research and insights, we can turn your web dud in to a web stud.
-		</span>
+    {#snippet heading()}
+      <span>Research driven</span>
+    {/snippet}
+    {#snippet body()}
+      <span>
+        Using the best UX research and insights, we can turn your web dud in to a web stud.
+      </span>
+    {/snippet}
 	</BenefitCard>
 	<BenefitCard lottiePath="/lottie/Fingerprint_tertiary.json" delay={750} initialPlay>
-		<span slot="heading">Completely custom</span>
-		<span slot="body">
-			Cookie-cutter designs are for cookie-cutter businesses. We believe in custom designs.
-		</span>
+    {#snippet heading()}
+      <span>Completely custom</span>
+    {/snippet}
+    {#snippet body()}
+      <span>
+        Cookie-cutter designs are for cookie-cutter businesses. We believe in custom designs.
+      </span>
+    {/snippet}
 	</BenefitCard>
 	<BenefitCard lottiePath="/lottie/Magnet_secondary.json" delay={1500} initialPlay>
-		<span slot="heading">Stay ahead of the curve</span>
-		<span slot="body">
-			We never stop taking inventory of the trends going on around the web, ensuring you get modern
-			work.
-		</span>
+    {#snippet heading()}
+      <span>Stay ahead of the curve</span>
+    {/snippet}
+    {#snippet body()}
+      <span>
+        We never stop taking inventory of the trends going on around the web, ensuring you get modern work.
+      </span>
+    {/snippet}
 	</BenefitCard>
 </section>
 <section

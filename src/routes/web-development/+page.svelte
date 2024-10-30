@@ -31,22 +31,34 @@
 </header>
 <section id="benefitsRow" class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-[125px]">
 	<BenefitCard lottiePath="/lottie/Tablet_primary.json" initialPlay>
-		<span slot="heading">Decrease load times</span>
-		<span slot="body">
-			A faster site leads to improved user experience and higher organic rankings.
-		</span>
+    {#snippet heading()}
+      <span>Decrease load times</span>
+    {/snippet}
+    {#snippet body()}
+      <span>
+        A faster site leads to improved user experience and higher organic rankings.
+      </span>
+    {/snippet}
 	</BenefitCard>
 	<BenefitCard lottiePath="/lottie/Consult_tertiary.json" delay={500} initialPlay>
-		<span slot="heading">Get more customers</span>
-		<span slot="body">
-			We’ll help you create a website that converts passive users into paying customers.
-		</span>
+    {#snippet heading()}
+      <span>Get more customers</span>
+    {/snippet}
+    {#snippet body()}
+      <span>
+        We’ll help you create a website that converts passive users into paying customers.
+      </span>
+    {/snippet}
 	</BenefitCard>
 	<BenefitCard lottiePath="/lottie/Coins_secondary.json" delay={1500} initialPlay>
-		<span slot="heading">Supercharge your business</span>
-		<span slot="body">
-			Gain a competitive advantage, increase brand awareness, and reach your goals.
-		</span>
+    {#snippet heading()}
+      <span>Supercharge your business</span>
+    {/snippet}
+    {#snippet body()}
+      <span>
+        Gain a competitive advantage, increase brand awareness, and reach your goals.
+      </span>
+    {/snippet}
 	</BenefitCard>
 </section>
 <section
@@ -153,24 +165,34 @@
 <section id="processRow" class="grid grid-cols-1 md:grid-cols-3 gap-8 my-[125px]">
 	<h2 class="col-start-1 md:col-span-3 text-center mb-5">How do we do it?</h2>
 	<BenefitCard lottiePath="/lottie/Consult_primary.json" initialPlay>
-		<span slot="heading">Discovery</span>
-		<span slot="body">
-			We collaborate with you on market research, competitor analysis, keywords, wireframes, and
-			design.
-		</span>
+    {#snippet heading()}
+      <span>Discovery</span>
+    {/snippet}
+    {#snippet body()}
+      <span>
+        We collaborate with you on market research, competitor analysis, keywords, wireframes, and design.
+      </span>
+    {/snippet}
 	</BenefitCard>
 	<BenefitCard lottiePath="/lottie/Computer_tertiary.json" delay={500} initialPlay>
-		<span slot="heading">Development</span>
-		<span slot="body">
-			Sit back while we do all the work to create and thoroughly test your beautiful new website.
-		</span>
+    {#snippet heading()}
+      <span>Development</span>
+    {/snippet}
+    {#snippet body()}
+      <span>
+        Sit back while we do all the work to create and thoroughly test your beautiful new website.
+      </span>
+    {/snippet}
 	</BenefitCard>
 	<BenefitCard lottiePath="/lottie/Confettie_secondary.json" delay={1500} initialPlay>
-		<span slot="heading">Delivery</span>
-		<span slot="body">
-			After the launch of your amazing new site, we carry on providing training and ongoing
-			maintenance.
-		</span>
+    {#snippet heading()}
+      <span>Delivery</span>
+    {/snippet}
+    {#snippet body()}
+      <span>
+        After the launch of your amazing new site, we carry on providing training and ongoing maintenance.
+      </span>
+    {/snippet}
 	</BenefitCard>
 </section>
 <section id="FAQs" class="flex flex-col items-center">

@@ -42,22 +42,34 @@
 </header>
 <section id="benefitsRow" class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-[125px]">
 	<BenefitCard lottiePath="/lottie/BarChart_primary.json" initialPlay>
-		<span slot="heading">Multiply your traffic</span>
-		<span slot="body">
-			Our clients see an average of 2-3x increase in organic traffic in their first 6-8 months.
-		</span>
+    {#snippet heading()}
+      <span>Multiply your traffic</span>
+    {/snippet}
+    {#snippet body()}
+      <span>
+        Our clients see an average of 2-3x increase in organic traffic in their first 6-8 months.
+      </span>
+    {/snippet}
 	</BenefitCard>
 	<BenefitCard lottiePath="/lottie/Medal_tertiary.json" delay={750} initialPlay>
-		<span slot="heading">Build trust</span>
-		<span slot="body">
-			Higher ranking pages are trusted more than non-ranked pages. More trust = more conversions.
-		</span>
+    {#snippet heading()}
+      <span>Build trust</span>
+    {/snippet}
+    {#snippet body()}
+      <span>
+        Higher ranking pages are trusted more than non-ranked pages. More trust = more conversions.
+      </span>
+    {/snippet}
 	</BenefitCard>
 	<BenefitCard lottiePath="/lottie/Magnet_secondary.json" delay={1500} initialPlay>
-		<span slot="heading">Increase engagement</span>
-		<span slot="body">
-			The more your content is geared towards what people are looking for, the more they engage.
-		</span>
+    {#snippet heading()}
+      <span>Increase engagement</span>
+    {/snippet}
+    {#snippet body()}
+      <span>
+        The more your content is geared towards what people are looking for, the more they engage.
+      </span>
+    {/snippet}
 	</BenefitCard>
 </section>
 <section

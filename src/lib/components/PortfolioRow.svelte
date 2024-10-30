@@ -34,7 +34,7 @@
 			{#each categories as category}
 				<PillButton
 					active={activeCategory === category}
-					on:pillClicked={() => setActiveCategory(category)}>{category}</PillButton>
+					btnCallback={() => setActiveCategory(category)}>{category}</PillButton>
 			{/each}
 		</div>
 		<Button type="link" link="/" classes="px-[24px] py-[12px] mt-10 mb-14 lg:mb-0" color="tertiary"

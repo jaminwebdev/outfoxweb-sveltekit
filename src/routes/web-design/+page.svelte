@@ -146,38 +146,52 @@
 <section id="FAQs" class="flex flex-col items-center mb-[125px]">
 	<h2 class="text-center mb-5">How do we do it?</h2>
 	<Accordion isOpen>
-		<span slot="question">Discovery</span>
-		<span slot="answer">It depends</span>
+    {#snippet question()}
+      <span>Why isn't my website ranking on Google?</span>
+    {/snippet}
+    {#snippet answer()}
+      <span>It depends</span>
+    {/snippet}
 	</Accordion>
 	<Accordion>
-		<span slot="question">Market and competitor analysis</span>
-		<div slot="answer">
-			<p>
-				Absolutely! Not only can we manage your hosting needs, but we prefer it. This allows us to
-				seamlessly update your website monthly, with 0 effort on your part.
-			</p>
-			<p class="mt-5">
-				On top of that, we don’t just launch your website and leave it up to chance. We monitor your
-				website by crawling it every 10 minutes to ensure your pages are always up and available. In
-				the event a page goes down, we’re notified in 10 minutes or less.
-			</p>
-		</div>
+    {#snippet question()}
+      <span>Why isn't my website ranking on Google?</span>
+    {/snippet}
+    {#snippet answer()}
+      <span>It depends</span>
+    {/snippet}
 	</Accordion>
 	<Accordion>
-		<span slot="question">Keyword research</span>
-		<span slot="answer">It depends</span>
+    {#snippet question()}
+      <span>Why isn't my website ranking on Google?</span>
+    {/snippet}
+    {#snippet answer()}
+      <span>It depends</span>
+    {/snippet}
 	</Accordion>
 	<Accordion>
-		<span slot="question">Wireframing & revisions</span>
-		<span slot="answer">It depends</span>
+    {#snippet question()}
+      <span>Wireframing & revisions</span>
+    {/snippet}
+    {#snippet answer()}
+      <span>It depends</span>
+    {/snippet}
 	</Accordion>
 	<Accordion>
-		<span slot="question">Design & revisions</span>
-		<span slot="answer">It depends</span>
+    {#snippet question()}
+      <span>Design & Revisions</span>
+    {/snippet}
+    {#snippet answer()}
+      <span>It depends</span>
+    {/snippet}
 	</Accordion>
 	<Accordion>
-		<span slot="question">Delivery</span>
-		<span slot="answer">It depends</span>
+    {#snippet question()}
+      <span>Delivery</span>
+    {/snippet}
+    {#snippet answer()}
+      <span>It depends</span>
+    {/snippet}
 	</Accordion>
 </section>
 <TestimonialRow testimonials={[testimonials['kyle'], testimonials['stacy']]} />
@@ -185,25 +199,27 @@
 <section id="FAQs" class="flex flex-col items-center mt-[125px]">
 	<h2 class="text-center mb-5">FAQs</h2>
 	<Accordion>
-		<span slot="question">How long does a design take?</span>
-		<span slot="answer">It depends</span>
+    {#snippet question()}
+      <span>How long does design take?</span>
+    {/snippet}
+    {#snippet answer()}
+      <span>It depends</span>
+    {/snippet}
 	</Accordion>
 	<Accordion>
-		<span slot="question">How many revisions do you allow?</span>
-		<div slot="answer">
-			<p>
-				Absolutely! Not only can we manage your hosting needs, but we prefer it. This allows us to
-				seamlessly update your website monthly, with 0 effort on your part.
-			</p>
-			<p class="mt-5">
-				On top of that, we don’t just launch your website and leave it up to chance. We monitor your
-				website by crawling it every 10 minutes to ensure your pages are always up and available. In
-				the event a page goes down, we’re notified in 10 minutes or less.
-			</p>
-		</div>
+    {#snippet question()}
+      <span>How many revisions do you allow?</span>
+    {/snippet}
+    {#snippet answer()}
+      <span>It depends</span>
+    {/snippet}
 	</Accordion>
 	<Accordion>
-		<span slot="question">Do you provide copywriting as well?</span>
-		<span slot="answer">It depends</span>
+    {#snippet question()}
+      <span>Do you provide copywriting or content as well?</span>
+    {/snippet}
+    {#snippet answer()}
+      <span>It depends</span>
+    {/snippet}
 	</Accordion>
 </section>

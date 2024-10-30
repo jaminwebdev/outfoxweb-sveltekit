@@ -186,29 +186,35 @@
 <section id="FAQs" class="flex flex-col items-center">
 	<h2 class="text-center mb-5">FAQs</h2>
 	<Accordion isOpen>
-		<span slot="question">How long does it take to build a new site?</span>
-		<span slot="answer">It depends</span>
+    {#snippet question()}
+      <span>How long does it take to build a new site?</span>
+    {/snippet}
+    {#snippet answer()}
+      <span>It depends</span>
+    {/snippet}
 	</Accordion>
 	<Accordion>
-		<span slot="question">Do you offer hosting and maintenance?</span>
-		<div slot="answer">
-			<p>
-				Absolutely! Not only can we manage your hosting needs, but we prefer it. This allows us to
-				seamlessly update your website monthly, with 0 effort on your part.
-			</p>
-			<p class="mt-5">
-				On top of that, we don’t just launch your website and leave it up to chance. We monitor your
-				website by crawling it every 10 minutes to ensure your pages are always up and available. In
-				the event a page goes down, we’re notified in 10 minutes or less.
-			</p>
-		</div>
+    {#snippet question()}
+      <span>Do you offer hosting and maintenance</span>
+    {/snippet}
+    {#snippet answer()}
+      <span>It depends</span>
+    {/snippet}
 	</Accordion>
 	<Accordion>
-		<span slot="question">What are Google’s Core Web Vitals?</span>
-		<span slot="answer">It depends</span>
+    {#snippet question()}
+      <span>What are Google Core Web Vitals?</span>
+    {/snippet}
+    {#snippet answer()}
+      <span>It depends</span>
+    {/snippet}
 	</Accordion>
 	<Accordion>
-		<span slot="question">Do you also offer design and SEO services for websites you build?</span>
-		<span slot="answer">It depends</span>
+    {#snippet question()}
+      <span>Do you offer design and writing services as well?</span>
+    {/snippet}
+    {#snippet answer()}
+      <span>It depends</span>
+    {/snippet}
 	</Accordion>
 </section>

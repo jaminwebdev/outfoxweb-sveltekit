@@ -13,22 +13,28 @@
 	<nav class="px-8 text-xl">
 		<div class="bg-body-color-light dark:bg-body-color-dark">
 			<Accordion bodyClasses="px-0">
-				<span slot="question">Services</span>
-				<div slot="answer">
-					<ServicesMenu on:click={handleMobileNav} />
-				</div>
+        {#snippet question()}
+				  <span>Services</span>
+        {/snippet}
+        {#snippet answer()}
+          <ServicesMenu on:click={handleMobileNav} />
+        {/snippet}
 			</Accordion>
 			<Accordion bodyClasses="px-0">
-				<span slot="question">Resources</span>
-				<div slot="answer">
-					<ResourcesMenu on:click={handleMobileNav} />
-				</div>
+        {#snippet question()}
+          <span>Resources</span>
+        {/snippet}
+        {#snippet answer()}
+          <ResourcesMenu on:click={handleMobileNav} />
+        {/snippet}
 			</Accordion>
 			<Accordion bodyClasses="px-0">
-				<span slot="question">About</span>
-				<div slot="answer">
-					<AboutMenu on:click={handleMobileNav} />
-				</div>
+        {#snippet question()}
+          <span>About</span>
+        {/snippet}
+        {#snippet answer()}
+          <AboutMenu on:click={handleMobileNav} />
+        {/snippet}
 			</Accordion>
 		</div>
 	</nav>

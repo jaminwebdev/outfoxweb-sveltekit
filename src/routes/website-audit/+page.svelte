@@ -146,30 +146,36 @@
 <section id="FAQs" class="flex flex-col items-center mb-[125px]">
 	<h2 class="text-center mb-5">How do we do it?</h2>
 	<Accordion isOpen>
-		<span slot="question">Website crawl</span>
-		<span slot="answer">It depends</span>
+    {#snippet question()}
+      <span>Website crawl</span>
+    {/snippet}
+    {#snippet answer()}
+      <span>It depends</span>
+    {/snippet}
 	</Accordion>
 	<Accordion>
-		<span slot="question">UX analysis</span>
-		<div slot="answer">
-			<p>
-				Absolutely! Not only can we manage your hosting needs, but we prefer it. This allows us to
-				seamlessly update your website monthly, with 0 effort on your part.
-			</p>
-			<p class="mt-5">
-				On top of that, we don’t just launch your website and leave it up to chance. We monitor your
-				website by crawling it every 10 minutes to ensure your pages are always up and available. In
-				the event a page goes down, we’re notified in 10 minutes or less.
-			</p>
-		</div>
+    {#snippet question()}
+      <span>UX Analysis</span>
+    {/snippet}
+    {#snippet answer()}
+      <span>It depends</span>
+    {/snippet}
 	</Accordion>
 	<Accordion>
-		<span slot="question">Content & SEO analysis</span>
-		<span slot="answer">It depends</span>
+    {#snippet question()}
+      <span>Content and SEO Analysis</span>
+    {/snippet}
+    {#snippet answer()}
+      <span>It depends</span>
+    {/snippet}
 	</Accordion>
 	<Accordion>
-		<span slot="question">Analytics analysis</span>
-		<span slot="answer">It depends</span>
+    {#snippet question()}
+      <span>Analytics Analysis</span>
+    {/snippet}
+    {#snippet answer()}
+      <span>It depends</span>
+    {/snippet}
 	</Accordion>
 </section>
 <TestimonialRow testimonials={[testimonials['kyle'], testimonials['stacy']]} />
@@ -177,25 +183,27 @@
 <section id="FAQs" class="flex flex-col items-center mt-[125px]">
 	<h2 class="text-center mb-5">FAQs</h2>
 	<Accordion>
-		<span slot="question">What does the website audit cover?</span>
-		<span slot="answer">It depends</span>
+    {#snippet question()}
+      <span>What does a website audit cover?</span>
+    {/snippet}
+    {#snippet answer()}
+      <span>It depends</span>
+    {/snippet}
 	</Accordion>
 	<Accordion>
-		<span slot="question">Do you also fix the issues you find?</span>
-		<div slot="answer">
-			<p>
-				Absolutely! Not only can we manage your hosting needs, but we prefer it. This allows us to
-				seamlessly update your website monthly, with 0 effort on your part.
-			</p>
-			<p class="mt-5">
-				On top of that, we don’t just launch your website and leave it up to chance. We monitor your
-				website by crawling it every 10 minutes to ensure your pages are always up and available. In
-				the event a page goes down, we’re notified in 10 minutes or less.
-			</p>
-		</div>
+    {#snippet question()}
+      <span>Do you also fix the issues you find?</span>
+    {/snippet}
+    {#snippet answer()}
+      <span>It depends</span>
+    {/snippet}
 	</Accordion>
 	<Accordion>
-		<span slot="question">Do you have an example report I can preview?</span>
-		<span slot="answer">It depends</span>
+    {#snippet question()}
+      <span>Do you have an example report I can view?</span>
+    {/snippet}
+    {#snippet answer()}
+      <span>It depends</span>
+    {/snippet}
 	</Accordion>
 </section>

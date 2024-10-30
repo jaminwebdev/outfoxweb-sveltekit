@@ -95,24 +95,18 @@
 		class="max-h-[380px] lg:max-h-[480px] -mb-[80px] lg:ml-[80px] object-contain justify-self-center lg:justify-self-auto" />
 </section>
 <section id="initialStats" class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-[125px] mt-[40px]">
-	<StatCard color="orange">
-		<span slot="stat">57%</span>
-		<span slot="subtitle">Wouldn’t recommend</span>
-		<span slot="body"
-			>57% of users report they wouldn’t recommend a business with a poorly designed mobile site.</span>
-	</StatCard>
-	<StatCard color="secondary">
-		<span slot="stat">89%</span>
-		<span slot="subtitle">Shop elsewhere</span>
-		<span slot="body"
-			>89% of users are less likely to return to a website after a bad user experience.</span>
-	</StatCard>
-	<StatCard color="tertiary">
-		<span slot="stat">200+%</span>
-		<span slot="subtitle">Increased conversions</span>
-		<span slot="body"
-			>A few small changes to your design, navigation, and UX can bring massive increases in sales.</span>
-	</StatCard>
+	<StatCard color="orange"
+    stat="57%"
+    subtitle="Wouldn’t recommend"
+    body="57% of users report they wouldn’t recommend a business with a poorly designed mobile site." />
+	<StatCard color="secondary"
+    stat="89%"
+    subtitle="Shop elsewhere"
+    body="89% of users are less likely to return to a website after a bad user experience." />
+	<StatCard color="tertiary"
+    stat="200+%"
+    subtitle="Increased conversions"
+    body="A few small changes to your design, navigation, and UX can bring massive increases in sales." />
 </section>
 <section
 	id="solution"

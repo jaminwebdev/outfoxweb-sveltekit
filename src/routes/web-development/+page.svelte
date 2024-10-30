@@ -89,24 +89,18 @@
 		class="max-h-[380px] lg:max-h-[470px] -mb-[80px] lg:ml-[80px] object-contain justify-self-center lg:justify-self-auto" />
 </section>
 <section id="initialStats" class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-[125px] mt-[40px]">
-	<StatCard color="orange">
-		<span slot="stat">40%</span>
-		<span slot="subtitle">Won't wait</span>
-		<span slot="body"
-			>40% of customers won’t wait more than 2-3 seconds before abandoning a site.</span>
-	</StatCard>
-	<StatCard color="secondary">
-		<span slot="stat">85%</span>
-		<span slot="subtitle">Expect speed</span>
-		<span slot="body"
-			>85% of mobile users expect pages to load as fast or faster than they do on a desktop.</span>
-	</StatCard>
-	<StatCard color="tertiary">
-		<span slot="stat">64%</span>
-		<span slot="subtitle">Look elsewhere</span>
-		<span slot="body"
-			>64% of consumers unhappy with their experience will buy elsewhere next time.</span>
-	</StatCard>
+	<StatCard color="orange"
+    stat="40%"
+    subtitle="Won't wait"
+    body="40% of customers won’t wait more than 2-3 seconds before abandoning a site." />
+	<StatCard color="secondary"
+    stat="85%"
+    subtitle="Expect speed"
+    body="85% of mobile users expect pages to load as fast or faster than they do on a desktop." />
+	<StatCard color="tertiary"
+    stat="64%"
+    subtitle="Look elsewhere"
+    body="64% of consumers unhappy with their experience will buy elsewhere next time." />
 </section>
 <section
 	id="solution"
@@ -141,25 +135,19 @@
 	</div>
 </section>
 <section id="secondaryStats" class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-[125px] mt-[40px]">
-	<StatCard color="primary">
-		<span slot="stat">0.3s</span>
-		<span slot="subtitle">Average load time</span>
-		<span slot="body"
-			>Using the fastest frameworks and hosting solutions, our sites are incredibly fast.</span>
-	</StatCard>
-	<StatCard color="secondary">
-		<span slot="stat">2x</span>
-		<span slot="subtitle">Conversion rates</span>
-		<span slot="body"
-			>Our clients see double the conversions on average in 6-8 months after launch.</span>
-	</StatCard>
-	<StatCard color="tertiary">
-		<span slot="stat">0%</span>
-		<span slot="subtitle">Down time</span>
-		<span slot="body"
-			>Thanks to our ultra-reliable hosting solutions and monitoring software, our sites are
-			extremely reliable.</span>
-	</StatCard>
+	<StatCard color="primary"
+    stat="0.3s"
+    subtitle="Average load time" 
+    body="Using the fastest frameworks and hosting solutions, our sites are incredibly fast."/>
+	<StatCard color="secondary"
+    stat="2x"
+    subtitle="Conversion rates" 
+    body="Our clients see double the conversions on average in 6-8 months after launch."/>
+	<StatCard color="tertiary"
+    stat="0%"
+    subtitle="Down time"
+    body="Thanks to our ultra-reliable hosting solutions and monitoring software, our sites are
+			extremely reliable." />
 </section>
 <TestimonialRow testimonials={[testimonials['kyle'], testimonials['stacy']]} />
 <section id="processRow" class="grid grid-cols-1 md:grid-cols-3 gap-8 my-[125px]">

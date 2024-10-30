@@ -98,25 +98,18 @@
 		class="max-h-[380px] lg:max-h-[480px] -mb-[80px] lg:ml-[80px] object-contain justify-self-center lg:justify-self-auto" />
 </section>
 <section id="initialStats" class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-[125px] mt-[40px]">
-	<StatCard color="orange">
-		<span slot="stat">88%</span>
-		<span slot="subtitle">Customers lost</span>
-		<span slot="body"
-			>88% of users are less likely to return to a website after a bad user experience.</span>
-	</StatCard>
-	<StatCard color="secondary">
-		<span slot="stat">53%</span>
-		<span slot="subtitle">Will close slow pages</span>
-		<span slot="body"
-			>53% of mobile users will close a website if it takes more than three seconds to load.</span>
-	</StatCard>
-	<StatCard color="tertiary">
-		<span slot="stat">72%</span>
-		<span slot="subtitle">Will spread the word</span>
-		<span slot="body"
-			>72% will tell 6 or more people about good experiences - including slow pages and broken
-			links.</span>
-	</StatCard>
+	<StatCard color="orange"
+    stat="88%"
+    subtitle="Customers lost"
+    body="88% of users are less likely to return to a website after a bad user experience." />
+	<StatCard color="secondary"
+    stat="53%"
+    subtitle="Will close slow pages"
+    body="53% of mobile users will close a website if it takes more than three seconds to load." />
+	<StatCard color="tertiary"
+    stat="72%"
+    subtitle="Will spread the word"
+    body="72% will tell 6 or more people about good experiences - including slow pages and broken links." />
 </section>
 <section
 	id="solution"

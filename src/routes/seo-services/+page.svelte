@@ -102,25 +102,18 @@
 		class="max-h-[380px] lg:max-h-[480px] -mb-[80px] lg:ml-[80px] object-contain justify-self-center lg:justify-self-auto" />
 </section>
 <section id="initialStats" class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-[125px] mt-[40px]">
-	<StatCard color="orange">
-		<span slot="stat">434%</span>
-		<span slot="subtitle">More indexed pages</span>
-		<span slot="body"
-			>Websites with proper SEO, copy writing, and content strategy get 434% more traffic.</span>
-	</StatCard>
-	<StatCard color="secondary">
-		<span slot="stat">3x</span>
-		<span slot="subtitle">As many leads</span>
-		<span slot="body"
-			>SEO generates over 3x as many leads as other marketing tactics and costs 62% less.</span>
-	</StatCard>
-	<StatCard color="tertiary">
-		<span slot="stat">5.7%</span>
-		<span slot="subtitle">Will rank in the top 10</span>
-		<span slot="body"
-			>Even with all the best SEO practices in mind, only 5.7% of pages will rank in the top 10 of
-			search.</span>
-	</StatCard>
+	<StatCard color="orange"
+    stat="434%"
+    subtitle="More indexed pages"
+    body="Websites with proper SEO, copy writing, and content strategy get 434% more traffic." />
+	<StatCard color="secondary"
+    stat="3x"
+    subtitle="As many leads"
+    body="SEO generates over 3x as many leads as other marketing tactics and costs 62% less." />
+	<StatCard color="tertiary"
+    stat="5.7%"
+    subtitle="Will rank in the top 10"
+    body="Even with all the best SEO practices in mind, only 5.7% of pages will rank in the top 10 of search." />
 </section>
 <section
 	id="solution"

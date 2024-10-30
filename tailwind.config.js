@@ -12,7 +12,9 @@ module.exports = {
 				'body-color': 'var(--body-color)',
 				'body-color-secondary': 'var(--body-color-secondary)',
 				'body-color-tertiary': 'var(--body-color-tertiary)',
-				'body-text': 'var(--color-body-text)'
+				'body-text': 'var(--color-body-text)',
+				'body-text-dark': '#1D1D20',
+				'body-text-light': '#F4F4F5'
 			}
 		}
 	}

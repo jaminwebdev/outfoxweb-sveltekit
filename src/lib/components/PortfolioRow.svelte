@@ -1,5 +1,5 @@
 <script lang="ts">
-	import GlowButton from './GlowButton.svelte';
+	import Button from './Button.svelte';
 	import { fade } from 'svelte/transition';
 	import PillButton from './PillButton.svelte';
 	// @ts-ignore
@@ -37,11 +37,8 @@
 					on:pillClicked={() => setActiveCategory(category)}>{category}</PillButton>
 			{/each}
 		</div>
-		<GlowButton
-			type="link"
-			link="/"
-			classes="px-[24px] py-[12px] mt-10 mb-14 lg:mb-0"
-			color="tertiary">See More</GlowButton>
+		<Button type="link" link="/" classes="px-[24px] py-[12px] mt-10 mb-14 lg:mb-0" color="tertiary"
+			>See More</Button>
 	</div>
 	<!-- Right column -->
 	<div class="grid grid-cols-1 grid-rows-1">

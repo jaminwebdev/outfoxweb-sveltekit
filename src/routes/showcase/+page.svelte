@@ -12,8 +12,8 @@
 	<!-- Example of outer card hover controlling lottie animation -->
 	<div
 		class="bg-body-color-secondary rounded-xl"
-		on:mouseenter={() => (hovering = true)}
-		on:mouseleave={() => (hovering = false)}>
+		onmouseenter={() => (hovering = true)}
+		onmouseleave={() => (hovering = false)}>
 		<InteractiveLottie path="/lottie/Successful.json" bind:forceAnimate={play} />
 	</div>
 	<!-- Example of repeating lottie animation -->
@@ -27,37 +27,41 @@
 	<MultiStepProjectForm />
 </div>
 
-<div class="grid place-items-center p-7">
-	<h2>Glow Buttons</h2>
-	<div class="grid gap-3 grid-cols-3">
-		<GlowButton classes="mt-6" link="/" type="link">Glow Button Link</GlowButton>
-		<GlowButton classes="mt-6" on:glowBtnClicked={console.log} color="tertiary"
-			>Glow Button Action</GlowButton>
-		<GlowButton classes="mt-6" on:glowBtnClicked={console.log} color="secondary"
-			>Glow Button Action</GlowButton>
+<div>
+	<h2 class="text-center pb-4">Glow Buttons</h2>
+	<div class="pb-10 flex justify-center flex-wrap gap-4">
+		<Button type="button" color="primary">Button Primary</Button>
+		<Button type="link" color="secondary" link="/showcase">Button Secondary (link)</Button>
+		<Button type="button" color="tertiary">Button Tertiary</Button>
 	</div>
 </div>
-<div class="grid gap-6 place-items-center p-7">
-	<h2>Regular Buttons - regular</h2>
-	<div class="grid gap-3 grid-cols-3">
-		<Button color="primary" on:btnClicked={console.log}>Normal button</Button>
-		<Button color="secondary" on:btnClicked={console.log}>Normal button</Button>
-		<Button color="tertiary" on:btnClicked={console.log}>Normal button</Button>
+<div>
+	<h2 class="text-center pb-4">Normal Buttons</h2>
+	<div class="pb-10 flex justify-center flex-wrap gap-4">
+		<Button type="button" flavor="normal" color="primary">Button Primary</Button>
+		<Button type="link" flavor="normal" color="secondary" link="/showcase">
+			Button Secondary (link)
+		</Button>
+		<Button type="button" flavor="normal" color="tertiary">Button Tertiary</Button>
 	</div>
 </div>
-<div class="grid gap-6 place-items-center p-7">
-	<h2>Regular Buttons - outline</h2>
-	<div class="grid gap-3 grid-cols-3">
-		<Button color="primary" type="outline" on:btnClicked={console.log}>Outline button</Button>
-		<Button color="secondary" type="outline" on:btnClicked={console.log}>Outline button</Button>
-		<Button color="tertiary" type="outline" on:btnClicked={console.log}>Outline button</Button>
+<div>
+	<h2 class="text-center pb-4">Ghost Buttons</h2>
+	<div class="pb-10 flex justify-center flex-wrap gap-4">
+		<Button type="button" flavor="ghost" color="primary">Button Primary</Button>
+		<Button type="link" flavor="ghost" color="secondary" link="/showcase">
+			Button Secondary (link)
+		</Button>
+		<Button type="button" flavor="ghost" color="tertiary">Button Tertiary</Button>
 	</div>
 </div>
-<div class="grid gap-6 place-items-center p-7">
-	<h2>Regular Buttons - ghost</h2>
-	<div class="grid gap-3 grid-cols-3">
-		<Button color="primary" type="ghost" on:btnClicked={console.log}>Ghost button</Button>
-		<Button color="secondary" type="ghost" on:btnClicked={console.log}>Ghost button</Button>
-		<Button color="tertiary" type="ghost" on:btnClicked={console.log}>Ghost button</Button>
+<div>
+	<h2 class="text-center pb-4">Outline Buttons</h2>
+	<div class="pb-10 flex justify-center flex-wrap gap-4">
+		<Button type="button" flavor="outline" color="primary">Button Primary</Button>
+		<Button type="link" flavor="outline" color="secondary" link="/showcase">
+			Button Secondary (link)
+		</Button>
+		<Button type="button" flavor="outline" color="tertiary">Button Tertiary</Button>
 	</div>
 </div>

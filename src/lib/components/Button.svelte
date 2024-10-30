@@ -1,14 +1,38 @@
 <script lang="ts">
-	import { createEventDispatcher } from 'svelte';
+	import { type Snippet } from 'svelte';
 
-	const dispatch = createEventDispatcher();
-	export let color: 'primary' | 'secondary' | 'tertiary' = 'primary';
-	export let type: 'normal' | 'outline' | 'ghost' = 'normal';
-	export let classes = '';
+  interface Props {
+		type?: 'button' | 'link';
+    flavor?: 'normal' | 'outline' | 'ghost' | 'glow';
+    color?: 'primary' | 'secondary' | 'tertiary';
+    link?: string;
+    classes?: string;
+    btnCallback?: () => void;
+    children: Snippet;
+	}
 
-	const variants = {
+	let { 
+    type = 'button',
+    flavor = 'glow',
+    color = 'primary',
+    link = '/',
+    classes,
+    btnCallback,
+    children
+   }: Props = $props();
+
+	const glowColorVariants = {
+		primary:
+			'bg-primary shadow-[0_0_0.5em_0] shadow-primary after:shadow-[0_0_2.25rem] after:shadow-primary text-body-text-dark',
+		secondary:
+			'bg-secondary shadow-[0_0_.5em_0] shadow-secondary after:shadow-[0_0_2.25rem] after:shadow-secondary text-body-text-light',
+		tertiary:
+			'bg-tertiary shadow-[0_0_.5em_0] shadow-tertiary after:shadow-[0_0_2.25rem] after:shadow-tertiary text-body-text-dark dark:text-body-text-light'
+	};
+
+  const variants = {
 		normal: {
-			primary: 'bg-primary hover:scale-[1.05]',
+			primary: 'bg-primary hover:scale-[1.05] text-body-text-light dark:text-body-text-dark',
 			secondary: 'bg-secondary text-body-text hover:scale-[1.05]',
 			tertiary: 'bg-tertiary text-body-text hover:scale-[1.05]'
 		},
@@ -18,28 +42,90 @@
 			tertiary: 'border-2 border-tertiary text-tertiary hover:bg-tertiary hover:text-body-text'
 		},
 		ghost: {
-			primary: 'bg-primary/10 text-primary hover:bg-primary/20 hover:scale-[1.05]',
-			secondary: 'bg-secondary/10 text-secondary hover:bg-secondary/20 hover:scale-[1.05]',
-			tertiary: 'bg-tertiary/10 text-tertiary hover:bg-tertiary/20 hover:scale-[1.05]'
+			primary: 'bg-primary/10 text-primary hover:bg-primary/30 hover:scale-[1.05]',
+			secondary: 'bg-secondary/10 text-secondary hover:bg-secondary/30 hover:scale-[1.05]',
+			tertiary: 'bg-tertiary/10 text-tertiary hover:bg-tertiary/30 hover:scale-[1.05]'
 		}
 	};
 </script>
 
-<button
-	type="button"
-	on:click={() => dispatch('btnClicked')}
-	class={`glowBtn 
-	${variants[type][color]} 
-	py-4 
-	px-[28px] 
-	rounded-lg 
-	inline-block 
-	text-body-text 
-	relative 
-	font-medium 
-	cursor-pointer
-    transition-all
-    duration-150
-    ${classes}`}>
-	<slot />
-</button>
+{#if type === 'button'}
+	<button
+		type="button"
+		onclick={btnCallback}
+		class={`
+            py-[16px] 
+            px-[28px] 
+            rounded-lg 
+            flex
+            justify-center
+            relative 
+            font-medium 
+            cursor-pointer
+            transition-all
+            duration-300
+            ${flavor === 'glow' ? 'glowBtn' : 'plain'}
+            ${flavor === 'glow' ? glowColorVariants[color] : variants[flavor][color]} 
+            ${classes}`}>
+		{@render children()}
+	</button>
+{:else if type === 'link'}
+	<a
+		href={link}
+		class={`
+            py-[16px] 
+            px-[28px] 
+            rounded-lg 
+            justify-center
+            inline-block
+            relative 
+            font-medium 
+            cursor-pointer
+            transition-all
+            duration-300
+            ${flavor === 'glow' ? 'glowBtn' : ''}
+            ${flavor === 'glow' ? glowColorVariants[color] : variants[flavor][color]} 
+            ${classes}`}>
+		{@render children()}
+	</a>
+{/if}
+
+<style>
+	.glowBtn::before {
+		pointer-events: none;
+		content: '';
+		position: absolute;
+		background: inherit;
+		top: 80%;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		transform: perspective(40px) rotateX(40deg) scale(1, 0.35);
+		filter: blur(20px);
+		opacity: 0.3;
+		transition: opacity 100ms linear;
+	}
+
+	.glowBtn::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		border-radius: inherit;
+		z-index: -1;
+		opacity: 0;
+		transition: opacity 100ms linear;
+	}
+
+	.glowBtn:hover::before,
+	.glowBtn:focus::before {
+		opacity: .75;
+	}
+	.glowBtn:hover::after,
+	.glowBtn:focus::after {
+		opacity: 0.5;
+	}
+</style>

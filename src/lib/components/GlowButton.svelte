@@ -10,7 +10,7 @@
 
 	const colorVariants = {
 		primary:
-			'bg-primary shadow-[0_0_0.5em_0] shadow-primary after:shadow-[0_0_2.25rem] after:shadow-primary',
+			'bg-primary shadow-[0_0_0.5em_0] shadow-primary after:shadow-[0_0_2.25rem] after:shadow-primary text-body-text-light dark:text-body-text-dark',
 		secondary:
 			'bg-secondary shadow-[0_0_.5em_0] shadow-secondary after:shadow-[0_0_2.25rem] after:shadow-secondary text-body-text',
 		tertiary:
@@ -23,32 +23,32 @@
 		type="button"
 		on:click={() => dispatch('glowBtnClicked')}
 		class={`glowBtn 
-	${colorVariants[color]} 
-	py-[16px] 
-	px-[28px] 
-	rounded-lg 
-	inline-block 
-	text-body-text 
-	relative 
-	font-medium 
-	cursor-pointer
-    ${classes}`}>
+      ${colorVariants[color]} 
+      py-[16px] 
+      px-[28px] 
+      rounded-lg 
+      inline-block 
+      text-body-text 
+      relative 
+      font-medium 
+      cursor-pointer
+      ${classes}`}>
 		<slot />
 	</button>
 {:else if type === 'link'}
 	<a
 		href={link}
 		class={`glowBtn 
-	${colorVariants[color]} 
-	py-[16px] 
-	px-[28px] 
-	rounded-lg 
-	inline-block 
-	text-body-text 
-	relative 
-	font-medium 
-	cursor-pointer
-	${classes}`}>
+      ${colorVariants[color]} 
+      py-[16px] 
+      px-[28px] 
+      rounded-lg 
+      inline-block 
+      text-body-text 
+      relative 
+      font-medium 
+      cursor-pointer
+      ${classes}`}>
 		<slot />
 	</a>
 {/if}

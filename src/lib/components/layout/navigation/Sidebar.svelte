@@ -3,21 +3,31 @@
 	import ServicesMenu from '$lib/components/layout/navigation/menus/ServicesMenu.svelte';
 	import ResourcesMenu from '$lib/components/layout/navigation/menus/ResourcesMenu.svelte';
 	import AboutMenu from '$lib/components/layout/navigation/menus/AboutMenu.svelte';
-	export let open: boolean;
-	const handleMobileNav = () => (open = !open);
+	
+  interface Props {
+		open: boolean;
+	}
+
+	let { open = $bindable()}: Props = $props();
+  
+	const handleMobileNav = () => open = !open;
 </script>
 
+
+
 <aside
-	class="fixed top-[100px] pt-10 pb-[200px] z-10 w-full h-screen bg-body-color-light dark:bg-body-color-dark text-body-text dark:text-body-text overflow-y-scroll"
+	class="fixed top-[100px] pt-10 pb-[200px] z-10 w-full h-screen bg-body-color text-body-text overflow-y-scroll"
 	class:open>
 	<nav class="px-8 text-xl">
-		<div class="bg-body-color-light dark:bg-body-color-dark">
+		<div class="bg-body-color">
 			<Accordion bodyClasses="px-0">
         {#snippet question()}
-				  <span>Services</span>
+          <span>Services</span>
         {/snippet}
         {#snippet answer()}
-          <ServicesMenu clickHandler={handleMobileNav} />
+          <div>
+            <ServicesMenu clickHandler={handleMobileNav} />
+          </div>
         {/snippet}
 			</Accordion>
 			<Accordion bodyClasses="px-0">
@@ -25,7 +35,9 @@
           <span>Resources</span>
         {/snippet}
         {#snippet answer()}
-          <ResourcesMenu clickHandler={handleMobileNav} />
+          <div>
+            <ResourcesMenu clickHandler={handleMobileNav} />
+          </div>
         {/snippet}
 			</Accordion>
 			<Accordion bodyClasses="px-0">
@@ -33,7 +45,9 @@
           <span>About</span>
         {/snippet}
         {#snippet answer()}
-          <AboutMenu clickHandler={handleMobileNav} />
+          <div>
+            <AboutMenu clickHandler={handleMobileNav} />
+          </div>
         {/snippet}
 			</Accordion>
 		</div>

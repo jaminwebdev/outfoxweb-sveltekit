@@ -1,15 +1,17 @@
 <script lang="ts">
-	import { createEventDispatcher } from 'svelte';
-	export let open: boolean;
+	interface Props {
+		open: boolean;
+		handleClick: () => void;
+	}
 
-	const dispatch = createEventDispatcher();
-	const handleHamburgerClick = () => dispatch('mobileMenuOpenToggle');
+	let { open = $bindable(), handleClick }: Props = $props();
 </script>
 
 <button
-	class="text-body-text dark:text-body-text hover:text-primary cursor-pointer p-4 border-none focus:outline-none absolute top-4 -right-3"
+	class="text-body-text hover:text-primary cursor-pointer p-4 border-none focus:outline-none absolute top-4 -right-3"
 	class:open
-	on:click={handleHamburgerClick}>
+	onclick={handleClick}
+	aria-label="mobile navigation trigger">
 	<svg width="32" height="24">
 		<line id="top" x1="0" y1="2" x2="32" y2="2" />
 		<line id="middle" x1="6" y1="12" x2="32" y2="12" />
@@ -22,7 +24,6 @@
 		min-height: 24px;
 		transition: transform 0.3s ease-in-out;
 		z-index: 20;
-		view-transition-name: hamburger;
 	}
 
 	svg line {

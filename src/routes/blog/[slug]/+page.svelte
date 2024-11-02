@@ -1,7 +1,12 @@
 <script lang="ts">
 	import { formatDate } from '$lib/utils/dates';
 	import type { PageData } from './$types';
-	export let data: PageData;
+
+	interface Props {
+		data: PageData;
+	}
+
+	let { data }: Props = $props();
 
 	const { title, date, content } = data;
 </script>

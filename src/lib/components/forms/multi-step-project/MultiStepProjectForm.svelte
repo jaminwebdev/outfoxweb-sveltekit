@@ -4,8 +4,6 @@
 	import DescriptionStep from './DescriptionStep.svelte';
 	import InfoStep from './InfoStep.svelte';
 	import { Lottie } from 'lottie-svelte';
-	import { createEventDispatcher } from 'svelte';
-	const dispatch = createEventDispatcher();
 
 	const steps = ['project', 'description', 'info'];
 	let currentStep = $state(0);
@@ -44,7 +42,6 @@
 
 	$effect(() => {
 		if (selfClose <= -2) {
-			dispatch('autoCloseForm');
 			clearInterval(closeInterval);
 		}
 	});

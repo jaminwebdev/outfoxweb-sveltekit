@@ -1,13 +1,25 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	export let data: PageData;
+
+	interface Props {
+		data: PageData;
+	}
+
+	let { data }: Props = $props();
+
 	const POSTS_PER_PAGE = 9;
 	const { posts, searchParams } = data;
-	$: search = searchParams.get('search') ?? '';
-	$: filteredPosts = posts.filter((post) =>
-		post.search.toLowerCase().includes(search.toLowerCase())
+
+	let search = $state('');
+
+	$effect(() => {
+		search = searchParams.get('search') ?? '';
+	});
+
+	let filteredPosts = $derived(
+		posts.filter((post) => post.search.toLowerCase().includes(search.toLowerCase()))
 	);
-	$: totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE);
+	let totalPages = $derived(Math.ceil(filteredPosts.length / POSTS_PER_PAGE));
 </script>
 
 <section id="blogPosts" class="min-h-[500px]">

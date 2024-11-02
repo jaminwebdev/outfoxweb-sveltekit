@@ -1,7 +1,11 @@
 <script lang="ts">
+	// @ts-ignore
 	import WebDevImg from '$lib/images/Mobile_Score.png?format=webp&quality=100&w=475';
+	// @ts-ignore
 	import DesignImg from '$lib/images/Figma_Tablet.png?format=webp&quality=100&w=475';
+	// @ts-ignore
 	import SEOImg from '$lib/images/Laptop_Metrics_Right.png?format=webp&quality=100&w=475';
+	// @ts-ignore
 	import AuditImg from '$lib/images/Laptop_Audit.png?format=webp&quality=100&w=475';
 
 	import ImgBackground from '$lib/components/ImgBackground.svelte';
@@ -9,8 +13,11 @@
 	import { fade } from 'svelte/transition';
 	import Checkmark from './Checkmark.svelte';
 
-	const services = ['Development', 'Design', 'SEO', 'Web Audits'];
-	let activeService = 'Development';
+	type Services = 'Development' | 'Design' | 'SEO' | 'Web Audits';
+
+	const services: Services[] = ['Development', 'Design', 'SEO', 'Web Audits'];
+
+	let activeService = $state('Development');
 </script>
 
 <section class="my-[125px] grid">
@@ -28,7 +35,7 @@
 				class="p-4 underline underline-offset-4 text-lg {activeService === service
 					? 'text-primary'
 					: ''}"
-				on:click={() => (activeService = service)}>{service}</button>
+				onclick={() => (activeService = service)}>{service}</button>
 		{/each}
 	</div>
 	<div class="grid grid-cols-1 grid-rows-1">
@@ -41,7 +48,7 @@
 					<div class="py-14 grid gap-4 justify-items-start">
 						<h3>Incredibly fast. <br />Incredibly engaging.</h3>
 						<p>With our battle-tested technology stack, your audience never has to wait.</p>
-						<Checkmark body="< 1 second load times" />
+						<Checkmark body="Less than 1 second load times" />
 						<Checkmark body="99.9% uptime in over 3 years" />
 						<Checkmark body="Feature rich and always interactive" />
 						<Button classes="mt-4" type="link" link="/">Learn More</Button>
@@ -68,7 +75,7 @@
 					<div class="py-14 grid gap-4 justify-items-start">
 						<h3>Design</h3>
 						<p>With our battle-tested technology stack, your audience never has to wait.</p>
-						<Checkmark body="< 1 second load times" />
+						<Checkmark body="Less than 1 second load times" />
 						<Checkmark body="99.9% uptime in over 3 years" />
 						<Checkmark body="Feature rich and always interactive" />
 						<Button classes="mt-4" type="link" link="/">Learn More</Button>
@@ -94,7 +101,7 @@
 					<div class="py-14 grid gap-4 justify-items-start">
 						<h3>SEO</h3>
 						<p>With our battle-tested technology stack, your audience never has to wait.</p>
-						<Checkmark body="< 1 second load times" />
+						<Checkmark body="Less than 1 second load times" />
 						<Checkmark body="99.9% uptime in over 3 years" />
 						<Checkmark body="Feature rich and always interactive" />
 						<Button classes="mt-4" type="link" link="/">Learn More</Button>
@@ -120,7 +127,7 @@
 					<div class="py-14 grid gap-4 justify-items-start">
 						<h3>Audits</h3>
 						<p>With our battle-tested technology stack, your audience never has to wait.</p>
-						<Checkmark body="< 1 second load times" />
+						<Checkmark body="Less than 1 second load times" />
 						<Checkmark body="99.9% uptime in over 3 years" />
 						<Checkmark body="Feature rich and always interactive" />
 						<Button classes="mt-4" type="link" link="/">Learn More</Button>

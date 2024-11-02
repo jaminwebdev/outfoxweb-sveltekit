@@ -17,7 +17,7 @@
 				  <span>Services</span>
         {/snippet}
         {#snippet answer()}
-          <ServicesMenu on:click={handleMobileNav} />
+          <ServicesMenu clickHandler={handleMobileNav} />
         {/snippet}
 			</Accordion>
 			<Accordion bodyClasses="px-0">
@@ -25,7 +25,7 @@
           <span>Resources</span>
         {/snippet}
         {#snippet answer()}
-          <ResourcesMenu on:click={handleMobileNav} />
+          <ResourcesMenu clickHandler={handleMobileNav} />
         {/snippet}
 			</Accordion>
 			<Accordion bodyClasses="px-0">
@@ -33,7 +33,7 @@
           <span>About</span>
         {/snippet}
         {#snippet answer()}
-          <AboutMenu on:click={handleMobileNav} />
+          <AboutMenu clickHandler={handleMobileNav} />
         {/snippet}
 			</Accordion>
 		</div>

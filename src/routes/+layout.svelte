@@ -5,8 +5,15 @@
 	import BgSpotlight from '$lib/components/BgSpotlight.svelte';
 	import Container from '$lib/components/layout/Container.svelte';
 	import type { LayoutData } from './$types';
-	export let data: LayoutData;
 	import { onNavigate } from '$app/navigation';
+	import type { Snippet } from 'svelte';
+
+  interface Props {
+    data: LayoutData;
+    children: Snippet;
+  }
+
+	let { data, children }: Props = $props();
 
 	onNavigate((navigation) => {
 		// @ts-ignore
@@ -31,7 +38,7 @@
 
 	<Container>
 		<Navigation urlData={data.url} />
-		<slot />
+		{@render children()}
 		<Footer />
 	</Container>
 	<div

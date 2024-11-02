@@ -1,25 +1,28 @@
 <script lang="ts">
 	import Button from '$lib/components/Button.svelte';
 	import { fade } from 'svelte/transition';
-	import { createEventDispatcher } from 'svelte';
-	const dispatch = createEventDispatcher();
 
-	export let description = '';
-	let touched = false;
-	let blurred = false;
+	interface Props {
+		description: string;
+		handleClick: (direction: 'prev' | 'next') => void;
+	}
 
-	const handleClick = (dir: 'next' | 'prev') => dispatch('changeStep', { dir });
+	let { description = $bindable(), handleClick }: Props = $props();
+
+	let touched = $state(false);
+	let blurred = $state(false);
 </script>
 
 <p>Great! Give me a brief overview of what you have in mind.</p>
 
+<!-- svelte-ignore element_invalid_self_closing_tag -->
 <textarea
 	rows="6"
-	class="w-full rounded-lg text-body-text p-3"
+	class="w-full rounded-lg text-body-text-dark p-3"
 	bind:value={description}
 	placeholder="Tell me more"
-	on:focus={() => (touched = true)}
-	on:blur={() => (blurred = true)} />
+	onfocus={() => (touched = true)}
+	onblur={() => (blurred = true)} />
 <p>Characters left: {750 - description.length}</p>
 
 {#if description.length < 1 && touched && blurred}
@@ -35,10 +38,10 @@
 {/if}
 
 <div class="grid grid-cols-[repeat(2,_max-content)] justify-between gap-3">
-	<Button type="ghost" color="tertiary" on:btnClicked={() => handleClick('prev')}>Prev</Button>
+	<Button flavor="ghost" color="tertiary" btnCallback={() => handleClick('prev')}>Prev</Button>
 	{#if description.length > 0}
 		<span transition:fade|global>
-			<Button on:btnClicked={() => handleClick('next')}>Next</Button>
+			<Button btnCallback={() => handleClick('next')}>Next</Button>
 		</span>
 	{/if}
 </div>

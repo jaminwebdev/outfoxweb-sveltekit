@@ -1,12 +1,13 @@
 <script lang="ts">
 	import Button from '$lib/components/Button.svelte';
 	import { fade } from 'svelte/transition';
-	import { createEventDispatcher } from 'svelte';
-	const dispatch = createEventDispatcher();
 
-	export let projectType: string[] = [];
+	interface Props {
+		projectType: string[];
+		handleClick: (direction: 'prev' | 'next') => void;
+	}
 
-	const handleClick = (dir: 'next' | 'prev') => dispatch('changeStep', { dir });
+	let { projectType = $bindable([]), handleClick }: Props = $props();
 </script>
 
 <p>What kind of project do you need help with?</p>
@@ -19,6 +20,6 @@
 
 {#if projectType.length > 0}
 	<div transition:fade|global class="grid grid-cols-[repeat(2,_max-content)] justify-between gap-3">
-		<Button classes="col-start-2" on:btnClicked={() => handleClick('next')}>Next</Button>
+		<Button classes="col-start-2" btnCallback={() => handleClick('next')}>Next</Button>
 	</div>
 {/if}

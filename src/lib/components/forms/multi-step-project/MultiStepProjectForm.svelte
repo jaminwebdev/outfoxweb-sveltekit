@@ -8,13 +8,16 @@
 	const dispatch = createEventDispatcher();
 
 	const steps = ['project', 'description', 'info'];
-	let currentStep = 0;
+	let currentStep = $state(0);
 	// form fields
-	let projectType: string[], description: string, name: string, email: string;
+	let projectType = $state(['']);
+	let description = $state('');
+	let name = $state('');
+	let email = $state('');
 
-	let formStatus: 'initial' | 'loading' | 'success' | 'error' = 'initial';
-	let selfClose = 12;
-	let closeInterval: NodeJS.Timer;
+	let formStatus: 'initial' | 'loading' | 'success' | 'error' = $state('initial');
+	let selfClose = $state(12);
+	let closeInterval: ReturnType<typeof setInterval>;
 
 	const submitForm = () => {
 		formStatus = 'loading';
@@ -30,19 +33,21 @@
 		closeInterval = setInterval(() => selfClose--, 1000);
 	};
 
-	const changeStep = (event: CustomEvent<{ dir: 'prev' | 'next' }>) => {
-		if (event.detail.dir === 'next' && currentStep < steps.length - 1) {
+	const changeStep = (direction: 'prev' | 'next') => {
+		if (direction === 'next' && currentStep < steps.length - 1) {
 			currentStep++;
 		}
-		if (event.detail.dir === 'prev' && currentStep >= 1) {
+		if (direction === 'prev' && currentStep >= 1) {
 			currentStep--;
 		}
 	};
 
-	$: if (selfClose <= -2) {
-		dispatch('autoCloseForm');
-		clearInterval(closeInterval);
-	}
+	$effect(() => {
+		if (selfClose <= -2) {
+			dispatch('autoCloseForm');
+			clearInterval(closeInterval);
+		}
+	});
 </script>
 
 {#if formStatus === 'loading'}
@@ -79,15 +84,15 @@
 	<div>
 		{#if steps[currentStep] === 'project'}
 			<div in:fade|global={{ duration: 250, delay: 400 }} out:fade|global={{ duration: 150 }}>
-				<ProjectStep on:changeStep={changeStep} bind:projectType />
+				<ProjectStep handleClick={changeStep} bind:projectType />
 			</div>
 		{:else if steps[currentStep] === 'description'}
 			<div in:fade|global={{ duration: 250, delay: 400 }} out:fade|global={{ duration: 150 }}>
-				<DescriptionStep on:changeStep={changeStep} bind:description />
+				<DescriptionStep handleClick={changeStep} bind:description />
 			</div>
 		{:else if steps[currentStep] === 'info'}
 			<div in:fade|global={{ duration: 250, delay: 400 }} out:fade|global={{ duration: 150 }}>
-				<InfoStep on:changeStep={changeStep} on:submitForm={submitForm} bind:name bind:email />
+				<InfoStep handleClick={changeStep} {submitForm} bind:name bind:email />
 			</div>
 		{/if}
 	</div>

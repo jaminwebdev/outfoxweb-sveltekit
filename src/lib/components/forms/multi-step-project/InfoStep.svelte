@@ -2,22 +2,23 @@
 	import Button from '$lib/components/Button.svelte';
 	import { fade } from 'svelte/transition';
 	import { z } from 'zod';
-	import { createEventDispatcher } from 'svelte';
-	const dispatch = createEventDispatcher();
 
-	export let name = '';
-	export let email = '';
+	interface Props {
+		name: string;
+		email: string;
+		handleClick: (direction: 'prev' | 'next') => void;
+		submitForm: () => void;
+	}
 
-	let nameTouched = false;
-	let nameBlurred = false;
-	let emailTouched = false;
-	let emailBlurred = false;
+	let { name = $bindable(), email = $bindable(), handleClick, submitForm }: Props = $props();
+
+	let nameTouched = $state(false);
+	let nameBlurred = $state(false);
+	let emailTouched = $state(false);
+	let emailBlurred = $state(false);
 
 	const emailSchema = z.string().email();
-	$: emailValid = emailSchema.safeParse(email);
-
-	const handleClick = (dir: 'next' | 'prev') => dispatch('changeStep', { dir });
-	const submitForm = () => dispatch('submitForm');
+	let emailValid = $derived(emailSchema.safeParse(email));
 </script>
 
 <div class="grid gap-4">
@@ -26,9 +27,9 @@
 		<input
 			type="text"
 			bind:value={name}
-			on:focus={() => (nameTouched = true)}
-			on:blur={() => (nameBlurred = true)}
-			class="text-body-text" />
+			onfocus={() => (nameTouched = true)}
+			onblur={() => (nameBlurred = true)}
+			class="text-body-text-dark" />
 		{#if name.length < 1 && nameTouched && nameBlurred}
 			<p transition:fade|global class="text-secondary">We need to know what to call you 😀.</p>
 		{/if}
@@ -39,9 +40,9 @@
 		<input
 			type="email"
 			bind:value={email}
-			on:focus={() => (emailTouched = true)}
-			on:blur={() => (emailBlurred = true)}
-			class="text-body-text" />
+			onfocus={() => (emailTouched = true)}
+			onblur={() => (emailBlurred = true)}
+			class="text-body-text-dark" />
 		{#if !emailValid.success && emailTouched && emailBlurred}
 			<p transition:fade|global class="text-secondary">
 				It's hard to email you without an email 😎.
@@ -51,10 +52,10 @@
 </div>
 
 <div class="grid grid-cols-[repeat(2,_max-content)] justify-between gap-3">
-	<Button type="ghost" color="tertiary" on:btnClicked={() => handleClick('prev')}>Prev</Button>
+	<Button flavor="ghost" color="tertiary" btnCallback={() => handleClick('prev')}>Prev</Button>
 	{#if name.length > 0 && emailValid.success}
 		<span transition:fade|global>
-			<Button on:btnClicked={submitForm}>Submit</Button>
+			<Button btnCallback={submitForm}>Submit</Button>
 		</span>
 	{/if}
 </div>

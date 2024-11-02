@@ -11,18 +11,19 @@
 	// @ts-ignore
 	import FinanceImg from '$lib/images/Finance_Header.png?format=webp&quality=100&w=550';
 
-	const categories = ['Saas', 'Finance', 'Workspace', 'Nonprofit'];
-	let activeCategory = 'Saas';
+	type Category = 'Saas' | 'Finance' | 'Workspace' | 'Nonprofit';
+	const categories: Category[] = ['Saas', 'Finance', 'Workspace', 'Nonprofit'];
 
-	const setActiveCategory = (category: string) => (activeCategory = category);
+	let activeCategory: Category = $state('Saas');
+
+	const setActiveCategory = (category: Category) => (activeCategory = category);
 </script>
 
 <section
 	class="rounded-xl bg-body-color-secondary px-6 py-10 md:p-[60px] grid grid-cols-1 lg:grid-cols-2 gap-4 items-center overflow-hidden min-h-[790px] lg:min-h-0">
 	<!-- Left column -->
 	<div>
-		<p
-			class="bg-secondary/20 text-secondary py-[5px] px-[14px] rounded-md inline-block text-base mb-2">
+		<p class="bg-primary/20 text-primary py-[5px] px-[14px] rounded-md inline-block text-base mb-2">
 			CHECK IT OUT
 		</p>
 		<h2 class="mb-4">Our latest work</h2>

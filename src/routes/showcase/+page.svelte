@@ -3,17 +3,17 @@
 	import Button from '$lib/components/Button.svelte';
 	import InteractiveLottie from '$lib/components/InteractiveLottie.svelte';
 
-	let hovering = false;
-	$: play = hovering;
+	let hovering = $state(false);
 </script>
 
 <div class="grid grid-cols-3 my-8 gap-5 max-w-4xl mx-auto">
 	<!-- Example of outer card hover controlling lottie animation -->
+	<!-- svelte-ignore a11y_no_static_element_interactions -->
 	<div
 		class="bg-body-color-secondary rounded-xl"
 		onmouseenter={() => (hovering = true)}
 		onmouseleave={() => (hovering = false)}>
-		<InteractiveLottie path="/lottie/Successful.json" bind:forceAnimate={play} />
+		<InteractiveLottie path="/lottie/Successful.json" bind:forceAnimate={hovering} />
 	</div>
 	<!-- Example of repeating lottie animation -->
 	<div class="bg-body-color-secondary rounded-xl">

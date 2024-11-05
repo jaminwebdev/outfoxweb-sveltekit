@@ -2,12 +2,14 @@ import type { PageLoad } from './$types';
 
 export const load: PageLoad = async ({ params }) => {
 	const post = await import(`../${params.slug}.md`);
-	const { title, date } = post.metadata;
+	const { title, pubDate, tags, coverImage } = post.metadata;
 	const content = post.default;
 
 	return {
 		content,
 		title,
-		date
+		tags,
+		pubDate,
+		coverImage
 	};
 };

@@ -1,4 +1,4 @@
 <script lang="ts">
 </script>
 
-<h1>About Us</h1>
+<h1>Headless Wordpress</h1>

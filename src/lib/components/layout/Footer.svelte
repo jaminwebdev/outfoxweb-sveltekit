@@ -5,13 +5,14 @@
 <footer class="grid grid-cols-1 md:grid-cols-3 gap-14 pt-[100px] pb-8">
 	<div class="grid justify-center md:justify-start text-center md:text-left gap-5">
 		<h4 class="text-2xl">Links</h4>
-		<a href="/" class="hover:underline decoration-inherit hover:underline-offset-8"
+		<a href="/web-development" class="hover:underline decoration-inherit hover:underline-offset-8"
 			>Web Development</a>
-		<a href="/" class="hover:underline decoration-inherit hover:underline-offset-8">Web Design</a>
-		<a href="/" class="hover:underline decoration-inherit hover:underline-offset-8">SEO</a>
-		<a href="/" class="hover:underline decoration-inherit hover:underline-offset-8">Consulting</a>
-		<a href="/" class="hover:underline decoration-inherit hover:underline-offset-8"
-			>Performance Audit</a>
+		<a href="/web-design" class="hover:underline decoration-inherit hover:underline-offset-8"
+			>Web Design</a>
+		<a href="/seo-services" class="hover:underline decoration-inherit hover:underline-offset-8"
+			>SEO</a>
+		<a href="/website-audit" class="hover:underline decoration-inherit hover:underline-offset-8"
+			>Website Audit</a>
 	</div>
 	<div class="grid justify-center row-start-1 md:row-start-auto">
 		<VerticalLogo classes="max-w-[160px] w-full" />
@@ -20,7 +21,6 @@
 		<h4 class="text-2xl">Support</h4>
 		<a href="/" class="hover:underline decoration-inherit hover:underline-offset-8">Contact</a>
 		<a href="/" class="hover:underline decoration-inherit hover:underline-offset-8">About</a>
-		<a href="/" class="hover:underline decoration-inherit hover:underline-offset-8">SEO</a>
 		<a href="/" class="hover:underline decoration-inherit hover:underline-offset-8"
 			>Terms and Conditions</a>
 		<a href="/" class="hover:underline decoration-inherit hover:underline-offset-8"

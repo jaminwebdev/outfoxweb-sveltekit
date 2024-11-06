@@ -4,6 +4,7 @@
 	// @ts-ignore
 	import HeadlessWPImg from '$lib/images/Headless_WP_iMac.png?format=webp&quality=75&w=550';
 	import Button from '$lib/components/Button.svelte';
+  import MultiStepDialog from '$lib/components/forms/multi-step-project/MultiStepDialog.svelte';
 	import ImgBackground from '$lib/components/ImgBackground.svelte';
 	import BenefitCard from '$lib/components/cards/BenefitCard.svelte';
 	import PortfolioRow from '$lib/components/PortfolioRow.svelte';
@@ -29,8 +30,9 @@
 		<p class="text-center md:text-left">
 			Reach your audience, convert more customers, and rank higher with the best website for you.
 		</p>
-		<Button type="link" link="/showcase" classes="justify-self-center md:justify-self-start"
-			>Showcase</Button>
+    <MultiStepDialog flavor="glow" classes="justify-self-center md:justify-self-start">
+      Let's Connect
+    </MultiStepDialog>
 	</div>
 	<div class="relative grid justify-center md:justify-normal">
 		<img

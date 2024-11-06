@@ -4,6 +4,7 @@
 	import ServicesMenu from '$lib/components/layout/navigation/menus/ServicesMenu.svelte';
 	import ResourcesMenu from '$lib/components/layout/navigation/menus/ResourcesMenu.svelte';
 	import AboutMenu from '$lib/components/layout/navigation/menus/AboutMenu.svelte';
+	import MultiStepDialog from '$lib/components/forms/multi-step-project/MultiStepDialog.svelte';
 
 	interface Props {
 		urlData: string;
@@ -64,7 +65,7 @@
 			</Dropdown>
 		</li>
 		<li>
-			<button class="rounded-lg bg-secondary text-body-text py-[12px] px-[28px]">Let's Chat</button>
+			<MultiStepDialog />
 		</li>
 	</ul>
 </div>

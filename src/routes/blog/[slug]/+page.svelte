@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Container from '$lib/components/layout/Container.svelte';
-	import { formatDate } from '$lib/utils/dates';
 	import type { PageData } from './$types';
 	// @ts-ignore
 	import JaminHeadshot from '$lib/images/jamin_headshot.jpg';

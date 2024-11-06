@@ -3,7 +3,7 @@
     description: "Silly description"
     tags: ["react", "svelte"]
     author: "Jamin Roberts"
-    coverImage: '/src/lib/images/personal_finance_dash.jpg'
+    coverImage: '/staticImages/personal_finance_dash.jpg'
     pubDate: 2024-04-10
     relatedPosts:
     - welcome # references `src/content/blog/welcome.md`

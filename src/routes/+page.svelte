@@ -10,6 +10,17 @@
 	import ServicesTabs from '$lib/components/ServicesTabs.svelte';
 	import TestimonialRow from '$lib/components/TestimonialRow.svelte';
 	import { testimonials } from '$lib/utils/testimonials';
+	import type { PageData } from './$types';
+	import BlogGrid from '$lib/components/blog/BlogGrid.svelte';
+
+
+  interface Props {
+		data: PageData;
+	}
+
+	let { data }: Props = $props();
+
+	const { posts } = data;
 </script>
 
 <header class="grid grid-cols-1 md:grid-cols-2 items-center gap-32 md:gap-14 py-20 md:py-16">
@@ -93,6 +104,10 @@
 			Have no fear! We can easily combine WordPress and our faster frontend technologies for
 			ultimate convenience and optimal performance!
 		</p>
-		<Button type="link" link="/" classes="px-[24px] py-[12px]" color="secondary">See More</Button>
+		<Button type="link" link="/headless-wordpress" classes="px-[24px] py-[12px]" color="secondary">See More</Button>
 	</div>
+</section>
+<section id="homepageBlogPosts" class="mb-12">
+  <h2 class="text-center">Our latest posts</h2>
+  <BlogGrid blogs={posts.slice(0, 3)}/>
 </section>
